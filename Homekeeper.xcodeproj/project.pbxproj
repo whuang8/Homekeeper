@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265719671BBA2D1D00D29495 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		26D80D9A1BA3AE930012ECBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80D991BA3AE930012ECBC /* AppDelegate.swift */; };
-		26D80D9C1BA3AE930012ECBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80D9B1BA3AE930012ECBC /* ViewController.swift */; };
 		26D80D9F1BA3AE930012ECBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D80D9D1BA3AE930012ECBC /* Main.storyboard */; };
 		26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA01BA3AE930012ECBC /* Images.xcassets */; };
 		26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */; };
@@ -27,10 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		265719671BBA2D1D00D29495 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		26D80D941BA3AE930012ECBC /* Homekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D80D981BA3AE930012ECBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26D80D991BA3AE930012ECBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26D80D9B1BA3AE930012ECBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		26D80D9E1BA3AE930012ECBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26D80DA01BA3AE930012ECBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		26D80DA31BA3AE930012ECBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				26D80D991BA3AE930012ECBC /* AppDelegate.swift */,
-				26D80D9B1BA3AE930012ECBC /* ViewController.swift */,
 				26D80D9D1BA3AE930012ECBC /* Main.storyboard */,
+				265719671BBA2D1D00D29495 /* LogInViewController.swift */,
 				26D80DA01BA3AE930012ECBC /* Images.xcassets */,
 				26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */,
 				26D80D971BA3AE930012ECBC /* Supporting Files */,
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26D80D9C1BA3AE930012ECBC /* ViewController.swift in Sources */,
+				265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */,
 				26D80D9A1BA3AE930012ECBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +335,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -352,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -381,6 +382,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -391,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
