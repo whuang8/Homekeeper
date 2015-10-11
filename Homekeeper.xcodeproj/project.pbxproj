@@ -13,6 +13,7 @@
 		26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA01BA3AE930012ECBC /* Images.xcassets */; };
 		26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */; };
 		26D80DB01BA3AE930012ECBC /* HomekeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80DAF1BA3AE930012ECBC /* HomekeeperTests.swift */; };
+		2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B38E11BC9EF3000D3D090 /* GroceryItem.swift */; settings = {ASSET_TAGS = (); }; };
 		C7238548133FC4CF609D6303 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC0D5C18339632B07140312 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		26D80DA91BA3AE930012ECBC /* HomekeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomekeeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D80DAE1BA3AE930012ECBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26D80DAF1BA3AE930012ECBC /* HomekeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomekeeperTests.swift; sourceTree = "<group>"; };
+		2F9B38E11BC9EF3000D3D090 /* GroceryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		420F39C2BD024566E35CB9C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6B790607C4D6A552E9FB28FE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9BC0D5C18339632B07140312 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 				26D80DA01BA3AE930012ECBC /* Images.xcassets */,
 				26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */,
 				26D80D971BA3AE930012ECBC /* Supporting Files */,
+				2F9B38E11BC9EF3000D3D090 /* GroceryItem.swift */,
 			);
 			path = Homekeeper;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26D80D9C1BA3AE930012ECBC /* ViewController.swift in Sources */,
+				2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */,
 				26D80D9A1BA3AE930012ECBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
