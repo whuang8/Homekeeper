@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265719671BBA2D1D00D29495 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		26D80D9A1BA3AE930012ECBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80D991BA3AE930012ECBC /* AppDelegate.swift */; };
 		26D80D9F1BA3AE930012ECBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D80D9D1BA3AE930012ECBC /* Main.storyboard */; };
 		26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA01BA3AE930012ECBC /* Images.xcassets */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		265719671BBA2D1D00D29495 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		26D80D941BA3AE930012ECBC /* Homekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D80D981BA3AE930012ECBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26D80D991BA3AE930012ECBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				26D80D991BA3AE930012ECBC /* AppDelegate.swift */,
 				26D80D9D1BA3AE930012ECBC /* Main.storyboard */,
 				265719671BBA2D1D00D29495 /* LogInViewController.swift */,
+				26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */,
 				26D80DA01BA3AE930012ECBC /* Images.xcassets */,
 				26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */,
 				26D80D971BA3AE930012ECBC /* Supporting Files */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */,
 				265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */,
 				26D80D9A1BA3AE930012ECBC /* AppDelegate.swift in Sources */,
 			);
