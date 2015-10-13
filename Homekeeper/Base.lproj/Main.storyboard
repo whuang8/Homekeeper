@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zQR-O1-JKe">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -57,6 +56,7 @@
                                     <outlet property="checkoutSwitch" destination="Hj9-Nq-Nb0" id="uGf-Ib-YCy"/>
                                     <outlet property="countLabel" destination="krb-39-w1u" id="3Nk-nl-dEz"/>
                                     <outlet property="groceryItemLabel" destination="YUO-Ij-EP8" id="YOh-7c-uvu"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="1w3-sr-xLY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -217,7 +217,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMk-c4-ibq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="568"/>
+            <point key="canvasLocation" x="1764" y="1007"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1w3-sr-xLY"/>
+    </inferredMetricsTieBreakers>
 </document>

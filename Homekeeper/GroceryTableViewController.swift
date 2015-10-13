@@ -21,12 +21,11 @@ class GroceryTableViewController: UITableViewController {
         // Load sample items
         loadSampleItems()
         
+        // Edit button initialization
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     func loadSampleItems() {
@@ -52,23 +51,6 @@ class GroceryTableViewController: UITableViewController {
         return items.count
     }
     
-    /*
-    let cellIdentifier = "GroceryItemCell"
-    
-    let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! GroceryItemTableViewCell
-    
-    // Fetches the meal for the specific row
-    let item = items[indexPath.row]
-    
-    // Configure the cell
-    cell.groceryItemLabel.text = item.groceryItem
-    cell.additionalInfoLabel.text = item.additionalInfo
-    cell.countLabel.text = String(format: "%d", item.count)
-    
-    return cell
-    */
-
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "GroceryItemTableViewCell"
         
@@ -85,25 +67,24 @@ class GroceryTableViewController: UITableViewController {
     }
 
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            items.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     /*
     // Override to support rearranging the table view.
@@ -125,18 +106,37 @@ class GroceryTableViewController: UITableViewController {
     
     @IBAction func unwindForSegue(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? GroceryItemViewController, item = sourceViewController.item {
-            // Add item
-            let newIndexPath = NSIndexPath(forRow: items.count, inSection: 0)
-            items.append(item)
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing item
+                items[selectedIndexPath.row] = item
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            }
+                
+            else {
+                // Add item
+                let newIndexPath = NSIndexPath(forRow: items.count, inSection: 0)
+                items.append(item)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
         }
     }
-    /*
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetail" {
+            let itemDetailViewController = segue.destinationViewController as! GroceryItemViewController
+            
+            // Get the cell that generated this view
+            if let selectedItemCell = sender as? GroceryItemTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedItemCell)!
+                let selectedItem = items[indexPath.row]
+                itemDetailViewController.item = selectedItem
+            }
+        }
+        else if segue.identifier == "AddItem" {
+            print("Adding a new item.")
+        }
     }
-    */
+    
     
 }

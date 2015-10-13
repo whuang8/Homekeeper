@@ -27,6 +27,14 @@ class GroceryItemViewController: UIViewController, UITextFieldDelegate {
         groceryItemTextField.delegate = self
         additionalInfoTextField.delegate = self
         
+        // Set up item info if editing an existing item
+        if let item = item {
+            groceryItemTextField.text = item.groceryItem
+            countStepper.value = Double(item.count)
+            additionalInfoTextField.text = item.additionalInfo
+            self.navigationController?.title = item.groceryItem
+        }
+        
         // Set countStepper to 1
         countStepper.value = 1
         
@@ -43,6 +51,10 @@ class GroceryItemViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // Hide the keyboard
         textField.resignFirstResponder()
+        
+        // Update label
+        
+        
         return true
     }
     
@@ -75,9 +87,17 @@ class GroceryItemViewController: UIViewController, UITextFieldDelegate {
     // Mark: Navigation
     
     @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        // Determine presentation style (modal or push)
+        let isPresentingInAddItemMode = presentingViewController is UINavigationController
+        
+        if isPresentingInAddItemMode {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        else {
+            navigationController!.popViewControllerAnimated(true)
+        }
     }
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
