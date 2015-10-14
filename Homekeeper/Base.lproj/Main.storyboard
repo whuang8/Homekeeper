@@ -56,7 +56,7 @@
                                     <outlet property="checkoutSwitch" destination="Hj9-Nq-Nb0" id="uGf-Ib-YCy"/>
                                     <outlet property="countLabel" destination="krb-39-w1u" id="3Nk-nl-dEz"/>
                                     <outlet property="groceryItemLabel" destination="YUO-Ij-EP8" id="YOh-7c-uvu"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="1w3-sr-xLY"/>
+                                    <segue destination="BYX-38-t0r" kind="show" identifier="ShowDetail" id="1w3-sr-xLY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -81,7 +81,7 @@
         <!--New Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GroceryItemViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYX-38-t0r" customClass="GroceryItemViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -113,7 +113,7 @@
                                                 <rect key="frame" x="386" y="0.0" width="94" height="29"/>
                                                 <animations/>
                                                 <connections>
-                                                    <action selector="changeCount:" destination="BYZ-38-t0r" eventType="valueChanged" id="cLY-Qi-Xfo"/>
+                                                    <action selector="changeCount:" destination="BYX-38-t0r" eventType="valueChanged" id="cLY-Qi-Xfo"/>
                                                 </connections>
                                             </stepper>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="29" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xN2-MS-r5g">
@@ -159,7 +159,7 @@
                     <navigationItem key="navigationItem" title="New Item" id="XvZ-Z4-Ea5">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eDZ-QN-6mm">
                             <connections>
-                                <action selector="cancel:" destination="BYZ-38-t0r" id="zOo-gh-PfC"/>
+                                <action selector="cancel:" destination="BYX-38-t0r" id="zOo-gh-PfC"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Gqi-mH-ZKy">
@@ -212,7 +212,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Dp-K3-9zK"/>
+                        <segue destination="BYX-38-t0r" kind="relationship" relationship="rootViewController" id="4Dp-K3-9zK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMk-c4-ibq" userLabel="First Responder" sceneMemberID="firstResponder"/>
