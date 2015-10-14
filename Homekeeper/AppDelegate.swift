@@ -7,14 +7,33 @@
 //  
 
 import UIKit
+//import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private func createMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController;
+        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("LeftViewController") as! LeftViewController;
+        
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController);
+        
+        leftViewController.mainViewController = nvc;
+        
+        let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController);
+        
+        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0);
+        self.window?.rootViewController = slideMenuController;
+        self.window?.makeKeyAndVisible();
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        self.createMenuView();
+        
         // Override point for customization after application launch.
         return true
     }
