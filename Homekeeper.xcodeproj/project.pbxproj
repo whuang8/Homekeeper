@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239CAD291BD0333E0090FDE8 /* Todo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239CAD281BD0333E0090FDE8 /* Todo.storyboard */; settings = {ASSET_TAGS = (); }; };
+		239CAD2B1BD033AE0090FDE8 /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD2A1BD033AE0090FDE8 /* AddToDo.swift */; settings = {ASSET_TAGS = (); }; };
+		239CAD2D1BD033D20090FDE8 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD2C1BD033D20090FDE8 /* ToDo.swift */; settings = {ASSET_TAGS = (); }; };
+		239CAD2F1BD033D70090FDE8 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD2E1BD033D70090FDE8 /* ToDoTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		239CAD311BD033DE0090FDE8 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD301BD033DE0090FDE8 /* ToDoTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265719671BBA2D1D00D29495 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		26D80D9A1BA3AE930012ECBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80D991BA3AE930012ECBC /* AppDelegate.swift */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		239CAD281BD0333E0090FDE8 /* Todo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Todo.storyboard; sourceTree = "<group>"; };
+		239CAD2A1BD033AE0090FDE8 /* AddToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddToDo.swift; path = ../../../project/Homekeeper/Homekeeper/AddToDo.swift; sourceTree = "<group>"; };
+		239CAD2C1BD033D20090FDE8 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDo.swift; path = ../../../project/Homekeeper/Homekeeper/ToDo.swift; sourceTree = "<group>"; };
+		239CAD2E1BD033D70090FDE8 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDoTableViewController.swift; path = ../../../project/Homekeeper/Homekeeper/ToDoTableViewController.swift; sourceTree = "<group>"; };
+		239CAD301BD033DE0090FDE8 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDoTableViewCell.swift; path = ../../../project/Homekeeper/Homekeeper/ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		265719671BBA2D1D00D29495 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		26D80D941BA3AE930012ECBC /* Homekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +85,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		239CAD271BD032EE0090FDE8 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				239CAD2A1BD033AE0090FDE8 /* AddToDo.swift */,
+				239CAD2E1BD033D70090FDE8 /* ToDoTableViewController.swift */,
+				239CAD301BD033DE0090FDE8 /* ToDoTableViewCell.swift */,
+				239CAD2C1BD033D20090FDE8 /* ToDo.swift */,
+				239CAD281BD0333E0090FDE8 /* Todo.storyboard */,
+			);
+			name = TodoList;
+			sourceTree = "<group>";
+		};
 		26D80D8B1BA3AE930012ECBC = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +126,7 @@
 				26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */,
 				26D80DA01BA3AE930012ECBC /* Images.xcassets */,
 				26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */,
+				239CAD271BD032EE0090FDE8 /* TodoList */,
 				2F9B38E31BC9F0DA00D3D090 /* GroceryList */,
 				26D80D971BA3AE930012ECBC /* Supporting Files */,
 			);
@@ -253,6 +276,7 @@
 				2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */,
 				26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */,
 				26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */,
+				239CAD291BD0333E0090FDE8 /* Todo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,13 +327,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239CAD2D1BD033D20090FDE8 /* ToDo.swift in Sources */,
 				26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */,
 				265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */,
 				26D80D9C1BA3AE930012ECBC /* GroceryItemViewController.swift in Sources */,
 				2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */,
 				2F9B38E81BCAC5E600D3D090 /* GroceryTableViewController.swift in Sources */,
+				239CAD311BD033DE0090FDE8 /* ToDoTableViewCell.swift in Sources */,
 				2F9B38E51BCAC29500D3D090 /* GroceryItemTableViewCell.swift in Sources */,
 				26D80D9A1BA3AE930012ECBC /* AppDelegate.swift in Sources */,
+				239CAD2B1BD033AE0090FDE8 /* AddToDo.swift in Sources */,
+				239CAD2F1BD033D70090FDE8 /* ToDoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
