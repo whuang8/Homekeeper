@@ -8,7 +8,7 @@
         <!--Grocery List-->
         <scene sceneID="Ame-jz-VbK">
             <objects>
-                <tableViewController id="q59-D0-XxO" customClass="GroceryTableViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="GroceryTableViewController" id="q59-D0-XxO" customClass="GroceryTableViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="dsM-bK-bq2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

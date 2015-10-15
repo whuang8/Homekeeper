@@ -12,6 +12,7 @@ import UIKit
 enum LeftMenu: Int {
     case Chat = 0
     case Debt
+    case Groc
     case Opt
 }
 
@@ -22,9 +23,10 @@ protocol LeftMenuProtocol : class {
 class LeftViewController: UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["Chat", "Debt", "Options"]
+    var menus = ["Chat", "Debt", "Groceries", "Options"]
     var chatViewController = UIViewController()
     var debtViewController = UIViewController()
+    var grocViewController = UIViewController()
     var optionsViewController = UIViewController()
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,9 +40,14 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         self.view.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
         
         let storyboard = UIStoryboard(name: "Popover", bundle: nil);
+        let storyboard2 = UIStoryboard(name: "GroceryList", bundle: nil)
         
         let debtViewController = storyboard.instantiateViewControllerWithIdentifier("DebtViewController") as! DebtViewController;
         self.debtViewController = UINavigationController(rootViewController: debtViewController);
+        
+        let grocViewController = storyboard2.instantiateViewControllerWithIdentifier("GroceryTableViewController") as!
+        GroceryTableViewController
+        self.grocViewController = UINavigationController(rootViewController: grocViewController)
         
         let optionsViewController = storyboard.instantiateViewControllerWithIdentifier("OptionsViewController") as! OptionsViewController;
         self.optionsViewController = UINavigationController(rootViewController: optionsViewController);
@@ -89,6 +96,9 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
             self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true);
         case .Debt:
             self.slideMenuController()?.changeMainViewController(self.debtViewController, close: true);
+            break;
+        case .Groc:
+            self.slideMenuController()?.changeMainViewController(self.grocViewController, close: true);
             break;
         case .Opt:
             self.slideMenuController()?.changeMainViewController(self.optionsViewController, close: true);
