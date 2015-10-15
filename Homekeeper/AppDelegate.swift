@@ -15,14 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     private func createMenuView() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let storyboard = UIStoryboard(name: "Popover", bundle: nil);
         
-        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController;
+        let chatViewController = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController;
         let leftViewController = storyboard.instantiateViewControllerWithIdentifier("LeftViewController") as! LeftViewController;
         
-        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController);
+        let nvc: UINavigationController = UINavigationController(rootViewController: chatViewController);
         
-        leftViewController.mainViewController = nvc;
+        leftViewController.chatViewController = nvc;
         
         let slideMenuController = SlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController);
         

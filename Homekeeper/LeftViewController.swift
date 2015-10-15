@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 enum LeftMenu: Int {
-    case Main = 0
+    case Chat = 0
     case Debt
     //case ToDo
     case Opt
@@ -23,8 +23,8 @@ protocol LeftMenuProtocol : class {
 class LeftViewController: UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["Main", "Debt", "Options"]
-    var mainViewController = UIViewController()
+    var menus = ["Chat", "Debt", "Options"]
+    var chatViewController = UIViewController()
     var debtViewController = UIViewController()
     //var todoViewController = UIViewController()
     var optionsViewController = UIViewController()
@@ -87,8 +87,8 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
     
     func changeViewController(menu: LeftMenu) {
         switch menu {
-        case .Main:
-            self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true);
+        case .Chat:
+            self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true);
         case .Debt:
             self.slideMenuController()?.changeMainViewController(self.debtViewController, close: true);
             break;

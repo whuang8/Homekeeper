@@ -52,7 +52,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="NsT-iy-xMx" id="03e-P1-adL"/>
+                        <outlet property="tableView" destination="NsT-iy-xMx" id="YFB-ip-9nJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Uf-Zi-Jmj" userLabel="First Responder" sceneMemberID="firstResponder"/>

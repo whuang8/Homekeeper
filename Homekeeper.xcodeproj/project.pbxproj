@@ -13,7 +13,6 @@
 		26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */; };
 		26D80DB01BA3AE930012ECBC /* HomekeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80DAF1BA3AE930012ECBC /* HomekeeperTests.swift */; };
 		3FB8A90C1BCDCEF700AD83BF /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8A90B1BCDCEF700AD83BF /* SlideMenuController.swift */; settings = {ASSET_TAGS = (); }; };
-		3FB8A90E1BCDDF0F00AD83BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8A90D1BCDDF0F00AD83BF /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FB8A9101BCDDF5500AD83BF /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8A90F1BCDDF5500AD83BF /* LeftViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FB8A9121BCDE50000AD83BF /* DebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8A9111BCDE50000AD83BF /* DebtViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FB8A9141BCDE6CC00AD83BF /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8A9131BCDE6CC00AD83BF /* BaseTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -47,7 +46,6 @@
 		26D80DAE1BA3AE930012ECBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26D80DAF1BA3AE930012ECBC /* HomekeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomekeeperTests.swift; sourceTree = "<group>"; };
 		3FB8A90B1BCDCEF700AD83BF /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
-		3FB8A90D1BCDDF0F00AD83BF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3FB8A90F1BCDDF5500AD83BF /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		3FB8A9111BCDE50000AD83BF /* DebtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtViewController.swift; sourceTree = "<group>"; };
 		3FB8A9131BCDE6CC00AD83BF /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -328,7 +326,6 @@
 				3FB8A9181BCDE9BB00AD83BF /* UITableViewExtension.swift in Sources */,
 				3FB8A9101BCDDF5500AD83BF /* LeftViewController.swift in Sources */,
 				3FCD62011BCF46630032675C /* ChatViewController.swift in Sources */,
-				3FB8A90E1BCDDF0F00AD83BF /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
