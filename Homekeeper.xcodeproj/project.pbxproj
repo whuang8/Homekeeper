@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		26D80D9A1BA3AE930012ECBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80D991BA3AE930012ECBC /* AppDelegate.swift */; };
 		26D80D9C1BA3AE930012ECBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80D9B1BA3AE930012ECBC /* ViewController.swift */; };
-		26D80D9F1BA3AE930012ECBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D80D9D1BA3AE930012ECBC /* Main.storyboard */; };
 		26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA01BA3AE930012ECBC /* Images.xcassets */; };
 		26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */; };
 		26D80DB01BA3AE930012ECBC /* HomekeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80DAF1BA3AE930012ECBC /* HomekeeperTests.swift */; };
@@ -22,6 +21,7 @@
 		3FB8A9181BCDE9BB00AD83BF /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8A9171BCDE9BB00AD83BF /* UITableViewExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		3FB8A91C1BCDF63600AD83BF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8A91B1BCDF63600AD83BF /* UIViewControllerExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		3FB8A91E1BCE046700AD83BF /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB8A91D1BCE046700AD83BF /* OptionsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3FCD61FB1BCF3EBF0032675C /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCD61FA1BCF3EBF0032675C /* Menu.storyboard */; settings = {ASSET_TAGS = (); }; };
 		C7238548133FC4CF609D6303 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC0D5C18339632B07140312 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,6 @@
 		26D80D981BA3AE930012ECBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26D80D991BA3AE930012ECBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26D80D9B1BA3AE930012ECBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		26D80D9E1BA3AE930012ECBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26D80DA01BA3AE930012ECBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		26D80DA31BA3AE930012ECBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		26D80DA91BA3AE930012ECBC /* HomekeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomekeeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +54,7 @@
 		3FB8A9171BCDE9BB00AD83BF /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		3FB8A91B1BCDF63600AD83BF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		3FB8A91D1BCE046700AD83BF /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		3FCD61FA1BCF3EBF0032675C /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Menu.storyboard; path = Base.lproj/Menu.storyboard; sourceTree = "<group>"; };
 		420F39C2BD024566E35CB9C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6B790607C4D6A552E9FB28FE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9BC0D5C18339632B07140312 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,13 +141,13 @@
 		3FB8A9191BCDEF0F00AD83BF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3FCD61FA1BCF3EBF0032675C /* Menu.storyboard */,
 				26D80D9B1BA3AE930012ECBC /* ViewController.swift */,
 				3FB8A9111BCDE50000AD83BF /* DebtViewController.swift */,
 				3FB8A91D1BCE046700AD83BF /* OptionsViewController.swift */,
 				3FB8A90B1BCDCEF700AD83BF /* SlideMenuController.swift */,
 				3FB8A90F1BCDDF5500AD83BF /* LeftViewController.swift */,
 				3FB8A90D1BCDDF0F00AD83BF /* MainViewController.swift */,
-				26D80D9D1BA3AE930012ECBC /* Main.storyboard */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -262,7 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26D80D9F1BA3AE930012ECBC /* Main.storyboard in Resources */,
+				3FCD61FB1BCF3EBF0032675C /* Menu.storyboard in Resources */,
 				26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */,
 				26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */,
 			);
@@ -348,14 +348,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		26D80D9D1BA3AE930012ECBC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				26D80D9E1BA3AE930012ECBC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
