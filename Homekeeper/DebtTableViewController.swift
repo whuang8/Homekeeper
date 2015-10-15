@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+class DebtTableViewController: UITableViewController {
+    var debts = [DebtItem]();
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}

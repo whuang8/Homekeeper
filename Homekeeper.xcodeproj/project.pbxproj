@@ -33,6 +33,11 @@
 		3F6F8F1E1BD04A2F00359A64 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */; settings = {ASSET_TAGS = (); }; };
 		3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1F1BD04A6300359A64 /* Base.lproj */; settings = {ASSET_TAGS = (); }; };
 		3F6F8F221BD04A8300359A64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F211BD04A8300359A64 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3F6F8F251BD0504800359A64 /* DebtTracker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F241BD0504800359A64 /* DebtTracker.storyboard */; settings = {ASSET_TAGS = (); }; };
+		3F6F8F271BD0573100359A64 /* DebtItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F261BD0573100359A64 /* DebtItem.swift */; settings = {ASSET_TAGS = (); }; };
+		3F6F8F291BD0583500359A64 /* DebtItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F281BD0583500359A64 /* DebtItemViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3F6F8F2B1BD059E500359A64 /* DebtItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F2A1BD059E500359A64 /* DebtItemTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		3F6F8F2D1BD05A6100359A64 /* DebtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F2C1BD05A6100359A64 /* DebtTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FE6A0981BD0310B00C312EA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0971BD0310B00C312EA /* ChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C7238548133FC4CF609D6303 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC0D5C18339632B07140312 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -78,6 +83,11 @@
 		3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Popover.storyboard; path = Homekeeper/Popover.storyboard; sourceTree = "<group>"; };
 		3F6F8F1F1BD04A6300359A64 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = Homekeeper/Base.lproj; sourceTree = "<group>"; };
 		3F6F8F211BD04A8300359A64 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Homekeeper/ViewController.swift; sourceTree = "<group>"; };
+		3F6F8F241BD0504800359A64 /* DebtTracker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DebtTracker.storyboard; sourceTree = "<group>"; };
+		3F6F8F261BD0573100359A64 /* DebtItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtItem.swift; sourceTree = "<group>"; };
+		3F6F8F281BD0583500359A64 /* DebtItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtItemViewController.swift; sourceTree = "<group>"; };
+		3F6F8F2A1BD059E500359A64 /* DebtItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtItemTableViewCell.swift; sourceTree = "<group>"; };
+		3F6F8F2C1BD05A6100359A64 /* DebtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtTableViewController.swift; sourceTree = "<group>"; };
 		3FE6A0971BD0310B00C312EA /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		420F39C2BD024566E35CB9C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6B790607C4D6A552E9FB28FE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +143,7 @@
 				26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */,
 				26D80DA01BA3AE930012ECBC /* Images.xcassets */,
 				26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */,
+				3F6F8F231BD0502600359A64 /* Debt */,
 				3FE6A0781BD02FDF00C312EA /* UI */,
 				2F9B38E31BC9F0DA00D3D090 /* GroceryList */,
 				26D80D971BA3AE930012ECBC /* Supporting Files */,
@@ -176,6 +187,18 @@
 				2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */,
 			);
 			name = GroceryList;
+			sourceTree = "<group>";
+		};
+		3F6F8F231BD0502600359A64 /* Debt */ = {
+			isa = PBXGroup;
+			children = (
+				3F6F8F241BD0504800359A64 /* DebtTracker.storyboard */,
+				3F6F8F261BD0573100359A64 /* DebtItem.swift */,
+				3F6F8F2C1BD05A6100359A64 /* DebtTableViewController.swift */,
+				3F6F8F2A1BD059E500359A64 /* DebtItemTableViewCell.swift */,
+				3F6F8F281BD0583500359A64 /* DebtItemViewController.swift */,
+			);
+			name = Debt;
 			sourceTree = "<group>";
 		};
 		3FE6A0781BD02FDF00C312EA /* UI */ = {
@@ -304,6 +327,7 @@
 				3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */,
 				2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */,
 				2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */,
+				3F6F8F251BD0504800359A64 /* DebtTracker.storyboard in Resources */,
 				3F6F8F1E1BD04A2F00359A64 /* Popover.storyboard in Resources */,
 				26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */,
 				26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */,
@@ -367,8 +391,12 @@
 				3F6F8F1A1BD0491400359A64 /* UIViewControllerExtension.swift in Sources */,
 				265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */,
 				26D80D9C1BA3AE930012ECBC /* GroceryItemViewController.swift in Sources */,
+				3F6F8F271BD0573100359A64 /* DebtItem.swift in Sources */,
 				2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */,
+				3F6F8F291BD0583500359A64 /* DebtItemViewController.swift in Sources */,
 				3F6F8F141BD0491400359A64 /* DebtViewController.swift in Sources */,
+				3F6F8F2D1BD05A6100359A64 /* DebtTableViewController.swift in Sources */,
+				3F6F8F2B1BD059E500359A64 /* DebtItemTableViewCell.swift in Sources */,
 				3F6F8F221BD04A8300359A64 /* ViewController.swift in Sources */,
 				3F6F8F191BD0491400359A64 /* UITableViewExtension.swift in Sources */,
 				2F9B38E81BCAC5E600D3D090 /* GroceryTableViewController.swift in Sources */,

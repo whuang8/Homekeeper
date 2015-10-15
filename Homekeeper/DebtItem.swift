@@ -7,3 +7,24 @@
 //
 
 import Foundation
+import UIKit
+
+class DebtItem {
+    var amount: Double;
+    var message: String;
+    var personInDebt: String;
+    var debtor: String;
+    var paid: Bool;
+    
+    init? (amount: Double, message: String, personInDebt: String, debtor: String) {
+        self.amount = amount;
+        self.message = message;
+        self.personInDebt = personInDebt;
+        self.debtor = debtor;
+        self.paid = false;
+        
+        if amount == 0.0 {
+            return nil;
+        }
+    }
+}

@@ -1,7 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--New Item-->
+        <scene sceneID="34e-zw-uuq">
+            <objects>
+                <viewController id="KgA-p7-5BC" customClass="GroceryItemViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oEs-Df-7FB"/>
+                        <viewControllerLayoutGuide type="bottom" id="vRq-B1-Z6l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kn7-eB-DKX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y7F-CE-NHB">
+                                <rect key="frame" x="20" y="82" width="560" height="146"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="34" placeholderIntrinsicHeight="21" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90E-Ao-Bcm">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="29" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xeI-zR-wbK">
+                                        <rect key="frame" x="0.0" y="36" width="560" height="29"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vok-Br-ZFO">
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="29"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-6z-6X2">
+                                                <rect key="frame" x="386" y="0.0" width="94" height="29"/>
+                                                <animations/>
+                                                <connections>
+                                                    <action selector="changeCount:" destination="KgA-p7-5BC" eventType="valueChanged" id="mxn-pz-cwf"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="29" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhm-nQ-zUo">
+                                                <rect key="frame" x="500" y="0.0" width="60" height="29"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T88-U0-Y4r">
+                                        <rect key="frame" x="0.0" y="80" width="37" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter any additional information here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1p-4u-oxW">
+                                        <rect key="frame" x="0.0" y="116" width="560" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="j1p-4u-oxW" firstAttribute="width" secondItem="Y7F-CE-NHB" secondAttribute="width" id="Xjn-Py-77u"/>
+                                    <constraint firstItem="xeI-zR-wbK" firstAttribute="leading" secondItem="Y7F-CE-NHB" secondAttribute="leading" id="kJh-YT-XWn"/>
+                                    <constraint firstAttribute="trailing" secondItem="xeI-zR-wbK" secondAttribute="trailing" id="n7d-vQ-vNy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y7F-CE-NHB" firstAttribute="leading" secondItem="Kn7-eB-DKX" secondAttribute="leadingMargin" id="2za-ms-CZe"/>
+                            <constraint firstItem="Y7F-CE-NHB" firstAttribute="trailing" secondItem="Kn7-eB-DKX" secondAttribute="trailingMargin" id="mSh-i7-yHf"/>
+                            <constraint firstItem="Y7F-CE-NHB" firstAttribute="top" secondItem="oEs-Df-7FB" secondAttribute="bottom" constant="18" id="yX1-ax-tlK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Item" id="CiG-aR-SXD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ug1-K3-28r">
+                            <connections>
+                                <action selector="cancel:" destination="KgA-p7-5BC" id="viE-EC-akk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zUe-hd-Mef">
+                            <connections>
+                                <segue destination="Dbm-s4-AP6" kind="unwind" unwindAction="unwindForSegue:" id="0nj-Ui-CaA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="additionalInfoTextField" destination="j1p-4u-oxW" id="ZtA-uq-mZK"/>
+                        <outlet property="countLabel" destination="Fhm-nQ-zUo" id="Bgo-Ih-aOe"/>
+                        <outlet property="countStepper" destination="7g6-6z-6X2" id="AOm-Ck-9sM"/>
+                        <outlet property="groceryItemTextField" destination="vok-Br-ZFO" id="WPS-fE-SkC"/>
+                        <outlet property="saveButton" destination="zUe-hd-Mef" id="egd-zW-Xlb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SgT-Bj-YHs" sceneMemberID="firstResponder"/>
+                <exit id="Dbm-s4-AP6" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2534" y="568"/>
+        </scene>
+    </scenes>
 </document>
