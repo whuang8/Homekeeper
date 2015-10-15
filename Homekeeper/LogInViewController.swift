@@ -60,7 +60,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     // We are now logged in
                     print("Log in successful")
                     self.loggedIn = true
-                    self.performSegueWithIdentifier("SignInSegue", sender: self)
+                    //self.performSegueWithIdentifier("SignInSegue", sender: self)
+                    
+                    let storyboard = UIStoryboard(name: "Popover", bundle: nil)
+                    let controller = storyboard.instantiateViewControllerWithIdentifier("ChatViewController")
+                    self.presentViewController(controller, animated: true, completion: nil)
                 }
         })
     }

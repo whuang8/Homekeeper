@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265719671BBA2D1D00D29495 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		26D80D9A1BA3AE930012ECBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80D991BA3AE930012ECBC /* AppDelegate.swift */; };
 		26D80D9C1BA3AE930012ECBC /* GroceryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80D9B1BA3AE930012ECBC /* GroceryItemViewController.swift */; };
 		26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA01BA3AE930012ECBC /* Images.xcassets */; };
 		26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */; };
@@ -20,6 +19,21 @@
 		2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */; settings = {ASSET_TAGS = (); }; };
 		2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */; settings = {ASSET_TAGS = (); }; };
+		3FE6A0881BD0301200C312EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0791BD0301200C312EA /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A0891BD0301200C312EA /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3FE6A07A1BD0301200C312EA /* Base.lproj */; settings = {ASSET_TAGS = (); }; };
+		3FE6A08A1BD0301200C312EA /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A07B1BD0301200C312EA /* BaseTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A08B1BD0301200C312EA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A07C1BD0301200C312EA /* ContainerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A08C1BD0301200C312EA /* DebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A07D1BD0301200C312EA /* DebtViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A08E1BD0301200C312EA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE6A07F1BD0301200C312EA /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		3FE6A08F1BD0301200C312EA /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0801BD0301200C312EA /* LeftViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A0901BD0301200C312EA /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0811BD0301200C312EA /* OptionsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A0911BD0301200C312EA /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE6A0821BD0301200C312EA /* Popover.storyboard */; settings = {ASSET_TAGS = (); }; };
+		3FE6A0921BD0301200C312EA /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0831BD0301200C312EA /* SlideMenuController.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A0931BD0301200C312EA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0841BD0301200C312EA /* StringExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A0941BD0301200C312EA /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0851BD0301200C312EA /* UITableViewExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A0951BD0301200C312EA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0861BD0301200C312EA /* UIViewControllerExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A0961BD0301200C312EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0871BD0301200C312EA /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE6A0981BD0310B00C312EA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0971BD0310B00C312EA /* ChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C7238548133FC4CF609D6303 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC0D5C18339632B07140312 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +52,6 @@
 		26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		26D80D941BA3AE930012ECBC /* Homekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D80D981BA3AE930012ECBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26D80D991BA3AE930012ECBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26D80D9B1BA3AE930012ECBC /* GroceryItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemViewController.swift; sourceTree = "<group>"; };
 		26D80DA01BA3AE930012ECBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		26D80DA31BA3AE930012ECBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -51,6 +64,21 @@
 		2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroceryTableViewController.xib; sourceTree = "<group>"; };
 		2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroceryList.storyboard; sourceTree = "<group>"; };
 		2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogInMain.storyboard; sourceTree = "<group>"; };
+		3FE6A0791BD0301200C312EA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../../../redo ayeee/Homekeeper/AppDelegate.swift"; sourceTree = "<group>"; };
+		3FE6A07A1BD0301200C312EA /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = "../../redo ayeee/Homekeeper/Base.lproj"; sourceTree = "<group>"; };
+		3FE6A07B1BD0301200C312EA /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = "../../redo ayeee/Homekeeper/BaseTableViewCell.swift"; sourceTree = "<group>"; };
+		3FE6A07C1BD0301200C312EA /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = "../../redo ayeee/Homekeeper/ContainerViewController.swift"; sourceTree = "<group>"; };
+		3FE6A07D1BD0301200C312EA /* DebtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebtViewController.swift; path = "../../redo ayeee/Homekeeper/DebtViewController.swift"; sourceTree = "<group>"; };
+		3FE6A07F1BD0301200C312EA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../../redo ayeee/Homekeeper/Info.plist"; sourceTree = "<group>"; };
+		3FE6A0801BD0301200C312EA /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftViewController.swift; path = "../../redo ayeee/Homekeeper/LeftViewController.swift"; sourceTree = "<group>"; };
+		3FE6A0811BD0301200C312EA /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsViewController.swift; path = "../../redo ayeee/Homekeeper/OptionsViewController.swift"; sourceTree = "<group>"; };
+		3FE6A0821BD0301200C312EA /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Popover.storyboard; path = "../../redo ayeee/Homekeeper/Popover.storyboard"; sourceTree = "<group>"; };
+		3FE6A0831BD0301200C312EA /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = "../../redo ayeee/Homekeeper/SlideMenuController.swift"; sourceTree = "<group>"; };
+		3FE6A0841BD0301200C312EA /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = "../../redo ayeee/Homekeeper/StringExtension.swift"; sourceTree = "<group>"; };
+		3FE6A0851BD0301200C312EA /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewExtension.swift; path = "../../redo ayeee/Homekeeper/UITableViewExtension.swift"; sourceTree = "<group>"; };
+		3FE6A0861BD0301200C312EA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = "../../redo ayeee/Homekeeper/UIViewControllerExtension.swift"; sourceTree = "<group>"; };
+		3FE6A0871BD0301200C312EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../redo ayeee/Homekeeper/ViewController.swift"; sourceTree = "<group>"; };
+		3FE6A0971BD0310B00C312EA /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		420F39C2BD024566E35CB9C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6B790607C4D6A552E9FB28FE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9BC0D5C18339632B07140312 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,12 +126,14 @@
 		26D80D961BA3AE930012ECBC /* Homekeeper */ = {
 			isa = PBXGroup;
 			children = (
+				3FE6A07F1BD0301200C312EA /* Info.plist */,
 				2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */,
-				26D80D991BA3AE930012ECBC /* AppDelegate.swift */,
+				3FE6A0791BD0301200C312EA /* AppDelegate.swift */,
 				265719671BBA2D1D00D29495 /* LogInViewController.swift */,
 				26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */,
 				26D80DA01BA3AE930012ECBC /* Images.xcassets */,
 				26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */,
+				3FE6A0781BD02FDF00C312EA /* UI */,
 				2F9B38E31BC9F0DA00D3D090 /* GroceryList */,
 				26D80D971BA3AE930012ECBC /* Supporting Files */,
 			);
@@ -146,6 +176,27 @@
 				2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */,
 			);
 			name = GroceryList;
+			sourceTree = "<group>";
+		};
+		3FE6A0781BD02FDF00C312EA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3FE6A07A1BD0301200C312EA /* Base.lproj */,
+				3FE6A07B1BD0301200C312EA /* BaseTableViewCell.swift */,
+				3FE6A0971BD0310B00C312EA /* ChatViewController.swift */,
+				3FE6A07C1BD0301200C312EA /* ContainerViewController.swift */,
+				3FE6A07D1BD0301200C312EA /* DebtViewController.swift */,
+				3FE6A0801BD0301200C312EA /* LeftViewController.swift */,
+				3FE6A0811BD0301200C312EA /* OptionsViewController.swift */,
+				3FE6A0821BD0301200C312EA /* Popover.storyboard */,
+				3FE6A0831BD0301200C312EA /* SlideMenuController.swift */,
+				3FE6A0841BD0301200C312EA /* StringExtension.swift */,
+				3FE6A0851BD0301200C312EA /* UITableViewExtension.swift */,
+				3FE6A0861BD0301200C312EA /* UIViewControllerExtension.swift */,
+				3FE6A0871BD0301200C312EA /* ViewController.swift */,
+			);
+			name = UI;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8517E83F9FA211879C4C5D1F /* Pods */ = {
@@ -248,10 +299,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE6A08E1BD0301200C312EA /* Info.plist in Resources */,
 				2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */,
 				2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */,
+				3FE6A0911BD0301200C312EA /* Popover.storyboard in Resources */,
 				2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */,
 				26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */,
+				3FE6A0891BD0301200C312EA /* Base.lproj in Resources */,
 				26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,13 +357,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE6A0881BD0301200C312EA /* AppDelegate.swift in Sources */,
+				3FE6A08C1BD0301200C312EA /* DebtViewController.swift in Sources */,
+				3FE6A0931BD0301200C312EA /* StringExtension.swift in Sources */,
+				3FE6A0941BD0301200C312EA /* UITableViewExtension.swift in Sources */,
+				3FE6A0951BD0301200C312EA /* UIViewControllerExtension.swift in Sources */,
 				26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */,
+				3FE6A08B1BD0301200C312EA /* ContainerViewController.swift in Sources */,
 				265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */,
 				26D80D9C1BA3AE930012ECBC /* GroceryItemViewController.swift in Sources */,
+				3FE6A08A1BD0301200C312EA /* BaseTableViewCell.swift in Sources */,
 				2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */,
+				3FE6A0921BD0301200C312EA /* SlideMenuController.swift in Sources */,
+				3FE6A0961BD0301200C312EA /* ViewController.swift in Sources */,
+				3FE6A0901BD0301200C312EA /* OptionsViewController.swift in Sources */,
 				2F9B38E81BCAC5E600D3D090 /* GroceryTableViewController.swift in Sources */,
+				3FE6A08F1BD0301200C312EA /* LeftViewController.swift in Sources */,
+				3FE6A0981BD0310B00C312EA /* ChatViewController.swift in Sources */,
 				2F9B38E51BCAC29500D3D090 /* GroceryItemTableViewCell.swift in Sources */,
-				26D80D9A1BA3AE930012ECBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
