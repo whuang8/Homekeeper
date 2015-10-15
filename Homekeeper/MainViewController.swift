@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
-        navigationItem.setRightBarButtonItem(UIBarButtonSystemItem.Add, animated: true);
+        //navigationItem.setRightBarButtonItem(UIBarButtonSystemItem.Add, animated: true);
     }
     
     override func didReceiveMemoryWarning() {
