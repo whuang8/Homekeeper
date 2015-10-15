@@ -79,12 +79,8 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
     }
     
     func makeToolbar() {
-        //let optionsButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Edit, target: nil, action: nil)
-        //let toolbarButtons = [optionsButton];
-        
         let toolbar = UIToolbar(frame: CGRectMake(0, view.frame.height - 44, 270, 44));
         toolbar.backgroundColor = UIColor.redColor();
-        //toolbar.setItems(toolbarButtons, animated: true);
         view.addSubview(toolbar);
         
     }
