@@ -39,7 +39,7 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         self.tableView.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
         self.view.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
         
-        let storyboard = UIStoryboard(name: "Menu", bundle: nil);
+        let storyboard = UIStoryboard(name: "Popover", bundle: nil);
         
         let debtViewController = storyboard.instantiateViewControllerWithIdentifier("DebtViewController") as! DebtViewController;
         self.debtViewController = UINavigationController(rootViewController: debtViewController);

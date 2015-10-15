@@ -1,15 +1,15 @@
 //
-//  MainViewController.swift
-//  Homekeeper
+//  ChatViewController.swift
+//  
 //
-//  Created by Tanner Strom on 10/13/15.
-//  Copyright © 2015 Team9. All rights reserved.
+//  Created by Tanner Strom on 10/14/15.
+//
 //
 
 import Foundation
 import UIKit
 
-class MainViewController: UIViewController {
+class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
