@@ -59,6 +59,7 @@
                                     <outlet property="debtLabel" destination="Uso-pg-25t" id="Scv-Yw-tsP"/>
                                     <outlet property="debtorLabel" destination="Usg-9J-jod" id="pfu-7P-R4I"/>
                                     <outlet property="messageLabel" destination="fCq-A6-5kp" id="WyY-nl-cxG"/>
+                                    <segue destination="3Nz-MC-oQn" kind="presentation" identifier="ShowDetail" id="LLT-HU-y2p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -70,7 +71,7 @@
                     <navigationItem key="navigationItem" id="qpB-ZP-sDo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2im-wv-xc7">
                             <connections>
-                                <segue destination="3Nz-MC-oQn" kind="presentation" id="mqI-Us-PDi"/>
+                                <segue destination="YoH-S1-iag" kind="presentation" identifier="AddItem" id="eTW-ts-jCj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -114,7 +115,7 @@
                                 <animations/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <segue destination="f2n-RB-t0M" kind="unwind" unwindAction="unwindToDebtList:" id="7QF-z7-2Wx"/>
+                                    <segue destination="f2n-RB-t0M" kind="unwind" unwindAction="unwindToDebtList:" id="DIm-gr-dmX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwN-T0-eXw">
@@ -194,6 +195,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mqI-Us-PDi"/>
+        <segue reference="LLT-HU-y2p"/>
     </inferredMetricsTieBreakers>
 </document>

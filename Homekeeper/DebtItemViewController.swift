@@ -36,6 +36,12 @@ class DebtItemViewController: UIViewController, UITextFieldDelegate {
         
         // Handle the text field’s user input through delegate callbacks.
         personTextField.delegate = self
+        
+        if let debtitem = debtitem {
+            personTextField.text = debtitem.personInDebt;
+            amountTextField.text = debtitem.amount;
+            messageTextField.text = debtitem.message;
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -43,6 +49,8 @@ class DebtItemViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    
     
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)

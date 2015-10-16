@@ -23,7 +23,7 @@ class DebtTableViewController: UITableViewController {
     }
     
     func loadSampleItems() {
-        let item1 = DebtItem(amount: "69.00", message: "I hate you", personInDebt: "Lee Anne")!;
+        let item1 = DebtItem(amount: "69.00", message: "idk man", personInDebt: "Lee Anne")!;
         let item2 = DebtItem(amount: "420.00", message: "That good kush", personInDebt: "Lance")!;
         let item3 = DebtItem(amount: "42.00", message: "Nerds are cool", personInDebt: "Tanner")!;
         
@@ -59,12 +59,38 @@ class DebtTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func unwindToDebtList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.sourceViewController as? DebtItemViewController, debtitem = sourceViewController.debtitem {
-            let newIndexPath = NSIndexPath(forRow: debts.count, inSection: 0);
-            debts.append(debtitem);
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom);
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowDetail" {
+            let debtDetailViewController = segue.destinationViewController as! DebtItemViewController
+            
+
+            if let selectedDebtCell = sender as? DebtItemTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedDebtCell)!
+                let selectedMeal = debts[indexPath.row]
+                debtDetailViewController.debtitem = selectedMeal
+            }
+        }
+        else if segue.identifier == "AddItem" {
+            print("Adding new cell");
         }
     }
     
+    @IBAction func unwindToDebtList(sender: UIStoryboardSegue) {
+        
+        let sourceViewController = sender.sourceViewController as? DebtItemViewController
+        
+        if (sourceViewController != nil), let debt = sourceViewController?.debtitem {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                debts[selectedIndexPath.row] = debt
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            }
+            else {
+                let newIndexPath = NSIndexPath(forRow: debts.count, inSection: 0)
+                debts.append(debt)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
+        }
+    }
 }
