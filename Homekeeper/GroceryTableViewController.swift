@@ -30,9 +30,9 @@ class GroceryTableViewController: UITableViewController {
     }
     
     func loadSampleItems() {
-        let item1 = GroceryItem(groceryItem: "Shit", additionalInfo: "", count: 2)!
-        let item2 = GroceryItem(groceryItem: "Other", additionalInfo: "Things go here", count: 5)!
-        let item3 = GroceryItem(groceryItem: "Test", additionalInfo: "Stuff", count: 1)!
+        let item1 = GroceryItem(groceryItem: "Blueberries", additionalInfo: "", count: 2)!
+        let item2 = GroceryItem(groceryItem: "Waffles", additionalInfo: "Lego my Ego", count: 5)!
+        let item3 = GroceryItem(groceryItem: "Hot pockets", additionalInfo: "Yumm", count: 75)!
         
         items += [item1, item2, item3]
     }

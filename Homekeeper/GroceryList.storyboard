@@ -22,26 +22,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="325" placeholderIntrinsicHeight="43" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUO-Ij-EP8" userLabel="Grocery Item Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUO-Ij-EP8" userLabel="Grocery Item Label">
                                             <rect key="frame" x="8" y="8" width="155" height="43"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="65" placeholderIntrinsicHeight="30" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krb-39-w1u" userLabel="Count Label">
-                                            <rect key="frame" x="267" y="16" width="66" height="30"/>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hj9-Nq-Nb0" userLabel="Item Switcher">
+                                            <rect key="frame" x="341" y="14" width="51" height="31"/>
+                                            <animations/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DM-aw-y8s" userLabel="Additional Info Label">
+                                            <rect key="frame" x="171" y="19" width="88" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="31" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hj9-Nq-Nb0" userLabel="Item Switcher">
-                                            <rect key="frame" x="341" y="16" width="51" height="31"/>
-                                            <animations/>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DM-aw-y8s" userLabel="Additional Info Label">
-                                            <rect key="frame" x="171" y="19" width="88" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krb-39-w1u" userLabel="Count Label">
+                                            <rect key="frame" x="267" y="15" width="66" height="30"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,6 +49,17 @@
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="krb-39-w1u" firstAttribute="leading" secondItem="4DM-aw-y8s" secondAttribute="trailing" constant="30" id="FjK-gM-h5R"/>
+                                        <constraint firstItem="Hj9-Nq-Nb0" firstAttribute="top" secondItem="U0p-qb-3pA" secondAttribute="topMargin" id="P2h-Ac-iRo"/>
+                                        <constraint firstItem="Hj9-Nq-Nb0" firstAttribute="leading" secondItem="krb-39-w1u" secondAttribute="trailing" constant="25" id="VOL-Dq-gcB"/>
+                                        <constraint firstItem="YUO-Ij-EP8" firstAttribute="leading" secondItem="U0p-qb-3pA" secondAttribute="leadingMargin" id="XnZ-W9-fHL"/>
+                                        <constraint firstItem="YUO-Ij-EP8" firstAttribute="top" secondItem="U0p-qb-3pA" secondAttribute="topMargin" constant="1" id="ZNA-5O-3Ge"/>
+                                        <constraint firstItem="4DM-aw-y8s" firstAttribute="leading" secondItem="YUO-Ij-EP8" secondAttribute="trailing" constant="60" id="fwo-yc-FOS"/>
+                                        <constraint firstItem="krb-39-w1u" firstAttribute="top" secondItem="U0p-qb-3pA" secondAttribute="topMargin" constant="5" id="h4v-g1-uPk"/>
+                                        <constraint firstItem="4DM-aw-y8s" firstAttribute="top" secondItem="U0p-qb-3pA" secondAttribute="topMargin" constant="5" id="jjL-wA-fqI"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Hj9-Nq-Nb0" secondAttribute="trailing" constant="10" id="lrE-Rb-l71"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
