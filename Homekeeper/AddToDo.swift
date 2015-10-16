@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddToDo: UIViewController {
+class AddToDo: UIViewController, UITextFieldDelegate {
 
     //Properties
     @IBOutlet weak var inputTextField: UITextField!
@@ -21,7 +21,11 @@ class AddToDo: UIViewController {
         // Do any additional setup after loading the view.
         //inputTextField.delegate = self
         
-        checkValidMessage()
+        if let todo = todo {
+            navigationItem.title = todo.message
+        }
+        
+        //checkValidMessage()
     }
     
     var todo: ToDo?
@@ -31,21 +35,21 @@ class AddToDo: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
+    /*func textFieldDidBeginEditing(textField: UITextField) {
         //Disable the Save button while editing.
         saveNewItem.enabled = false
-    }
+    }*/
     
-    func checkValidMessage() {
+    /*func checkValidMessage() {
         // Disable the Save button if the text field is empty.
         let text = inputTextField.text ?? ""
         saveNewItem.enabled = !text.isEmpty
-    }
+    }*/
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    /*func textFieldDidEndEditing(textField: UITextField) {
         checkValidMessage()
         navigationItem.title = textField.text
-    }
+    }*/
     
     //Actions
     

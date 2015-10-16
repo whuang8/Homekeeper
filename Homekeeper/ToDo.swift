@@ -14,11 +14,11 @@ class ToDo {
     var message: String
     
     //initalize
-    init(message: String) {
+    init?(message: String) {
         self.message = message
-//        if (message.isEmpty) {
-//                return nil
-//        }
+        if (message.isEmpty) {
+                return nil
+        }
     
     }
 

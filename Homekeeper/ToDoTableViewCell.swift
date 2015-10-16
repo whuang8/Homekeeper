@@ -12,7 +12,7 @@ class ToDoTableViewCell: UITableViewCell {
     
     //Properties
     @IBOutlet weak var testLabel: UILabel!
-    @IBOutlet weak var testControl: UITextField!
+//    @IBOutlet weak var testControl: UITextField!
 
     
     override func awakeFromNib() {

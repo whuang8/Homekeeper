@@ -22,21 +22,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf4-IW-RsX">
-                                            <rect key="frame" x="8" y="46" width="261" height="27"/>
+                                            <rect key="frame" x="8" y="8" width="261" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4P-1O-HWu">
-                                            <rect key="frame" x="8" y="8" width="584" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="testControl" destination="G4P-1O-HWu" id="7Mj-OT-IaN"/>
                                     <outlet property="testLabel" destination="gf4-IW-RsX" id="FVE-Kx-WPI"/>
+                                    <segue destination="yU9-Mv-24T" kind="show" identifier="editDetails" id="otD-7L-Ab3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +43,7 @@
                     <navigationItem key="navigationItem" title="To Do" id="CkP-F1-Iwq">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="Uva-bj-Xgf">
                             <connections>
-                                <segue destination="yU9-Mv-24T" kind="show" id="nA1-tQ-gfW"/>
+                                <segue destination="Kdf-AB-t75" kind="presentation" identifier="addItem" id="nA1-tQ-gfW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -108,7 +103,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hle-eL-TAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="GAo-1o-mT5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1153" y="292"/>
+            <point key="canvasLocation" x="1773" y="292"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cOR-Qe-1U8">
@@ -128,5 +123,26 @@
             </objects>
             <point key="canvasLocation" x="-461" y="285"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xoQ-W6-1Ao">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kdf-AB-t75" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yvd-kb-bhc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yU9-Mv-24T" kind="relationship" relationship="rootViewController" id="Nf5-b7-atk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1sR-9Z-iVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021" y="692"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="otD-7L-Ab3"/>
+    </inferredMetricsTieBreakers>
 </document>
