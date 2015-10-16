@@ -11,6 +11,11 @@ import UIKit
 
 class DebtItemTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var debtLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var debtorLabel: UILabel!
+    //@IBOutlet weak var personInDebtLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

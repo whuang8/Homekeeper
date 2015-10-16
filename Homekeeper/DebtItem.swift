@@ -13,14 +13,14 @@ class DebtItem {
     var amount: Double;
     var message: String;
     var personInDebt: String;
-    var debtor: String;
+    //var debtor: String;
     var paid: Bool;
     
-    init? (amount: Double, message: String, personInDebt: String, debtor: String) {
+    init? (amount: Double, message: String, personInDebt: String) {
         self.amount = amount;
         self.message = message;
         self.personInDebt = personInDebt;
-        self.debtor = debtor;
+        //self.debtor = debtor;
         self.paid = false;
         
         if amount == 0.0 {

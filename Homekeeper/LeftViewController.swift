@@ -40,9 +40,10 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         self.view.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
         
         let storyboard = UIStoryboard(name: "Popover", bundle: nil);
-        let storyboard2 = UIStoryboard(name: "GroceryList", bundle: nil)
+        let storyboard2 = UIStoryboard(name: "GroceryList", bundle: nil);
+        let storyboard3 = UIStoryboard(name: "DebtTracker", bundle: nil);
         
-        let debtViewController = storyboard.instantiateViewControllerWithIdentifier("DebtViewController") as! DebtViewController;
+        let debtViewController = storyboard3.instantiateViewControllerWithIdentifier("DebtTableViewController") as! DebtViewController;
         self.debtViewController = UINavigationController(rootViewController: debtViewController);
         
         let grocViewController = storyboard2.instantiateViewControllerWithIdentifier("GroceryTableViewController") as!
