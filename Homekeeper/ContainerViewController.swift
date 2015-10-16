@@ -72,6 +72,7 @@ class ContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setNavigationBarItem()
         /*
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let mainNavigationController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("MainNavigationController") 
