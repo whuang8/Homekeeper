@@ -10,7 +10,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="GroceryTableViewController" id="q59-D0-XxO" customClass="GroceryTableViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="dsM-bK-bq2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -22,7 +22,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="350" placeholderIntrinsicHeight="43" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUO-Ij-EP8" userLabel="Grocery Item Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="325" placeholderIntrinsicHeight="43" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUO-Ij-EP8" userLabel="Grocery Item Label">
                                             <rect key="frame" x="8" y="8" width="155" height="43"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -56,7 +56,7 @@
                                     <outlet property="checkoutSwitch" destination="Hj9-Nq-Nb0" id="uGf-Ib-YCy"/>
                                     <outlet property="countLabel" destination="krb-39-w1u" id="3Nk-nl-dEz"/>
                                     <outlet property="groceryItemLabel" destination="YUO-Ij-EP8" id="YOh-7c-uvu"/>
-                                    <segue destination="BYX-38-t0r" kind="show" identifier="ShowDetail" id="1w3-sr-xLY"/>
+                                    <segue destination="BYX-38-t0r" kind="show" identifier="ShowDetail" id="XwV-uc-90n"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -65,14 +65,24 @@
                             <outlet property="delegate" destination="q59-D0-XxO" id="DRp-0S-fvA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Grocery List" id="jZ9-1s-kyp">
-                        <barButtonItem key="leftBarButtonItem" title="Checkout" id="AM7-kV-WcQ"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Emh-Tk-RMK">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ISO-De-lKz"/>
+                        <barButtonItem title="Checkout" id="ZVr-BU-GDI">
                             <connections>
-                                <segue destination="zTO-iA-dTv" kind="presentation" id="yoj-ZX-wrd"/>
+                                <action selector="checkoutPressed:" destination="q59-D0-XxO" id="Fdi-pz-yRL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Klb-7E-lsh"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Grocery List" id="jZ9-1s-kyp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Emh-Tk-RMK" userLabel="AddItem">
+                            <connections>
+                                <segue destination="elf-p7-ePM" kind="presentation" identifier="AddItem" id="1aq-sH-tNb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oi-lX-Psl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +97,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IL4-ij-dh6">
@@ -179,7 +189,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="uB5-CG-4kc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2534" y="568"/>
+            <point key="canvasLocation" x="2682" y="576"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JlK-5J-oJT">
@@ -201,26 +211,26 @@
             <point key="canvasLocation" x="112" y="576"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="zRI-Zd-6ZV">
+        <scene sceneID="kuF-80-V6g">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zTO-iA-dTv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="elf-p7-ePM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BDK-Ck-jjh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3pU-Ex-faE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYX-38-t0r" kind="relationship" relationship="rootViewController" id="4Dp-K3-9zK"/>
+                        <segue destination="BYX-38-t0r" kind="relationship" relationship="rootViewController" id="vBC-Kg-ihz"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gMk-c4-ibq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ExN-ix-VXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="1007"/>
+            <point key="canvasLocation" x="1812" y="1040"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1w3-sr-xLY"/>
+        <segue reference="XwV-uc-90n"/>
     </inferredMetricsTieBreakers>
 </document>

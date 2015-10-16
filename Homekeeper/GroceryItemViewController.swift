@@ -27,16 +27,18 @@ class GroceryItemViewController: UIViewController, UITextFieldDelegate {
         groceryItemTextField.delegate = self
         additionalInfoTextField.delegate = self
         
+        // Set countStepper to 1
+        countStepper.value = 1
+        
         // Set up item info if editing an existing item
         if let item = item {
             groceryItemTextField.text = item.groceryItem
             countStepper.value = Double(item.count)
             additionalInfoTextField.text = item.additionalInfo
-            self.navigationController?.title = item.groceryItem
+            navigationItem.title = item.groceryItem
         }
         
-        // Set countStepper to 1
-        countStepper.value = 1
+        countLabel.text = String(format:"%d", Int(countStepper.value))
         
         // Enable save button only if text in groceryItem
         checkVaildItemName()
@@ -91,7 +93,7 @@ class GroceryItemViewController: UIViewController, UITextFieldDelegate {
         let isPresentingInAddItemMode = presentingViewController is UINavigationController
         
         if isPresentingInAddItemMode {
-            dismissViewControllerAnimated(true, completion: nil)
+            navigationController!.popViewControllerAnimated(true)
         }
         
         else {

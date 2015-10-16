@@ -21,8 +21,9 @@ class GroceryTableViewController: UITableViewController {
         // Load sample items
         loadSampleItems()
         
-        // Add navigation bar
+        // Navigation and toolbar setup
         self.setNavigationBarItem()
+        self.navigationController?.toolbarHidden = false
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,6 +41,24 @@ class GroceryTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Mark: Actions
+    
+    @IBAction func checkoutPressed(sender: UIBarButtonItem) {
+        let tableView = self.tableView
+        
+        // Remove rows that are switched to be checked out
+        for var row = items.count - 1; row >= 0; row-- {
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0)) as! GroceryItemTableViewCell
+            
+            if cell.checkoutSwitch.on {
+                items.removeAtIndex(row)
+            }
+        }
+        
+        tableView.reloadData()
+    }
+    
 
     // MARK: - Table view data source
 
@@ -125,6 +144,7 @@ class GroceryTableViewController: UITableViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Load data for detail view
         if segue.identifier == "ShowDetail" {
             let itemDetailViewController = segue.destinationViewController as! GroceryItemViewController
             
@@ -134,9 +154,6 @@ class GroceryTableViewController: UITableViewController {
                 let selectedItem = items[indexPath.row]
                 itemDetailViewController.item = selectedItem
             }
-        }
-        else if segue.identifier == "AddItem" {
-            print("Adding a new item.")
         }
     }
     
