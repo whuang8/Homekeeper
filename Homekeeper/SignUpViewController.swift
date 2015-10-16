@@ -41,6 +41,16 @@ class SignUpViewController: UIViewController {
                 } else {
                     let uid = result["uid"] as? String
                     print("Successfully created user account with uid: \(uid)")
+                    
+                    
+                    let ref = Firebase(url: "https://homekeeper.firebaseio.com")
+                    
+                    let userInfo = ["first_name": self.firstName.text!, "last_name": self.lastName.text!, "email": self.email.text!]
+                    let usersRef = ref.childByAppendingPath("users")
+                    let user = [uid as String!: userInfo]
+                
+                    usersRef.updateChildValues(user)
+                    
                     self.performSegueWithIdentifier("HomeSegue", sender: self)
                     
                 }
