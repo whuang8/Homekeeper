@@ -11,46 +11,40 @@ import UIKit
 
 class DebtItemViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var personInDebt: UITextField!
-    @IBOutlet var debt: UITextField!
-    @IBOutlet var message: UITextField!
-    @IBOutlet var submit: UIButton!
-    @IBOutlet var cancel: UIButton!
+    @IBOutlet weak var personTextField: UITextField!
+    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var messageTextField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
     
-    var item: DebtItem?
+    var debtitem: DebtItem?
     
-    override func viewDidLoad() {
-        super.viewDidLoad();
-        personInDebt.delegate = self;
-        debt.delegate = self;
-        message.delegate = self;
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if submitButton === sender {
+            let amount = amountTextField.text ?? "";
+            let message = messageTextField.text ?? "";
+            let person = personTextField.text ?? "";
+            
+            debtitem = DebtItem(amount: amount, message: message, personInDebt: person);
+        }
+        
+        //dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning();
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Handle the text field’s user input through delegate callbacks.
+        personTextField.delegate = self
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder();
-        return true;
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
     }
     
-    /*func textFieldDidEndEditing(textField: UITextField) {
-        checkValidItemName();
-    }*/
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
-        submit.enabled = false;
+    @IBAction func cancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if submit === sender {
-            let name = personInDebt.text ?? "";
-            let owed = Double(debt.text!)
-            let threat = message.text;
-            
-            item = DebtItem(amount: owed!, message: threat!, personInDebt: name)!
-        }
-    }
-    
 }

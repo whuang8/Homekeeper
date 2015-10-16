@@ -2,41 +2,42 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1AI-Xk-ffl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Debt Table View Controller-->
         <scene sceneID="V8t-92-XMH">
             <objects>
-                <tableViewController id="1AI-Xk-ffl" customClass="DebtTableViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DebtTableViewController" id="1AI-Xk-ffl" customClass="DebtTableViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="eLb-9R-IlJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="oMk-c0-28P">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" rowHeight="95" id="oMk-c0-28P" customClass="DebtItemTableViewCell" customModule="Homekeeper" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oMk-c0-28P" id="WtP-vR-hya">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uso-pg-25t">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uso-pg-25t">
                                             <rect key="frame" x="18" y="16" width="65" height="26"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCq-A6-5kp">
-                                            <rect key="frame" x="18" y="65" width="563" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usg-9J-jod">
+                                            <rect key="frame" x="397" y="18" width="184" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usg-9J-jod">
-                                            <rect key="frame" x="397" y="18" width="184" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCq-A6-5kp">
+                                            <rect key="frame" x="18" y="65" width="563" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -44,10 +45,20 @@
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="fCq-A6-5kp" firstAttribute="bottom" secondItem="WtP-vR-hya" secondAttribute="bottomMargin" id="BKa-Sf-dfT"/>
+                                        <constraint firstItem="Uso-pg-25t" firstAttribute="top" secondItem="WtP-vR-hya" secondAttribute="topMargin" constant="15" id="D3B-RO-afp"/>
+                                        <constraint firstItem="Usg-9J-jod" firstAttribute="top" secondItem="WtP-vR-hya" secondAttribute="topMargin" constant="15" id="Dt1-62-6PX"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Usg-9J-jod" secondAttribute="trailing" constant="11" id="WMK-hP-Hav"/>
+                                        <constraint firstItem="fCq-A6-5kp" firstAttribute="leading" secondItem="WtP-vR-hya" secondAttribute="leadingMargin" constant="10" id="lbN-Og-IAW"/>
+                                        <constraint firstItem="Uso-pg-25t" firstAttribute="leading" secondItem="WtP-vR-hya" secondAttribute="leadingMargin" constant="10" id="nPV-6W-Vbj"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="3Nz-MC-oQn" kind="show" id="rdz-0q-Cmk"/>
+                                    <outlet property="debtLabel" destination="Uso-pg-25t" id="Scv-Yw-tsP"/>
+                                    <outlet property="debtorLabel" destination="Usg-9J-jod" id="pfu-7P-R4I"/>
+                                    <outlet property="messageLabel" destination="fCq-A6-5kp" id="WyY-nl-cxG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +67,13 @@
                             <outlet property="delegate" destination="1AI-Xk-ffl" id="BrV-GE-Ub6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qpB-ZP-sDo"/>
+                    <navigationItem key="navigationItem" id="qpB-ZP-sDo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2im-wv-xc7">
+                            <connections>
+                                <segue destination="3Nz-MC-oQn" kind="presentation" id="mqI-Us-PDi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khc-Ta-SiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,11 +113,17 @@
                                 <rect key="frame" x="276" y="308" width="49" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue destination="f2n-RB-t0M" kind="unwind" unwindAction="unwindToDebtList:" id="7QF-z7-2Wx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwN-T0-eXw">
                                 <rect key="frame" x="277" y="369" width="48" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="3Nz-MC-oQn" eventType="touchUpInside" id="RrO-uw-pWo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -120,16 +143,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="auC-us-k6l"/>
                     <connections>
-                        <outlet property="cancel" destination="NwN-T0-eXw" id="Z0W-Ii-3Zq"/>
-                        <outlet property="debt" destination="WZL-PZ-izI" id="exw-xN-DqG"/>
-                        <outlet property="message" destination="BrI-Ks-uh7" id="KtZ-xS-AdG"/>
-                        <outlet property="personInDebt" destination="lok-hB-6el" id="2qd-Sv-51P"/>
-                        <outlet property="submit" destination="Wo0-nx-Mdh" id="YNP-Ob-luk"/>
+                        <outlet property="amountTextField" destination="WZL-PZ-izI" id="Cyv-KZ-Prn"/>
+                        <outlet property="messageTextField" destination="BrI-Ks-uh7" id="bZI-hx-7FA"/>
+                        <outlet property="personTextField" destination="lok-hB-6el" id="Hjm-4E-3cU"/>
+                        <outlet property="submitButton" destination="Wo0-nx-Mdh" id="WLa-O7-hdb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGK-aA-D3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="f2n-RB-t0M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2514" y="1723"/>
+            <point key="canvasLocation" x="2406" y="1769"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mOC-Pd-ouv">
@@ -171,6 +194,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rdz-0q-Cmk"/>
+        <segue reference="mqI-Us-PDi"/>
     </inferredMetricsTieBreakers>
 </document>
