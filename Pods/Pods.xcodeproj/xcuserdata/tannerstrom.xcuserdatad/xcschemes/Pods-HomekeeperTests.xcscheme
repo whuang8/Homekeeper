@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "26D80D931BA3AE930012ECBC"
-               BuildableName = "Homekeeper.app"
-               BlueprintName = "Homekeeper"
-               ReferencedContainer = "container:Homekeeper.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "NO"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "26D80DA81BA3AE930012ECBC"
-               BuildableName = "HomekeeperTests.xctest"
-               BlueprintName = "HomekeeperTests"
-               ReferencedContainer = "container:Homekeeper.xcodeproj">
+               BlueprintIdentifier = "C1C850D3163D9E2308F7FDBC5208A838"
+               BuildableName = "libPods-HomekeeperTests.a"
+               BlueprintName = "Pods-HomekeeperTests"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -43,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "26D80D931BA3AE930012ECBC"
-            BuildableName = "Homekeeper.app"
-            BlueprintName = "Homekeeper"
-            ReferencedContainer = "container:Homekeeper.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -65,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "26D80D931BA3AE930012ECBC"
-            BuildableName = "Homekeeper.app"
-            BlueprintName = "Homekeeper"
-            ReferencedContainer = "container:Homekeeper.xcodeproj">
+            BlueprintIdentifier = "C1C850D3163D9E2308F7FDBC5208A838"
+            BuildableName = "libPods-HomekeeperTests.a"
+            BlueprintName = "Pods-HomekeeperTests"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -84,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "26D80D931BA3AE930012ECBC"
-            BuildableName = "Homekeeper.app"
-            BlueprintName = "Homekeeper"
-            ReferencedContainer = "container:Homekeeper.xcodeproj">
+            BlueprintIdentifier = "C1C850D3163D9E2308F7FDBC5208A838"
+            BuildableName = "libPods-HomekeeperTests.a"
+            BlueprintName = "Pods-HomekeeperTests"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

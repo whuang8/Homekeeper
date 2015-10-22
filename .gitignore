@@ -1,1 +1,5 @@
 .DS_Store
+
+Homekeeper.xcodeproj/xcuserdata
+Homekeeper.xcworkspace/xcuserdata/
+Pods/Pods.xcodeproj/xcuserdata
