@@ -21,15 +21,14 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
         // Move landing to login if some var is nil
         if num == nil {
             let storyboard = UIStoryboard(name: "LogInMain", bundle: nil);
             let controller = storyboard.instantiateViewControllerWithIdentifier("LogInViewController") as! LogInViewController
-            self.slideMenuController()?.changeMainViewController(controller, close: false)
+            self.presentViewController(controller, animated: true, completion: nil)
             
             num = 1
-        }*/
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
