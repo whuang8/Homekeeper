@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class ChatViewController: UIViewController {
-    var num: Int?
     
     @IBAction func toLogin(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "LogInMain", bundle: nil);
@@ -21,13 +20,13 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
         // Move landing to login if some var is nil
-        if num == nil {
+        if (defaults.stringForKey(AppDelegate.constants.userNameKeyConstant) == nil) {
             let storyboard = UIStoryboard(name: "LogInMain", bundle: nil);
             let controller = storyboard.instantiateViewControllerWithIdentifier("LogInViewController") as! LogInViewController
-            self.presentViewController(controller, animated: true, completion: nil)
-            
-            num = 1
+            self.presentViewController(controller, animated: false, completion: nil)
         }
     }
     
@@ -35,6 +34,9 @@ class ChatViewController: UIViewController {
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
         //navigationItem.setRightBarButtonItem(UIBarButtonSystemItem.Add, animated: true);
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        print (defaults.stringForKey(AppDelegate.constants.userNameKeyConstant))
     }
     
     override func didReceiveMemoryWarning() {

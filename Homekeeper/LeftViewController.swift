@@ -112,8 +112,6 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         case .Opt:
             self.slideMenuController()?.changeMainViewController(self.optionsViewController, close: true);
             break;
-        default:
-            break;
         }
     }
 }

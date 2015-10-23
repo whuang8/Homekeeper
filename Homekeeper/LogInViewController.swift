@@ -60,6 +60,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     self.loggedIn = true
                     //self.performSegueWithIdentifier("SignInSegue", sender: self)
                     
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    
+                    defaults.setObject(self.emailText.text, forKey: AppDelegate.constants.userNameKeyConstant)
+                        
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
         })

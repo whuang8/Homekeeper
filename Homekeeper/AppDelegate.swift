@@ -11,15 +11,23 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
+    
+    struct constants {
+        static let userNameKeyConstant = "userNameKey"
+        static let homeNameKeyConstant = "homeNameKey"
+        static let firstNameKeyConstant = "firstNameKey"
+        static let lastNameKeyConstant = "lastNameKey"
+        static let groceryListKeyConstant = "groceryListKey"
+        static let toDoListKeyConstant = "toDoListKey"
+    }
     
     private func createMenuView() {
         let storyboard = UIStoryboard(name: "Popover", bundle: nil);
         
         let mainViewController = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController;
         let leftViewController = storyboard.instantiateViewControllerWithIdentifier("LeftViewController") as! LeftViewController;
-        
+
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController);
         
         leftViewController.chatViewController = nvc;
