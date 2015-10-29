@@ -7,19 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
 class GroceryTableViewController: UITableViewController {
     
     // Mark: Properties
     
     var items = [GroceryItem]()
+    let ref = Firebase(url: "https://homekeeper.firebaseio.com/grocery-items/testHome")
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        // Load sample items
-        loadSampleItems()
         
         // Navigation and toolbar setup
         self.setNavigationBarItem()
@@ -29,12 +27,19 @@ class GroceryTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
     }
     
-    func loadSampleItems() {
-        let item1 = GroceryItem(groceryItem: "Blueberries", additionalInfo: "", count: 2)!
-        let item2 = GroceryItem(groceryItem: "Waffles", additionalInfo: "Lego my Ego", count: 5)!
-        let item3 = GroceryItem(groceryItem: "Hot pockets", additionalInfo: "Yumm", count: 75)!
-        
-        items += [item1, item2, item3]
+    override func viewDidAppear(animated: Bool) {
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            // Create and populate new array with database entries
+            var newItems = [GroceryItem]()
+            for item in snapshot.children {
+                let groceryItem = GroceryItem(snapshot: item as! FDataSnapshot)
+                newItems.append(groceryItem)
+            }
+            
+            // Set new array equal to old and reload data
+            self.items = newItems
+            self.tableView.reloadData()
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,18 +99,14 @@ class GroceryTableViewController: UITableViewController {
     }
     */
 
-    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
             items.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
     
     /*
     // Override to support rearranging the table view.

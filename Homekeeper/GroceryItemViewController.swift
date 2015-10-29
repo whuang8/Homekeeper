@@ -7,7 +7,8 @@
 
 
 import UIKit
-
+import Foundation
+import Firebase
 
 class GroceryItemViewController: UIViewController, UITextFieldDelegate {
     // Mark: Properties
@@ -109,6 +110,16 @@ class GroceryItemViewController: UIViewController, UITextFieldDelegate {
             
             // Set the item that needs to be added
             item = GroceryItem(groceryItem: name, additionalInfo: additionalInfo!, count: Int(count!)!)
+            
+            let rootRef = Firebase(url: "https://homekeeper.firebaseio.com/")
+            let itemsRef = rootRef.childByAppendingPath("grocery-items/testHome")
+            
+            
+            let groceryItemRef = itemsRef.childByAppendingPath(name)
+            
+            groceryItemRef.setValue(item?.toAnyObject())
+            
+            
         }
     }
 }
