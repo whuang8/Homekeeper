@@ -34,9 +34,6 @@ class ChatViewController: UIViewController {
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
         //navigationItem.setRightBarButtonItem(UIBarButtonSystemItem.Add, animated: true);
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
-        print (defaults.stringForKey(AppDelegate.constants.userNameKeyConstant))
     }
     
     override func didReceiveMemoryWarning() {

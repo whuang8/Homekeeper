@@ -91,10 +91,8 @@ class GroceryItemViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancel(sender: UIBarButtonItem) {
         // Determine presentation style (modal or push)
-        let isPresentingInAddItemMode = presentingViewController is UINavigationController
-        
-        if isPresentingInAddItemMode {
-            navigationController!.popViewControllerAnimated(true)
+        if presentingViewController != nil {
+            dismissViewControllerAnimated(true, completion: nil)
         }
         
         else {
@@ -110,16 +108,6 @@ class GroceryItemViewController: UIViewController, UITextFieldDelegate {
             
             // Set the item that needs to be added
             item = GroceryItem(groceryItem: name, additionalInfo: additionalInfo!, count: Int(count!)!)
-            
-            let rootRef = Firebase(url: "https://homekeeper.firebaseio.com/")
-            let itemsRef = rootRef.childByAppendingPath("grocery-items/testHome")
-            
-            
-            let groceryItemRef = itemsRef.childByAppendingPath(name)
-            
-            groceryItemRef.setValue(item?.toAnyObject())
-            
-            
         }
     }
 }

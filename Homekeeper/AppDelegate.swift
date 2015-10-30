@@ -7,6 +7,7 @@
 //  
 
 import UIKit
+import Firebase
 //import SlideMenuControllerSwift
 
 @UIApplicationMain
@@ -20,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         static let lastNameKeyConstant = "lastNameKey"
         static let groceryListKeyConstant = "groceryListKey"
         static let toDoListKeyConstant = "toDoListKey"
+    }
+    
+    override init() {
+        super.init()
+        Firebase.defaultConfig().persistenceEnabled = true;
     }
     
     private func createMenuView() {

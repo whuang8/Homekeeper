@@ -58,6 +58,7 @@ class GroceryTableViewController: UITableViewController {
             
             if cell.checkoutSwitch.on {
                 items.removeAtIndex(row)
+                items[row].ref!.removeValue()
             }
         }
         
@@ -103,9 +104,10 @@ class GroceryTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            items.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        }    
+            let groceryItem = items[indexPath.row]
+            
+            groceryItem.ref?.removeValue()
+        }
     }
     
     /*
@@ -128,8 +130,13 @@ class GroceryTableViewController: UITableViewController {
     
     @IBAction func unwindForSegue(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? GroceryItemViewController, item = sourceViewController.item {
+            let rootRef = Firebase(url: "https://homekeeper.firebaseio.com/")
+            let itemsRef = rootRef.childByAppendingPath("grocery-items/testHome")
+            
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                // Update an existing item
+                // Update item
+                items[selectedIndexPath.row].ref!.updateChildValues(item.toAnyObject() as! [NSObject : AnyObject])
+                
                 items[selectedIndexPath.row] = item
                 tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
             }
@@ -138,6 +145,10 @@ class GroceryTableViewController: UITableViewController {
                 // Add item
                 let newIndexPath = NSIndexPath(forRow: items.count, inSection: 0)
                 items.append(item)
+    
+                let groceryItemRef = itemsRef.childByAutoId()
+                
+                groceryItemRef.setValue(item.toAnyObject())
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
         }

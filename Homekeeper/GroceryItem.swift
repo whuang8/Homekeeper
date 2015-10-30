@@ -8,14 +8,16 @@
 
 import UIKit
 import Firebase
+import Foundation
 
 class GroceryItem {
     // Mark: Properties
     
-    var groceryItem: String
-    var additionalInfo: String
-    var count: Int
-    var checkout: Bool
+    var groceryItem: String!
+    var additionalInfo: String!
+    var count: Int!
+    var checkout: Bool!
+    var ref: Firebase?
     
     // Mark: Initializations
     
@@ -30,11 +32,12 @@ class GroceryItem {
         }
     }
     
-    init(snapshot: FDataSnapshot) {
+    init (snapshot: FDataSnapshot) {
         groceryItem = snapshot.value["item"] as! String
         additionalInfo = snapshot.value["info"] as! String
         count = snapshot.value["count"] as! Int
         checkout = false
+        ref = snapshot.ref
     }
     
     func toAnyObject() -> AnyObject {
