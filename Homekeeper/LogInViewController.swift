@@ -63,6 +63,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     let defaults = NSUserDefaults.standardUserDefaults()
                     
                     defaults.setObject(self.emailText.text, forKey: AppDelegate.constants.userNameKeyConstant)
+                    defaults.setObject("testHome", forKey: AppDelegate.constants.homeNameKeyConstant)
                         
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }

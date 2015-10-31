@@ -14,8 +14,10 @@ class GroceryTableViewController: UITableViewController {
     // Mark: Properties
     
     var items = [GroceryItem]()
-    let ref = Firebase(url: "https://homekeeper.firebaseio.com/grocery-items/testHome")
-        
+    let ref = Firebase(url: "https://homekeeper.firebaseio.com/grocery-items/" + NSUserDefaults.standardUserDefaults().stringForKey(AppDelegate.constants.homeNameKeyConstant)!)
+    
+    // Mark: Initializers
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +30,7 @@ class GroceryTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        ref.observeEventType(.Value, withBlock: { snapshot in
+        ref!.observeEventType(.Value, withBlock: { snapshot in
             // Create and populate new array with database entries
             var newItems = [GroceryItem]()
             for item in snapshot.children {
