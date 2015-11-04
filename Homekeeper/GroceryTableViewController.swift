@@ -14,7 +14,6 @@ class GroceryTableViewController: UITableViewController {
     // Mark: Properties
     
     var items = [GroceryItem]()
-    let ref = Firebase(url: "https://homekeeper.firebaseio.com/grocery-items/" + NSUserDefaults.standardUserDefaults().stringForKey(AppDelegate.constants.homeNameKeyConstant)!)
     
     // Mark: Initializers
     
@@ -30,6 +29,8 @@ class GroceryTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        let ref = Firebase(url: "https://homekeeper.firebaseio.com/grocery-items/" + NSUserDefaults.standardUserDefaults().stringForKey(AppDelegate.constants.homeNameKeyConstant)!)
+        
         ref!.observeEventType(.Value, withBlock: { snapshot in
             // Create and populate new array with database entries
             var newItems = [GroceryItem]()
@@ -132,8 +133,7 @@ class GroceryTableViewController: UITableViewController {
     
     @IBAction func unwindForSegue(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? GroceryItemViewController, item = sourceViewController.item {
-            let rootRef = Firebase(url: "https://homekeeper.firebaseio.com/")
-            let itemsRef = rootRef.childByAppendingPath("grocery-items/testHome")
+            let ref = Firebase(url: "https://homekeeper.firebaseio.com/grocery-items/" + NSUserDefaults.standardUserDefaults().stringForKey(AppDelegate.constants.homeNameKeyConstant)!)
             
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update item
@@ -148,7 +148,7 @@ class GroceryTableViewController: UITableViewController {
                 let newIndexPath = NSIndexPath(forRow: items.count, inSection: 0)
                 items.append(item)
     
-                let groceryItemRef = itemsRef.childByAutoId()
+                let groceryItemRef = ref.childByAutoId()
                 
                 groceryItemRef.setValue(item.toAnyObject())
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
