@@ -7,42 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		239CAD431BD03BCB0090FDE8 /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD421BD03BCB0090FDE8 /* AddToDo.swift */; settings = {ASSET_TAGS = (); }; };
-		239CAD441BD03BCB0090FDE8 /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD421BD03BCB0090FDE8 /* AddToDo.swift */; settings = {ASSET_TAGS = (); }; };
-		239CAD461BD03C300090FDE8 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD451BD03C300090FDE8 /* ToDoTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		239CAD471BD03C300090FDE8 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD451BD03C300090FDE8 /* ToDoTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		239CAD491BD03C520090FDE8 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD481BD03C520090FDE8 /* ToDo.swift */; settings = {ASSET_TAGS = (); }; };
-		239CAD4A1BD03C520090FDE8 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD481BD03C520090FDE8 /* ToDo.swift */; settings = {ASSET_TAGS = (); }; };
-		239CAD4C1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		239CAD4D1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		2641CDCF1BD0DAAE000ED84A /* ToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2641CDCE1BD0DAAE000ED84A /* ToDo.storyboard */; settings = {ASSET_TAGS = (); }; };
-		265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265719671BBA2D1D00D29495 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		239CAD431BD03BCB0090FDE8 /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD421BD03BCB0090FDE8 /* AddToDo.swift */; };
+		239CAD441BD03BCB0090FDE8 /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD421BD03BCB0090FDE8 /* AddToDo.swift */; };
+		239CAD461BD03C300090FDE8 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD451BD03C300090FDE8 /* ToDoTableViewController.swift */; };
+		239CAD471BD03C300090FDE8 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD451BD03C300090FDE8 /* ToDoTableViewController.swift */; };
+		239CAD491BD03C520090FDE8 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD481BD03C520090FDE8 /* ToDo.swift */; };
+		239CAD4A1BD03C520090FDE8 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD481BD03C520090FDE8 /* ToDo.swift */; };
+		239CAD4C1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */; };
+		239CAD4D1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */; };
+		2641CDCF1BD0DAAE000ED84A /* ToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2641CDCE1BD0DAAE000ED84A /* ToDo.storyboard */; };
+		265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265719671BBA2D1D00D29495 /* LogInViewController.swift */; };
+		26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */; };
 		26D80D9C1BA3AE930012ECBC /* GroceryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80D9B1BA3AE930012ECBC /* GroceryItemViewController.swift */; };
 		26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA01BA3AE930012ECBC /* Images.xcassets */; };
 		26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */; };
 		26D80DB01BA3AE930012ECBC /* HomekeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80DAF1BA3AE930012ECBC /* HomekeeperTests.swift */; };
-		2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B38E11BC9EF3000D3D090 /* GroceryItem.swift */; settings = {ASSET_TAGS = (); }; };
-		2F9B38E51BCAC29500D3D090 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B38E41BCAC29500D3D090 /* GroceryItemTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		2F9B38E81BCAC5E600D3D090 /* GroceryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B38E61BCAC5E600D3D090 /* GroceryTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */; settings = {ASSET_TAGS = (); }; };
-		2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F081BD048A200359A64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F071BD048A200359A64 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F121BD0491400359A64 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F131BD0491400359A64 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F141BD0491400359A64 /* DebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0B1BD0491400359A64 /* DebtViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F151BD0491400359A64 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0C1BD0491400359A64 /* LeftViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F161BD0491400359A64 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0D1BD0491400359A64 /* OptionsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F171BD0491400359A64 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F181BD0491400359A64 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0F1BD0491400359A64 /* StringExtension.swift */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F191BD0491400359A64 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F1A1BD0491400359A64 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F111BD0491400359A64 /* UIViewControllerExtension.swift */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F1C1BD049E500359A64 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1B1BD049E500359A64 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F1E1BD04A2F00359A64 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1F1BD04A6300359A64 /* Base.lproj */; settings = {ASSET_TAGS = (); }; };
-		3F6F8F221BD04A8300359A64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F211BD04A8300359A64 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3FE6A0981BD0310B00C312EA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0971BD0310B00C312EA /* ChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B38E11BC9EF3000D3D090 /* GroceryItem.swift */; };
+		2F9B38E51BCAC29500D3D090 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B38E41BCAC29500D3D090 /* GroceryItemTableViewCell.swift */; };
+		2F9B38E81BCAC5E600D3D090 /* GroceryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B38E61BCAC5E600D3D090 /* GroceryTableViewController.swift */; };
+		2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */; };
+		2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */; };
+		2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */; };
+		3F38F58A1BF1A73800E4293B /* ChampsElysees_150610_03_Videvo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3F38F5891BF1A73800E4293B /* ChampsElysees_150610_03_Videvo.mov */; };
+		3F6F8F081BD048A200359A64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F071BD048A200359A64 /* AppDelegate.swift */; };
+		3F6F8F121BD0491400359A64 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */; };
+		3F6F8F131BD0491400359A64 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */; };
+		3F6F8F141BD0491400359A64 /* DebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0B1BD0491400359A64 /* DebtViewController.swift */; };
+		3F6F8F151BD0491400359A64 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0C1BD0491400359A64 /* LeftViewController.swift */; };
+		3F6F8F161BD0491400359A64 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0D1BD0491400359A64 /* OptionsViewController.swift */; };
+		3F6F8F171BD0491400359A64 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */; };
+		3F6F8F181BD0491400359A64 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0F1BD0491400359A64 /* StringExtension.swift */; };
+		3F6F8F191BD0491400359A64 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */; };
+		3F6F8F1A1BD0491400359A64 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F111BD0491400359A64 /* UIViewControllerExtension.swift */; };
+		3F6F8F1C1BD049E500359A64 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1B1BD049E500359A64 /* Info.plist */; };
+		3F6F8F1E1BD04A2F00359A64 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */; };
+		3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1F1BD04A6300359A64 /* Base.lproj */; };
+		3F6F8F221BD04A8300359A64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F211BD04A8300359A64 /* ViewController.swift */; };
+		3FE6A0981BD0310B00C312EA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0971BD0310B00C312EA /* ChatViewController.swift */; };
 		C7238548133FC4CF609D6303 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC0D5C18339632B07140312 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroceryTableViewController.xib; sourceTree = "<group>"; };
 		2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroceryList.storyboard; sourceTree = "<group>"; };
 		2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogInMain.storyboard; sourceTree = "<group>"; };
+		3F38F5891BF1A73800E4293B /* ChampsElysees_150610_03_Videvo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = ChampsElysees_150610_03_Videvo.mov; path = ../../MediaPlayerTest/MediaPlayerTest/ChampsElysees_150610_03_Videvo.mov; sourceTree = "<group>"; };
 		3F6F8F071BD048A200359A64 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = Homekeeper/BaseTableViewCell.swift; sourceTree = "<group>"; };
 		3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = Homekeeper/ContainerViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				3F6F8F1B1BD049E500359A64 /* Info.plist */,
 				2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */,
+				3F38F5891BF1A73800E4293B /* ChampsElysees_150610_03_Videvo.mov */,
 				3F6F8F071BD048A200359A64 /* AppDelegate.swift */,
 				265719671BBA2D1D00D29495 /* LogInViewController.swift */,
 				26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */,
@@ -328,6 +331,7 @@
 			files = (
 				2641CDCF1BD0DAAE000ED84A /* ToDo.storyboard in Resources */,
 				3F6F8F1C1BD049E500359A64 /* Info.plist in Resources */,
+				3F38F58A1BF1A73800E4293B /* ChampsElysees_150610_03_Videvo.mov in Resources */,
 				2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */,
 				3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */,
 				2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */,
