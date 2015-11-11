@@ -13,9 +13,6 @@ import Firebase
 
 
 class LogInViewController: UIViewController, UITextFieldDelegate {
-
-    //@IBOutlet weak var emailText: UITextField!
-    //@IBOutlet weak var passwordText: UITextField!
     
     var emailText: UITextField!;
     var passwordText: UITextField!;
@@ -25,7 +22,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blueColor();
+        //self.view.backgroundColor = UIColor.blueColor();
         setVideoLayer();
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
@@ -33,34 +30,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         drawLoginMenu()
         drawLoginCancelButtons()
-    }
-    
-    func setVideoLayer() {
-        let myPlayerView = UIView(frame: self.view.frame);
-        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("ChampsElysees_150610_03_Videvo", withExtension: "mov")!;
-        let player = AVPlayer(URL: videoURL);
-        
-        player.play();
-        player.muted = true;
-        player.actionAtItemEnd = AVPlayerActionAtItemEnd.None;
-        
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "playerItemDidReachEnd:",
-            name: AVPlayerItemDidPlayToEndTimeNotification,
-            object: player.currentItem)
-        
-        let avLayer = AVPlayerLayer(player: player);
-        avLayer.frame = myPlayerView.bounds;
-        avLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-    
-        myPlayerView.layer.addSublayer(avLayer);
-        
-        let blur = UIBlurEffect(style: UIBlurEffectStyle.Dark);
-        let blurView = UIVisualEffectView(effect: blur);
-        blurView.alpha = 0.75;
-        blurView.frame = self.view.bounds;
-        self.view.addSubview(blurView);
-        
+        drawSignUpButton()
     }
     
     //runs when login button is hit
@@ -114,7 +84,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     
     //runs when sign up button is hit
-    @IBAction func signUp(sender: UIButton) {
+    func signUp(sender: UIButton) {
         self.performSegueWithIdentifier("SignUpSegue", sender: self)
     }
     
@@ -180,6 +150,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     func cancel(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: {});
+    }
+    
+    func presentSignup(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "LogInMain", bundle: nil);
+        let controller = storyboard.instantiateViewControllerWithIdentifier("SignUpViewController");
+        self.presentViewController(controller, animated: true, completion: nil);
     }
     
     func drawLoginMenu() {
@@ -323,6 +299,64 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 loginButton.enabled = true;
                 cancelButton.enabled = true;
         })
+    }
+    
+    func drawSignUpButton() {
+        let supWid: CGFloat = 200.0;
+        let supHei: CGFloat = 40.0;
+        
+        let signUpButton: UIButton = UIButton(frame: CGRectMake(self.view.bounds.width / 2 - (supWid / 2),
+            self.view.bounds.height - supHei,
+            supWid,
+            supHei));
+        
+        signUpButton.backgroundColor = UIColor.clearColor();
+        signUpButton.layer.cornerRadius = 8.0;
+        signUpButton.setTitle("Sign Up", forState: UIControlState.Normal);
+        signUpButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
+        signUpButton.titleLabel?.font = UIFont(name: "GillSans", size: 20);
+        signUpButton.addTarget(self, action: "presentSignup:", forControlEvents: UIControlEvents.TouchUpInside);
+        signUpButton.alpha = 0.0;
+        signUpButton.enabled = false;
+        
+        self.view.addSubview(signUpButton);
+        
+        UIView.animateWithDuration(0.5,
+            delay: 0,
+            options: UIViewAnimationOptions.CurveEaseIn,
+            animations: {
+                signUpButton.alpha = 0.5;
+            },
+            completion: { finished in
+                signUpButton.enabled = true;
+        })
+    }
+    
+    func setVideoLayer() {
+        let myPlayerView = UIView(frame: self.view.frame);
+        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("ChampsElysees_150610_03_Videvo", withExtension: "mov")!;
+        let player = AVPlayer(URL: videoURL);
+        
+        player.play();
+        player.muted = true;
+        player.actionAtItemEnd = AVPlayerActionAtItemEnd.None;
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "playerItemDidReachEnd:",
+            name: AVPlayerItemDidPlayToEndTimeNotification,
+            object: player.currentItem)
+        
+        let avLayer = AVPlayerLayer(player: player);
+        avLayer.frame = myPlayerView.bounds;
+        avLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        
+        myPlayerView.layer.addSublayer(avLayer);
+        
+        let blur = UIBlurEffect(style: UIBlurEffectStyle.Dark);
+        let blurView = UIVisualEffectView(effect: blur);
+        blurView.alpha = 0.75;
+        blurView.frame = self.view.bounds;
+        self.view.addSubview(blurView);
     }
     
 

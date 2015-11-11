@@ -7,17 +7,7 @@
         <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LogInViewController" id="BYZ-38-t0r" customClass="LogInViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                    </view>
-                </viewController>
+                <viewController storyboardIdentifier="LogInViewController" id="BYZ-38-t0r" customClass="LogInViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="321"/>
@@ -25,7 +15,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="Wrx-Us-xyN">
             <objects>
-                <viewController id="dDu-ON-EQZ" customClass="SignUpViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="dDu-ON-EQZ" customClass="SignUpViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="avB-MO-0GF"/>
                         <viewControllerLayoutGuide type="bottom" id="CWR-e8-CA5"/>
@@ -77,7 +67,6 @@
                                 </state>
                                 <connections>
                                     <action selector="createUser:" destination="dDu-ON-EQZ" eventType="touchUpInside" id="DVy-Eo-CqM"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="HomeSegue" id="6ty-zI-Kjm"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gxk-Rg-RgG">
