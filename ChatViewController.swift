@@ -8,14 +8,12 @@
 
 import Foundation
 import UIKit
+import JSQMessagesViewController
+import Firebase
 
-class ChatViewController: UIViewController {
-    
-    @IBAction func toLogin(sender: AnyObject) {
-        let storyboard = UIStoryboard(name: "LogInMain", bundle: nil);
-        let controller = storyboard.instantiateViewControllerWithIdentifier("LogInViewController");
-        self.presentViewController(controller, animated: true, completion: nil)
-    }
+class ChatViewController: JSQMessagesViewController {
+    //var messages = [Message]()
+    //var ref = Firebase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +26,19 @@ class ChatViewController: UIViewController {
             let controller = storyboard.instantiateViewControllerWithIdentifier("LogInViewController") as! LogInViewController
             self.presentViewController(controller, animated: false, completion: nil)
         }
+        else {
+            // Set id and name using NSUser information
+            senderId = "0"
+            senderDisplayName = "Temp"
+        }
+        
+        automaticallyScrollsToMostRecentMessage = true
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
-        //navigationItem.setRightBarButtonItem(UIBarButtonSystemItem.Add, animated: true);
+        collectionView!.collectionViewLayout.springinessEnabled = true
     }
     
     override func didReceiveMemoryWarning() {
