@@ -23,7 +23,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor.blueColor();
-        setVideoLayer();
+        //setVideoLayer();
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -331,7 +331,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 signUpButton.enabled = true;
         })
     }
-    
+    /*
     func setVideoLayer() {
         let myPlayerView = UIView(frame: self.view.frame);
         let videoURL: NSURL = NSBundle.mainBundle().URLForResource("ChampsElysees_150610_03_Videvo", withExtension: "mov")!;
@@ -357,7 +357,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         blurView.alpha = 0.75;
         blurView.frame = self.view.bounds;
         self.view.addSubview(blurView);
-    }
+    }*/
     
 
     /*

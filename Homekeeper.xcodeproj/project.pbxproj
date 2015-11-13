@@ -28,7 +28,6 @@
 		2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */; };
 		2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */; };
 		2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */; };
-		3F38F58A1BF1A73800E4293B /* ChampsElysees_150610_03_Videvo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3F38F5891BF1A73800E4293B /* ChampsElysees_150610_03_Videvo.mov */; };
 		3F6F8F081BD048A200359A64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F071BD048A200359A64 /* AppDelegate.swift */; };
 		3F6F8F121BD0491400359A64 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */; };
 		3F6F8F131BD0491400359A64 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */; };
@@ -79,7 +78,6 @@
 		2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroceryTableViewController.xib; sourceTree = "<group>"; };
 		2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroceryList.storyboard; sourceTree = "<group>"; };
 		2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogInMain.storyboard; sourceTree = "<group>"; };
-		3F38F5891BF1A73800E4293B /* ChampsElysees_150610_03_Videvo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = ChampsElysees_150610_03_Videvo.mov; path = ../../MediaPlayerTest/MediaPlayerTest/ChampsElysees_150610_03_Videvo.mov; sourceTree = "<group>"; };
 		3F6F8F071BD048A200359A64 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = Homekeeper/BaseTableViewCell.swift; sourceTree = "<group>"; };
 		3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = Homekeeper/ContainerViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			children = (
 				3F6F8F1B1BD049E500359A64 /* Info.plist */,
 				2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */,
-				3F38F5891BF1A73800E4293B /* ChampsElysees_150610_03_Videvo.mov */,
 				3F6F8F071BD048A200359A64 /* AppDelegate.swift */,
 				265719671BBA2D1D00D29495 /* LogInViewController.swift */,
 				26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */,
@@ -331,7 +328,6 @@
 			files = (
 				2641CDCF1BD0DAAE000ED84A /* ToDo.storyboard in Resources */,
 				3F6F8F1C1BD049E500359A64 /* Info.plist in Resources */,
-				3F38F58A1BF1A73800E4293B /* ChampsElysees_150610_03_Videvo.mov in Resources */,
 				2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */,
 				3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */,
 				2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */,

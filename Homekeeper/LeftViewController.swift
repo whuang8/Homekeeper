@@ -37,7 +37,8 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "Wood.jpg")!);
+        //self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "Wood.jpg")!);
+        self.tableView.backgroundColor = UIColor.blackColor();
         self.tableView.separatorColor = UIColor(white: 0.0, alpha: 0.0)
         self.view.backgroundColor = UIColor.clearColor();
         
