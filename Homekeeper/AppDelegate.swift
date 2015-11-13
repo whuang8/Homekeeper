@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         static let lastNameKeyConstant = "lastNameKey"
         static let groceryListKeyConstant = "groceryListKey"
         static let toDoListKeyConstant = "toDoListKey"
+        static let userUIDConstant = "userUIDConstant"
     }
     
     override init() {

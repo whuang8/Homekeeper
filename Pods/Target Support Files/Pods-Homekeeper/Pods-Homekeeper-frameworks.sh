@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Homekeeper/SwiftRequest.framework"
   install_framework "Pods-Homekeeper/JSQMessagesViewController.framework"
   install_framework "Pods-Homekeeper/JSQSystemSoundPlayer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Homekeeper/SwiftRequest.framework"
   install_framework "Pods-Homekeeper/JSQMessagesViewController.framework"
   install_framework "Pods-Homekeeper/JSQSystemSoundPlayer.framework"
 fi

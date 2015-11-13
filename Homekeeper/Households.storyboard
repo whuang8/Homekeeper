@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kcs-wq-zRh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Households Table View Controller-->
+        <scene sceneID="e5c-Za-RrK">
+            <objects>
+                <tableViewController storyboardIdentifier="HouseholdsTableViewController" id="DLQ-A3-XRY" customClass="HouseholdsTableViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a6o-yi-X4Y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VtA-hH-7L0" customClass="HouseholdsTableViewCell" customModule="Homekeeper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VtA-hH-7L0" id="xNk-1k-MfA">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3F-kg-dui" userLabel="HomeLabel">
+                                            <rect key="frame" x="16" y="11" width="300" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="Label" destination="W3F-kg-dui" id="vLE-ZU-79s"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DLQ-A3-XRY" id="EW3-Sl-SuK"/>
+                            <outlet property="delegate" destination="DLQ-A3-XRY" id="MDn-DH-HCj"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Delete" id="5XG-KM-lTX"/>
+                        <barButtonItem title="Invite" id="2HP-7I-mwB"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="abx-wM-koz">
+                        <barButtonItem key="rightBarButtonItem" title="Invite" id="Ua6-A1-42x" userLabel="addHome">
+                            <connections>
+                                <segue destination="IM3-mL-JE9" kind="presentation" id="rau-I2-IIn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5U-H3-doT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="299"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kNf-Pw-y2F">
+            <objects>
+                <navigationController id="IM3-mL-JE9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Twy-uo-7QH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vjl-HU-o8n" kind="relationship" relationship="rootViewController" id="fG8-92-0EC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Da-wz-KQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1320" y="812"/>
+        </scene>
+        <!--Invite a Housemate-->
+        <scene sceneID="AAv-sH-Cgd">
+            <objects>
+                <viewController id="vjl-HU-o8n" customClass="HouseholdsViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pnj-hj-Tyk"/>
+                        <viewControllerLayoutGuide type="bottom" id="pKD-5P-o3w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rme-tH-3ue">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Wa-ai-1aT">
+                                <rect key="frame" x="149" y="135" width="302" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="MCC-pN-rSa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vP4-Cn-DeX">
+                                <rect key="frame" x="222" y="200" width="155" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Invite!"/>
+                                <connections>
+                                    <action selector="createButton:" destination="vjl-HU-o8n" eventType="touchUpInside" id="crK-nu-HuS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vP4-Cn-DeX" firstAttribute="top" secondItem="5Wa-ai-1aT" secondAttribute="bottom" constant="35" id="GKd-Gx-TM6"/>
+                            <constraint firstItem="5Wa-ai-1aT" firstAttribute="top" secondItem="pnj-hj-Tyk" secondAttribute="bottom" constant="71" id="ag2-Lw-Ywe"/>
+                            <constraint firstItem="5Wa-ai-1aT" firstAttribute="centerX" secondItem="vP4-Cn-DeX" secondAttribute="centerX" id="dXa-jW-YY5"/>
+                            <constraint firstItem="5Wa-ai-1aT" firstAttribute="centerX" secondItem="Rme-tH-3ue" secondAttribute="centerX" id="o6P-7k-Vv9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Invite a Housemate" id="BkZ-qh-mWe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mQO-eA-rmH">
+                            <connections>
+                                <segue destination="BGd-cU-ItY" kind="unwind" unwindAction="unwindToHouseholds:" id="fKX-IU-ysO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeName" destination="5Wa-ai-1aT" id="j7r-5y-Rvx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6EK-8a-ryx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BGd-cU-ItY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2013" y="381"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HD2-Sp-JX2">
+            <objects>
+                <navigationController id="kcs-wq-zRh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HO3-dm-4kR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DLQ-A3-XRY" kind="relationship" relationship="rootViewController" id="sej-Mj-adp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHq-fJ-XAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207" y="299"/>
+        </scene>
+    </scenes>
+</document>

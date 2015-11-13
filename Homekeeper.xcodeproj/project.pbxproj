@@ -15,6 +15,10 @@
 		239CAD4A1BD03C520090FDE8 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD481BD03C520090FDE8 /* ToDo.swift */; };
 		239CAD4C1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */; };
 		239CAD4D1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */; };
+		261D29061BF5AF8E007DF5D1 /* HouseholdsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261D29051BF5AF8E007DF5D1 /* HouseholdsTableViewController.swift */; };
+		261D290B1BF5C7E7007DF5D1 /* Households.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261D290A1BF5C7E7007DF5D1 /* Households.storyboard */; };
+		261D290D1BF5C9BB007DF5D1 /* HouseholdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261D290C1BF5C9BB007DF5D1 /* HouseholdsViewController.swift */; };
+		261D29111BF61B39007DF5D1 /* HouseholdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261D29101BF61B39007DF5D1 /* HouseholdsTableViewCell.swift */; };
 		2641CDCF1BD0DAAE000ED84A /* ToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2641CDCE1BD0DAAE000ED84A /* ToDo.storyboard */; };
 		265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265719671BBA2D1D00D29495 /* LogInViewController.swift */; };
 		26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */; };
@@ -35,6 +39,7 @@
 		2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */; };
 		2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */; };
 		2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */; };
+		39B85B576C5E34EFC33E9CB3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38C20969A0FEE8A6675E256 /* Pods.framework */; };
 		3F21A7261BF30152009F6BB9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21A7251BF30152009F6BB9 /* OptionsViewController.swift */; };
 		3F6F8F081BD048A200359A64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F071BD048A200359A64 /* AppDelegate.swift */; };
 		3F6F8F121BD0491400359A64 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */; };
@@ -47,7 +52,6 @@
 		3F6F8F1E1BD04A2F00359A64 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */; };
 		3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1F1BD04A6300359A64 /* Base.lproj */; };
 		3FE6A0981BD0310B00C312EA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0971BD0310B00C312EA /* ChatViewController.swift */; };
-		C7238548133FC4CF609D6303 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC0D5C18339632B07140312 /* libPods.a */; };
 		C81AAFC61FF7171A071E68FA /* Pods_Homekeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A030608C5F94020C3E734C9 /* Pods_Homekeeper.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,10 @@
 		239CAD451BD03C300090FDE8 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		239CAD481BD03C520090FDE8 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		261D29051BF5AF8E007DF5D1 /* HouseholdsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseholdsTableViewController.swift; path = ../HouseholdsTableViewController.swift; sourceTree = "<group>"; };
+		261D290A1BF5C7E7007DF5D1 /* Households.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Households.storyboard; sourceTree = "<group>"; };
+		261D290C1BF5C9BB007DF5D1 /* HouseholdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseholdsViewController.swift; sourceTree = "<group>"; };
+		261D29101BF61B39007DF5D1 /* HouseholdsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseholdsTableViewCell.swift; sourceTree = "<group>"; };
 		2641CDCE1BD0DAAE000ED84A /* ToDo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ToDo.storyboard; sourceTree = "<group>"; };
 		265719671BBA2D1D00D29495 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +115,7 @@
 		628C46559FCAF8B34F47063C /* Pods-Homekeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homekeeper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homekeeper/Pods-Homekeeper.debug.xcconfig"; sourceTree = "<group>"; };
 		6B790607C4D6A552E9FB28FE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6CB7923D58D77BB358024FBB /* Pods-Homekeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homekeeper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homekeeper/Pods-Homekeeper.release.xcconfig"; sourceTree = "<group>"; };
-		9BC0D5C18339632B07140312 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C38C20969A0FEE8A6675E256 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7238548133FC4CF609D6303 /* libPods.a in Frameworks */,
 				C81AAFC61FF7171A071E68FA /* Pods_Homekeeper.framework in Frameworks */,
+				39B85B576C5E34EFC33E9CB3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +150,17 @@
 			name = TodoList;
 			sourceTree = "<group>";
 		};
+		261D29071BF5B03A007DF5D1 /* Households */ = {
+			isa = PBXGroup;
+			children = (
+				261D29101BF61B39007DF5D1 /* HouseholdsTableViewCell.swift */,
+				261D290A1BF5C7E7007DF5D1 /* Households.storyboard */,
+				261D290C1BF5C9BB007DF5D1 /* HouseholdsViewController.swift */,
+				261D29051BF5AF8E007DF5D1 /* HouseholdsTableViewController.swift */,
+			);
+			name = Households;
+			sourceTree = "<group>";
+		};
 		26D80D8B1BA3AE930012ECBC = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +184,7 @@
 		26D80D961BA3AE930012ECBC /* Homekeeper */ = {
 			isa = PBXGroup;
 			children = (
+				261D29071BF5B03A007DF5D1 /* Households */,
 				2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */,
 				3F6F8F071BD048A200359A64 /* AppDelegate.swift */,
 				265719671BBA2D1D00D29495 /* LogInViewController.swift */,
@@ -265,8 +285,8 @@
 		925CFB7E9038ED36A15975E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9BC0D5C18339632B07140312 /* libPods.a */,
 				5A030608C5F94020C3E734C9 /* Pods_Homekeeper.framework */,
+				C38C20969A0FEE8A6675E256 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -324,7 +344,7 @@
 				TargetAttributes = {
 					26D80D931BA3AE930012ECBC = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 44L47DE54H;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					26D80DA81BA3AE930012ECBC = {
 						CreatedOnToolsVersion = 6.4;
@@ -358,6 +378,7 @@
 			files = (
 				2641CDCF1BD0DAAE000ED84A /* ToDo.storyboard in Resources */,
 				2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */,
+				261D290B1BF5C7E7007DF5D1 /* Households.storyboard in Resources */,
 				3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */,
 				2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */,
 				2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */,
@@ -405,7 +426,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Homekeeper/Pods-Homekeeper-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F24342C8FEC0A64C88257EFA /* Copy Pods Resources */ = {
@@ -432,9 +453,12 @@
 			files = (
 				239CAD461BD03C300090FDE8 /* ToDoTableViewController.swift in Sources */,
 				3F6F8F081BD048A200359A64 /* AppDelegate.swift in Sources */,
+				261D29061BF5AF8E007DF5D1 /* HouseholdsTableViewController.swift in Sources */,
 				3F6F8F131BD0491400359A64 /* ContainerViewController.swift in Sources */,
 				3F6F8F121BD0491400359A64 /* BaseTableViewCell.swift in Sources */,
 				3F6F8F151BD0491400359A64 /* LeftViewController.swift in Sources */,
+				261D290D1BF5C9BB007DF5D1 /* HouseholdsViewController.swift in Sources */,
+				261D29111BF61B39007DF5D1 /* HouseholdsTableViewCell.swift in Sources */,
 				3F6F8F181BD0491400359A64 /* StringExtension.swift in Sources */,
 				26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */,
 				2F73D8351BF589FF000484B6 /* DebtViewController.swift in Sources */,
@@ -588,7 +612,7 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homekeeper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Team9.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -604,7 +628,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homekeeper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Team9.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

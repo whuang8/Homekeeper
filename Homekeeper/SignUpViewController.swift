@@ -51,6 +51,10 @@ class SignUpViewController: UIViewController {
                 
                     usersRef.updateChildValues(user)
                     
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    
+                    defaults.setObject(uid, forKey: AppDelegate.constants.userUIDConstant)
+                    
                     self.performSegueWithIdentifier("HomeSegue", sender: self)
                     
                 }

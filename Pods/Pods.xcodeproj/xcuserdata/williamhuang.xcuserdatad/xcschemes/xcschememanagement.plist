@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>JSQMessagesViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Homekeeper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,20 +29,40 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftRequest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1469924FC52F60B0068FA24EEFCB3EFC</key>
+		<key>2CDE38119D8BA3068139B14B85816C2A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9DE8C0991A36EBF362AAD73B08AE9636</key>
+		<key>3901ED1CB42DB566A5C2A7D262334CE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1C850D3163D9E2308F7FDBC5208A838</key>
+		<key>95DB89A8BFC5FF0BF98458651D0163CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DEB03A607FC670D9A4862C191B36D62D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EDA125ADA52355B7CA6DF7BA96918357</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFDC42D33AF0B24628C1EE46A45602C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
