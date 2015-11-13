@@ -17,14 +17,6 @@ class ChatViewController: UIViewController {
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
-    @IBAction func toOptions(sender: AnyObject) {
-        let optionsViewController:OptionsViewController = OptionsViewController();
-        let navController:UINavigationController = UINavigationController(rootViewController: optionsViewController);
-        navController.title = "Options";
-        
-        self.presentViewController(navController, animated: true, completion: nil);
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

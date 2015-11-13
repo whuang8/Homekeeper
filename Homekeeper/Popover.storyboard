@@ -31,14 +31,6 @@
                                     <action selector="toLogin:" destination="nqG-wc-LJq" eventType="touchUpInside" id="ZVG-5J-FY1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1m-vW-4pZ">
-                                <rect key="frame" x="273" y="430" width="54" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Options"/>
-                                <connections>
-                                    <action selector="toOptions:" destination="nqG-wc-LJq" eventType="touchUpInside" id="TuR-oM-tXA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,8 +39,6 @@
                             <constraint firstItem="QoJ-69-i6C" firstAttribute="centerX" secondItem="pHp-E7-1Dy" secondAttribute="centerX" id="B9c-br-iLD"/>
                             <constraint firstItem="QoJ-69-i6C" firstAttribute="centerY" secondItem="pHp-E7-1Dy" secondAttribute="centerY" constant="91" id="DtH-PX-CtE"/>
                             <constraint firstItem="eD6-6q-myH" firstAttribute="centerX" secondItem="pHp-E7-1Dy" secondAttribute="centerX" id="IcV-tU-BSr"/>
-                            <constraint firstItem="b1m-vW-4pZ" firstAttribute="centerX" secondItem="pHp-E7-1Dy" secondAttribute="centerX" id="ZgS-JY-NeF"/>
-                            <constraint firstItem="b1m-vW-4pZ" firstAttribute="centerY" secondItem="pHp-E7-1Dy" secondAttribute="centerY" constant="145" id="hkT-zk-vbT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CjO-nG-nBa"/>
