@@ -15,7 +15,7 @@ class DebtTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSampleItems()
-        //self.setNavigationBarItem()
+        self.setNavigationBarItem()
     }
     
     override func viewDidAppear(animated: Bool) {

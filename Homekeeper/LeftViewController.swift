@@ -45,6 +45,7 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         let storyboard = UIStoryboard(name: "Popover", bundle: nil);
         let storyboard2 = UIStoryboard(name: "GroceryList", bundle: nil);
         let storyboard3 = UIStoryboard(name: "ToDo", bundle: nil);
+        let storyboard4 = UIStoryboard(name: "DebtTracker", bundle: nil);
         
         let chatViewController = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController;
         self.chatViewController = UINavigationController(rootViewController: chatViewController);
@@ -54,6 +55,9 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         
         let todoViewController = storyboard3.instantiateViewControllerWithIdentifier("ToDoTableViewController") as! ToDoTableViewController;
         self.todoViewController = UINavigationController(rootViewController: todoViewController);
+        
+        let debtViewController = storyboard4.instantiateViewControllerWithIdentifier("DebtTableViewController") as! DebtTableViewController;
+        self.debtViewController = UINavigationController(rootViewController: debtViewController);
         
         //self.presentViewController(navController, animated: true, completion: nil);
         
