@@ -39,7 +39,8 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         //self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "Wood.jpg")!);
         self.tableView.backgroundColor = UIColor.blackColor();
         self.tableView.separatorColor = UIColor(white: 0.0, alpha: 0.0)
-        self.view.backgroundColor = UIColor.clearColor();
+        self.tableView.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
+        self.view.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
         
         let storyboard = UIStoryboard(name: "Popover", bundle: nil);
         let storyboard2 = UIStoryboard(name: "GroceryList", bundle: nil);
@@ -87,6 +88,13 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         super.didReceiveMemoryWarning()
     }
     
+    func toOptions(sender: AnyObject) {
+        let optionsViewController:OptionsViewController = OptionsViewController();
+        let navController:UINavigationController = UINavigationController(rootViewController: optionsViewController);
+        navController.title = "Options";
+        
+        self.presentViewController(navController, animated: true, completion: nil);
+    }
     
     
     func makeToolbar() {
@@ -96,7 +104,14 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         items.append(loginButton);
         
         let toolbar = UIToolbar(frame: CGRectMake(0, view.frame.height - 44, 270, 44));
-        toolbar.backgroundColor = UIColor.clearColor();
+        toolbar.backgroundColor = UIColor.redColor();
+        
+        let options:UIBarButtonItem = UIBarButtonItem(title: "Options",
+            style: UIBarButtonItemStyle.Plain,
+            target: self,
+            action: "toOptions:");
+    
+        items.append(options);
         toolbar.items = items;
         
         view.addSubview(toolbar);

@@ -29,12 +29,12 @@
 		2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */; };
 		2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */; };
 		2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */; };
+		3F21A7261BF30152009F6BB9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F21A7251BF30152009F6BB9 /* OptionsViewController.swift */; };
 		3F6F8F081BD048A200359A64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F071BD048A200359A64 /* AppDelegate.swift */; };
 		3F6F8F121BD0491400359A64 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */; };
 		3F6F8F131BD0491400359A64 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */; };
 		3F6F8F141BD0491400359A64 /* DebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0B1BD0491400359A64 /* DebtViewController.swift */; };
 		3F6F8F151BD0491400359A64 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0C1BD0491400359A64 /* LeftViewController.swift */; };
-		3F6F8F161BD0491400359A64 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0D1BD0491400359A64 /* OptionsViewController.swift */; };
 		3F6F8F171BD0491400359A64 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */; };
 		3F6F8F181BD0491400359A64 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0F1BD0491400359A64 /* StringExtension.swift */; };
 		3F6F8F191BD0491400359A64 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */; };
