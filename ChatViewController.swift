@@ -43,11 +43,13 @@ class ChatViewController: JSQMessagesViewController {
         self.setNavigationBarItem()
         collectionView!.collectionViewLayout.springinessEnabled = true
         
-        // set temp data here
-        let msg1 = Message(text: "CS 307", senderName: "Thing 1", senderID: "1")
-        let msg2 = Message(text: "E = mc^2", senderName: "Thing 2", senderID: "2")
-        messages.append(msg1)
-        messages.append(msg2)
+        if messages.isEmpty {
+            // set temp data here
+            let msg1 = Message(text: "CS 307", senderName: "Thing 1", senderID: "1")
+            let msg2 = Message(text: "E = mc^2", senderName: "Thing 2", senderID: "2")
+            messages.append(msg1)
+            messages.append(msg2)
+        }
         
         self.collectionView?.reloadData()
     }
