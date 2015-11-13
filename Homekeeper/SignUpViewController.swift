@@ -75,6 +75,7 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //This is where Tanner starts adding thigns.
 
     /*
     // MARK: - Navigation
