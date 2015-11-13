@@ -207,6 +207,18 @@
 			name = GroceryList;
 			sourceTree = "<group>";
 		};
+		3F6F8F231BD0502600359A64 /* Debt */ = {
+			isa = PBXGroup;
+			children = (
+				3F6F8F241BD0504800359A64 /* DebtTracker.storyboard */,
+				3F6F8F261BD0573100359A64 /* DebtItem.swift */,
+				3F6F8F2C1BD05A6100359A64 /* DebtTableViewController.swift */,
+				3F6F8F2A1BD059E500359A64 /* DebtItemTableViewCell.swift */,
+				3F6F8F281BD0583500359A64 /* DebtItemViewController.swift */,
+			);
+			name = Debt;
+			sourceTree = "<group>";
+		};
 		3FE6A0781BD02FDF00C312EA /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +351,7 @@
 				3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */,
 				2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */,
 				2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */,
+				3F6F8F251BD0504800359A64 /* DebtTracker.storyboard in Resources */,
 				3F6F8F1E1BD04A2F00359A64 /* Popover.storyboard in Resources */,
 				26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */,
 				26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */,
@@ -422,6 +435,7 @@
 				26D80D9C1BA3AE930012ECBC /* GroceryItemViewController.swift in Sources */,
 				239CAD4C1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */,
 				2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */,
+				3F6F8F291BD0583500359A64 /* DebtItemViewController.swift in Sources */,
 				3F6F8F141BD0491400359A64 /* DebtViewController.swift in Sources */,
 				2F60C8B01BF3D43C00CE58DE /* Message.swift in Sources */,
 				3F6F8F191BD0491400359A64 /* UITableViewExtension.swift in Sources */,
