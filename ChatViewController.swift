@@ -17,6 +17,14 @@ class ChatViewController: UIViewController {
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
+    @IBAction func toOptions(sender: AnyObject) {
+        let optionsViewController:OptionsViewController = OptionsViewController();
+        let navController:UINavigationController = UINavigationController(rootViewController: optionsViewController);
+        navController.title = "Options";
+        
+        self.presentViewController(navController, animated: true, completion: nil);
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,8 +33,12 @@ class ChatViewController: UIViewController {
         // Move landing to login if some var is nil
         if (defaults.stringForKey(AppDelegate.constants.userNameKeyConstant) == nil) {
             let storyboard = UIStoryboard(name: "LogInMain", bundle: nil);
+            
             let controller = storyboard.instantiateViewControllerWithIdentifier("LogInViewController") as! LogInViewController
-            self.presentViewController(controller, animated: false, completion: nil)
+            let navController = UINavigationController(rootViewController: controller);
+            
+            navController.title = "Options";
+            self.presentViewController(navController, animated: false, completion: nil)
         }
     }
     
