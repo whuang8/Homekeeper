@@ -46,8 +46,8 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         let storyboard2 = UIStoryboard(name: "GroceryList", bundle: nil);
         let storyboard3 = UIStoryboard(name: "ToDo", bundle: nil);
         
-        let debtViewController = storyboard3.instantiateViewControllerWithIdentifier("DebtTableViewController") as! DebtTableViewController;
-        self.debtViewController = UINavigationController(rootViewController: debtViewController);
+        let chatViewController = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController;
+        self.chatViewController = UINavigationController(rootViewController: chatViewController);
         
         let grocViewController = storyboard2.instantiateViewControllerWithIdentifier("GroceryTableViewController") as! GroceryTableViewController;
         self.grocViewController = UINavigationController(rootViewController: grocViewController)
