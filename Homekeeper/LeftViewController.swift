@@ -14,7 +14,6 @@ enum LeftMenu: Int {
     case Debt
     case Groc
     case Todo
-    case Opt
 }
 
 protocol LeftMenuProtocol : class {
@@ -24,12 +23,12 @@ protocol LeftMenuProtocol : class {
 class LeftViewController: UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["Chat", "Debt", "Groceries", "Todo", "Options"]
+    var menus = ["Chat", "Debt", "Groceries", "Todo"]
     var chatViewController = UIViewController()
     var debtViewController = UIViewController()
     var grocViewController = UIViewController()
     var todoViewController = UIViewController()
-    var optionsViewController = UIViewController()
+    //var optionsTableViewController = UIViewController()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -55,8 +54,7 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         let todoViewController = storyboard3.instantiateViewControllerWithIdentifier("ToDoTableViewController") as! ToDoTableViewController;
         self.todoViewController = UINavigationController(rootViewController: todoViewController);
         
-        let optionsViewController = storyboard.instantiateViewControllerWithIdentifier("OptionsViewController") as! OptionsViewController;
-        self.optionsViewController = UINavigationController(rootViewController: optionsViewController);
+        //self.presentViewController(navController, animated: true, completion: nil);
         
         self.tableView.registerCellClass(BaseTableViewCell);
         makeToolbar();
@@ -122,9 +120,6 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
             break;
         case .Todo:
             self.slideMenuController()?.changeMainViewController(self.todoViewController, close: true);
-            break;
-        case .Opt:
-            self.slideMenuController()?.changeMainViewController(self.optionsViewController, close: true);
             break;
         }
     }

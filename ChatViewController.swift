@@ -28,8 +28,12 @@ class ChatViewController: JSQMessagesViewController {
         // Move landing to login if some var is nil
         if (defaults.stringForKey(AppDelegate.constants.userNameKeyConstant) == nil) {
             let storyboard = UIStoryboard(name: "LogInMain", bundle: nil);
+            
             let controller = storyboard.instantiateViewControllerWithIdentifier("LogInViewController") as! LogInViewController
-            self.presentViewController(controller, animated: false, completion: nil)
+            let navController = UINavigationController(rootViewController: controller);
+            
+            navController.title = "Options";
+            self.presentViewController(navController, animated: false, completion: nil)
         }
         else {
             // reset sender id and name

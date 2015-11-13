@@ -79,12 +79,12 @@
 		2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroceryTableViewController.xib; sourceTree = "<group>"; };
 		2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroceryList.storyboard; sourceTree = "<group>"; };
 		2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogInMain.storyboard; sourceTree = "<group>"; };
+		3F21A7251BF30152009F6BB9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsViewController.swift; path = Homekeeper/OptionsViewController.swift; sourceTree = "<group>"; };
 		3F6F8F071BD048A200359A64 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = Homekeeper/BaseTableViewCell.swift; sourceTree = "<group>"; };
 		3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = Homekeeper/ContainerViewController.swift; sourceTree = "<group>"; };
 		3F6F8F0B1BD0491400359A64 /* DebtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebtViewController.swift; path = Homekeeper/DebtViewController.swift; sourceTree = "<group>"; };
 		3F6F8F0C1BD0491400359A64 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftViewController.swift; path = Homekeeper/LeftViewController.swift; sourceTree = "<group>"; };
-		3F6F8F0D1BD0491400359A64 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsViewController.swift; path = Homekeeper/OptionsViewController.swift; sourceTree = "<group>"; };
 		3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Homekeeper/SlideMenuController.swift; sourceTree = "<group>"; };
 		3F6F8F0F1BD0491400359A64 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Homekeeper/StringExtension.swift; sourceTree = "<group>"; };
 		3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewExtension.swift; path = Homekeeper/UITableViewExtension.swift; sourceTree = "<group>"; };
@@ -213,10 +213,11 @@
 				3F6F8F1F1BD04A6300359A64 /* Base.lproj */,
 				3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */,
 				3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */,
+				3FE6A0971BD0310B00C312EA /* ChatViewController.swift */,
 				3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */,
 				3F6F8F0B1BD0491400359A64 /* DebtViewController.swift */,
 				3F6F8F0C1BD0491400359A64 /* LeftViewController.swift */,
-				3F6F8F0D1BD0491400359A64 /* OptionsViewController.swift */,
+				3F21A7251BF30152009F6BB9 /* OptionsViewController.swift */,
 				3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */,
 				3F6F8F0F1BD0491400359A64 /* StringExtension.swift */,
 				3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */,
@@ -301,6 +302,7 @@
 				TargetAttributes = {
 					26D80D931BA3AE930012ECBC = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 44L47DE54H;
 					};
 					26D80DA81BA3AE930012ECBC = {
 						CreatedOnToolsVersion = 6.4;
@@ -407,13 +409,13 @@
 			files = (
 				239CAD461BD03C300090FDE8 /* ToDoTableViewController.swift in Sources */,
 				3F6F8F081BD048A200359A64 /* AppDelegate.swift in Sources */,
-				3F6F8F161BD0491400359A64 /* OptionsViewController.swift in Sources */,
 				3F6F8F131BD0491400359A64 /* ContainerViewController.swift in Sources */,
 				3F6F8F121BD0491400359A64 /* BaseTableViewCell.swift in Sources */,
 				3F6F8F151BD0491400359A64 /* LeftViewController.swift in Sources */,
 				3F6F8F181BD0491400359A64 /* StringExtension.swift in Sources */,
 				26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */,
 				239CAD431BD03BCB0090FDE8 /* AddToDo.swift in Sources */,
+				3F21A7261BF30152009F6BB9 /* OptionsViewController.swift in Sources */,
 				3F6F8F1A1BD0491400359A64 /* UIViewControllerExtension.swift in Sources */,
 				265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */,
 				239CAD491BD03C520090FDE8 /* ToDo.swift in Sources */,
@@ -557,11 +559,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homekeeper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Team9.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -571,11 +575,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homekeeper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Team9.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
