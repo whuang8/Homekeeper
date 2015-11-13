@@ -14,6 +14,7 @@ class GroceryTableViewController: UITableViewController {
     // Mark: Properties
     
     var items = [GroceryItem]()
+    var ref = Firebase()
     
     // Mark: Initializers
     
@@ -23,15 +24,18 @@ class GroceryTableViewController: UITableViewController {
         // Navigation and toolbar setup
         self.setNavigationBarItem()
         self.navigationController?.toolbarHidden = false
+        setupFirebase()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
     }
     
+    func setupFirebase() {
+        ref = Firebase(url: "https://homekeeper.firebaseio.com/grocery-items/" + NSUserDefaults.standardUserDefaults().stringForKey(AppDelegate.constants.homeNameKeyConstant)!)
+    }
+    
     override func viewDidAppear(animated: Bool) {
-        let ref = Firebase(url: "https://homekeeper.firebaseio.com/grocery-items/" + NSUserDefaults.standardUserDefaults().stringForKey(AppDelegate.constants.homeNameKeyConstant)!)
-        
-        ref!.observeEventType(.Value, withBlock: { snapshot in
+        ref.observeEventType(.Value, withBlock: { snapshot in
             // Create and populate new array with database entries
             var newItems = [GroceryItem]()
             for item in snapshot.children {
@@ -104,12 +108,13 @@ class GroceryTableViewController: UITableViewController {
     */
 
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle,
+        forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
             let groceryItem = items[indexPath.row]
             
-            groceryItem.ref?.removeValue()
+            groceryItem.ref!.removeValue()
         }
     }
     
@@ -133,7 +138,6 @@ class GroceryTableViewController: UITableViewController {
     
     @IBAction func unwindForSegue(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? GroceryItemViewController, item = sourceViewController.item {
-            let ref = Firebase(url: "https://homekeeper.firebaseio.com/grocery-items/" + NSUserDefaults.standardUserDefaults().stringForKey(AppDelegate.constants.homeNameKeyConstant)!)
             
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // Update item
