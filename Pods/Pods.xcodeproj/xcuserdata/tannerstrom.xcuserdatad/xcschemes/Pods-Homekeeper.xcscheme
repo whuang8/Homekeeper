@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9DE8C0991A36EBF362AAD73B08AE9636"
-               BuildableName = "libPods-Homekeeper.a"
+               BlueprintIdentifier = "0D8DB962530D042FF600934B10ACD9A2"
+               BuildableName = "Pods_Homekeeper.framework"
                BlueprintName = "Pods-Homekeeper"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9DE8C0991A36EBF362AAD73B08AE9636"
-            BuildableName = "libPods-Homekeeper.a"
+            BlueprintIdentifier = "0D8DB962530D042FF600934B10ACD9A2"
+            BuildableName = "Pods_Homekeeper.framework"
             BlueprintName = "Pods-Homekeeper"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9DE8C0991A36EBF362AAD73B08AE9636"
-            BuildableName = "libPods-Homekeeper.a"
+            BlueprintIdentifier = "0D8DB962530D042FF600934B10ACD9A2"
+            BuildableName = "Pods_Homekeeper.framework"
             BlueprintName = "Pods-Homekeeper"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
