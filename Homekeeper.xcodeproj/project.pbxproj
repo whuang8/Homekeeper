@@ -86,7 +86,7 @@
 		26F7F6E21BF97A610009F884 /* HouseholdsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseholdsTableViewCell.swift; sourceTree = "<group>"; };
 		26F7F6E31BF97A610009F884 /* HouseholdsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseholdsTableViewController.swift; sourceTree = "<group>"; };
 		26F7F6E41BF97A610009F884 /* HouseholdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseholdsViewController.swift; sourceTree = "<group>"; };
-		26F7F6E91BF97A850009F884 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		26F7F6E91BF97A850009F884 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftViewController.swift; path = ../LeftViewController.swift; sourceTree = "<group>"; };
 		2F028D991BF9586600CE11CA /* checkBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkBox.swift; sourceTree = "<group>"; };
 		2F60C8AF1BF3D43C00CE58DE /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2F73D8281BF58985000484B6 /* DebtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtTableViewController.swift; sourceTree = "<group>"; };
@@ -101,16 +101,16 @@
 		2F9B38E71BCAC5E600D3D090 /* GroceryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroceryTableViewController.xib; sourceTree = "<group>"; };
 		2F9B38EE1BCF430100D3D090 /* GroceryList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroceryList.storyboard; sourceTree = "<group>"; };
 		2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogInMain.storyboard; sourceTree = "<group>"; };
-		3F21A7251BF30152009F6BB9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsViewController.swift; path = Homekeeper/OptionsViewController.swift; sourceTree = "<group>"; };
+		3F21A7251BF30152009F6BB9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		3F6F8F071BD048A200359A64 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = Homekeeper/BaseTableViewCell.swift; sourceTree = "<group>"; };
-		3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = Homekeeper/ContainerViewController.swift; sourceTree = "<group>"; };
-		3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Homekeeper/SlideMenuController.swift; sourceTree = "<group>"; };
-		3F6F8F0F1BD0491400359A64 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Homekeeper/StringExtension.swift; sourceTree = "<group>"; };
-		3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewExtension.swift; path = Homekeeper/UITableViewExtension.swift; sourceTree = "<group>"; };
-		3F6F8F111BD0491400359A64 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = Homekeeper/UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
+		3F6F8F0F1BD0491400359A64 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		3F6F8F111BD0491400359A64 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Popover.storyboard; path = Homekeeper/Popover.storyboard; sourceTree = "<group>"; };
-		3F6F8F1F1BD04A6300359A64 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = Homekeeper/Base.lproj; sourceTree = "<group>"; };
+		3F6F8F1F1BD04A6300359A64 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		3FE6A0971BD0310B00C312EA /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		420F39C2BD024566E35CB9C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5A030608C5F94020C3E734C9 /* Pods_Homekeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homekeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,8 +143,8 @@
 		239CAD271BD032EE0090FDE8 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
-				2F028D991BF9586600CE11CA /* checkBox.swift */,
 				2641CDCE1BD0DAAE000ED84A /* ToDo.storyboard */,
+				2F028D991BF9586600CE11CA /* checkBox.swift */,
 				239CAD481BD03C520090FDE8 /* ToDo.swift */,
 				239CAD451BD03C300090FDE8 /* ToDoTableViewController.swift */,
 				239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */,
@@ -176,17 +176,17 @@
 		26D80D961BA3AE930012ECBC /* Homekeeper */ = {
 			isa = PBXGroup;
 			children = (
-				2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */,
-				3F6F8F071BD048A200359A64 /* AppDelegate.swift */,
-				265719671BBA2D1D00D29495 /* LogInViewController.swift */,
-				26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */,
 				26D80DA01BA3AE930012ECBC /* Images.xcassets */,
+				3F6F8F1F1BD04A6300359A64 /* Base.lproj */,
+				3F6F8F071BD048A200359A64 /* AppDelegate.swift */,
 				26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */,
-				26F7F6E01BF97A260009F884 /* households */,
+				3FE6A0781BD02FDF00C312EA /* Chat */,
 				2F73D8271BF588AD000484B6 /* Debt */,
-				239CAD271BD032EE0090FDE8 /* TodoList */,
-				3FE6A0781BD02FDF00C312EA /* UI */,
 				2F9B38E31BC9F0DA00D3D090 /* GroceryList */,
+				26F7F6E01BF97A260009F884 /* Households */,
+				2F028D9B1BF9817D00CE11CA /* Login/SignUp */,
+				2F028D9C1BF981A600CE11CA /* Navbar/Options */,
+				239CAD271BD032EE0090FDE8 /* TodoList */,
 				26D80D971BA3AE930012ECBC /* Supporting Files */,
 			);
 			path = Homekeeper;
@@ -217,7 +217,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		26F7F6E01BF97A260009F884 /* households */ = {
+		26F7F6E01BF97A260009F884 /* Households */ = {
 			isa = PBXGroup;
 			children = (
 				26F7F6E11BF97A610009F884 /* Households.storyboard */,
@@ -225,7 +225,32 @@
 				26F7F6E31BF97A610009F884 /* HouseholdsTableViewController.swift */,
 				26F7F6E41BF97A610009F884 /* HouseholdsViewController.swift */,
 			);
-			name = households;
+			name = Households;
+			sourceTree = "<group>";
+		};
+		2F028D9B1BF9817D00CE11CA /* Login/SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				2FDBCCB71BCF545600DEFA75 /* LogInMain.storyboard */,
+				265719671BBA2D1D00D29495 /* LogInViewController.swift */,
+				26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */,
+			);
+			name = Login/SignUp;
+			sourceTree = "<group>";
+		};
+		2F028D9C1BF981A600CE11CA /* Navbar/Options */ = {
+			isa = PBXGroup;
+			children = (
+				3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */,
+				3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */,
+				26F7F6E91BF97A850009F884 /* LeftViewController.swift */,
+				3F21A7251BF30152009F6BB9 /* OptionsViewController.swift */,
+				3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */,
+				3F6F8F0F1BD0491400359A64 /* StringExtension.swift */,
+				3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */,
+				3F6F8F111BD0491400359A64 /* UIViewControllerExtension.swift */,
+			);
+			name = Navbar/Options;
 			sourceTree = "<group>";
 		};
 		2F73D8271BF588AD000484B6 /* Debt */ = {
@@ -254,23 +279,14 @@
 			name = GroceryList;
 			sourceTree = "<group>";
 		};
-		3FE6A0781BD02FDF00C312EA /* UI */ = {
+		3FE6A0781BD02FDF00C312EA /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				3F6F8F1F1BD04A6300359A64 /* Base.lproj */,
 				3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */,
-				3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */,
-				3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */,
-				26F7F6E91BF97A850009F884 /* LeftViewController.swift */,
-				3F21A7251BF30152009F6BB9 /* OptionsViewController.swift */,
-				3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */,
-				3F6F8F0F1BD0491400359A64 /* StringExtension.swift */,
-				3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */,
-				3F6F8F111BD0491400359A64 /* UIViewControllerExtension.swift */,
 				3FE6A0971BD0310B00C312EA /* ChatViewController.swift */,
 				2F60C8AF1BF3D43C00CE58DE /* Message.swift */,
 			);
-			name = UI;
+			name = Chat;
 			path = ..;
 			sourceTree = "<group>";
 		};
