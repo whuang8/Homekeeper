@@ -22,6 +22,11 @@
 		26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA01BA3AE930012ECBC /* Images.xcassets */; };
 		26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */; };
 		26D80DB01BA3AE930012ECBC /* HomekeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80DAF1BA3AE930012ECBC /* HomekeeperTests.swift */; };
+		26F7F6E51BF97A610009F884 /* Households.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26F7F6E11BF97A610009F884 /* Households.storyboard */; };
+		26F7F6E61BF97A610009F884 /* HouseholdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7F6E21BF97A610009F884 /* HouseholdsTableViewCell.swift */; };
+		26F7F6E71BF97A610009F884 /* HouseholdsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7F6E31BF97A610009F884 /* HouseholdsTableViewController.swift */; };
+		26F7F6E81BF97A610009F884 /* HouseholdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7F6E41BF97A610009F884 /* HouseholdsViewController.swift */; };
+		26F7F6EA1BF97A850009F884 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7F6E91BF97A850009F884 /* LeftViewController.swift */; };
 		2F028D9A1BF9586600CE11CA /* checkBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F028D991BF9586600CE11CA /* checkBox.swift */; };
 		2F60C8B01BF3D43C00CE58DE /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60C8AF1BF3D43C00CE58DE /* Message.swift */; };
 		2F73D8291BF58985000484B6 /* DebtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F73D8281BF58985000484B6 /* DebtTableViewController.swift */; };
@@ -40,7 +45,6 @@
 		3F6F8F081BD048A200359A64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F071BD048A200359A64 /* AppDelegate.swift */; };
 		3F6F8F121BD0491400359A64 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */; };
 		3F6F8F131BD0491400359A64 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */; };
-		3F6F8F151BD0491400359A64 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0C1BD0491400359A64 /* LeftViewController.swift */; };
 		3F6F8F171BD0491400359A64 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */; };
 		3F6F8F181BD0491400359A64 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F0F1BD0491400359A64 /* StringExtension.swift */; };
 		3F6F8F191BD0491400359A64 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */; };
@@ -78,6 +82,11 @@
 		26D80DA91BA3AE930012ECBC /* HomekeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomekeeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D80DAE1BA3AE930012ECBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26D80DAF1BA3AE930012ECBC /* HomekeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomekeeperTests.swift; sourceTree = "<group>"; };
+		26F7F6E11BF97A610009F884 /* Households.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Households.storyboard; sourceTree = "<group>"; };
+		26F7F6E21BF97A610009F884 /* HouseholdsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseholdsTableViewCell.swift; sourceTree = "<group>"; };
+		26F7F6E31BF97A610009F884 /* HouseholdsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseholdsTableViewController.swift; sourceTree = "<group>"; };
+		26F7F6E41BF97A610009F884 /* HouseholdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseholdsViewController.swift; sourceTree = "<group>"; };
+		26F7F6E91BF97A850009F884 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		2F028D991BF9586600CE11CA /* checkBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkBox.swift; sourceTree = "<group>"; };
 		2F60C8AF1BF3D43C00CE58DE /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2F73D8281BF58985000484B6 /* DebtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtTableViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +105,6 @@
 		3F6F8F071BD048A200359A64 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = Homekeeper/BaseTableViewCell.swift; sourceTree = "<group>"; };
 		3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = Homekeeper/ContainerViewController.swift; sourceTree = "<group>"; };
-		3F6F8F0C1BD0491400359A64 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftViewController.swift; path = Homekeeper/LeftViewController.swift; sourceTree = "<group>"; };
 		3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Homekeeper/SlideMenuController.swift; sourceTree = "<group>"; };
 		3F6F8F0F1BD0491400359A64 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Homekeeper/StringExtension.swift; sourceTree = "<group>"; };
 		3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewExtension.swift; path = Homekeeper/UITableViewExtension.swift; sourceTree = "<group>"; };
@@ -174,6 +182,7 @@
 				26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */,
 				26D80DA01BA3AE930012ECBC /* Images.xcassets */,
 				26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */,
+				26F7F6E01BF97A260009F884 /* households */,
 				2F73D8271BF588AD000484B6 /* Debt */,
 				239CAD271BD032EE0090FDE8 /* TodoList */,
 				3FE6A0781BD02FDF00C312EA /* UI */,
@@ -206,6 +215,17 @@
 				26D80DAE1BA3AE930012ECBC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26F7F6E01BF97A260009F884 /* households */ = {
+			isa = PBXGroup;
+			children = (
+				26F7F6E11BF97A610009F884 /* Households.storyboard */,
+				26F7F6E21BF97A610009F884 /* HouseholdsTableViewCell.swift */,
+				26F7F6E31BF97A610009F884 /* HouseholdsTableViewController.swift */,
+				26F7F6E41BF97A610009F884 /* HouseholdsViewController.swift */,
+			);
+			name = households;
 			sourceTree = "<group>";
 		};
 		2F73D8271BF588AD000484B6 /* Debt */ = {
@@ -241,7 +261,7 @@
 				3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */,
 				3F6F8F091BD0491400359A64 /* BaseTableViewCell.swift */,
 				3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */,
-				3F6F8F0C1BD0491400359A64 /* LeftViewController.swift */,
+				26F7F6E91BF97A850009F884 /* LeftViewController.swift */,
 				3F21A7251BF30152009F6BB9 /* OptionsViewController.swift */,
 				3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */,
 				3F6F8F0F1BD0491400359A64 /* StringExtension.swift */,
@@ -327,7 +347,7 @@
 				TargetAttributes = {
 					26D80D931BA3AE930012ECBC = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 44L47DE54H;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					26D80DA81BA3AE930012ECBC = {
 						CreatedOnToolsVersion = 6.4;
@@ -361,6 +381,7 @@
 			files = (
 				2641CDCF1BD0DAAE000ED84A /* ToDo.storyboard in Resources */,
 				2F9B38EF1BCF430100D3D090 /* GroceryList.storyboard in Resources */,
+				26F7F6E51BF97A610009F884 /* Households.storyboard in Resources */,
 				3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */,
 				2FDBCCB81BCF545600DEFA75 /* LogInMain.storyboard in Resources */,
 				2F9B38E91BCAC5E600D3D090 /* GroceryTableViewController.xib in Resources */,
@@ -437,19 +458,22 @@
 				3F6F8F081BD048A200359A64 /* AppDelegate.swift in Sources */,
 				3F6F8F131BD0491400359A64 /* ContainerViewController.swift in Sources */,
 				3F6F8F121BD0491400359A64 /* BaseTableViewCell.swift in Sources */,
-				3F6F8F151BD0491400359A64 /* LeftViewController.swift in Sources */,
+				26F7F6E61BF97A610009F884 /* HouseholdsTableViewCell.swift in Sources */,
 				3F6F8F181BD0491400359A64 /* StringExtension.swift in Sources */,
 				26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */,
 				2F73D8351BF589FF000484B6 /* DebtViewController.swift in Sources */,
 				239CAD431BD03BCB0090FDE8 /* AddToDo.swift in Sources */,
+				26F7F6E81BF97A610009F884 /* HouseholdsViewController.swift in Sources */,
 				3F21A7261BF30152009F6BB9 /* OptionsViewController.swift in Sources */,
 				3F6F8F1A1BD0491400359A64 /* UIViewControllerExtension.swift in Sources */,
 				265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */,
 				2F73D8291BF58985000484B6 /* DebtTableViewController.swift in Sources */,
 				239CAD491BD03C520090FDE8 /* ToDo.swift in Sources */,
+				26F7F6E71BF97A610009F884 /* HouseholdsTableViewController.swift in Sources */,
 				26D80D9C1BA3AE930012ECBC /* GroceryItemViewController.swift in Sources */,
 				239CAD4C1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */,
 				2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */,
+				26F7F6EA1BF97A850009F884 /* LeftViewController.swift in Sources */,
 				2F73D82F1BF58994000484B6 /* DebtItemTableViewCell.swift in Sources */,
 				2F60C8B01BF3D43C00CE58DE /* Message.swift in Sources */,
 				2F028D9A1BF9586600CE11CA /* checkBox.swift in Sources */,
@@ -592,7 +616,7 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homekeeper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Team9.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -608,7 +632,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homekeeper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Team9.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
