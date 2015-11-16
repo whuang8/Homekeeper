@@ -14,16 +14,21 @@ class AddToDo: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var justALabel: UILabel!
     @IBOutlet weak var saveNewItem: UIBarButtonItem!
+    @IBOutlet weak var messageInput: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         //inputTextField.delegate = self
         
         if let todo = todo {
-            navigationItem.title = todo.message
+           inputTextField.text = todo.task
+            messageInput.text = todo.message
         }
+        
+        //if let todo = todo {
+            //navigationItem.title = todo.message
+        //}
         
         //checkValidMessage()
     }
@@ -32,7 +37,6 @@ class AddToDo: UIViewController, UITextFieldDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     /*func textFieldDidBeginEditing(textField: UITextField) {
@@ -60,8 +64,14 @@ class AddToDo: UIViewController, UITextFieldDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveNewItem === sender {
-            let message = inputTextField.text
-            todo = ToDo(message: message!)
+            let task = inputTextField.text
+            let message = messageInput.text
+            
+            //let username = NSUserName()
+            let username = "createUser"
+        
+            
+            todo = ToDo(message: message!, user: username, task: task!, timeChecked: 0, checkedUser: "none")
         }
     }
     

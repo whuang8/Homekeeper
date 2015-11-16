@@ -7,47 +7,70 @@
 //
 
 import UIKit
+import Firebase
 
 class ToDoTableViewController: UITableViewController {
 
     //Properties
     var todos = [ToDo]()
+    var todosArchive = [ToDo]()
     var todo: ToDo?
     
+    let ref = Firebase(url: "https://homekeeper.firebaseio.com/todo-items/testHome")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Use the edit button item provided by the table view controller.
-        navigationItem.leftBarButtonItem = editButtonItem()
+        //navigationItem.leftBarButtonItem = editButtonItem()
         
-        //self.setNavigationBarItem()
+         self.setNavigationBarItem()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        loadToDos()
+
+        //loadToDos()
     }
     
-    func loadToDos() {
-        let string1 = "test1"
-        let todo1 = ToDo(message: string1)!
-        let string2 = "test2"
-        let todo2 = ToDo(message: string2)!
-        let string3 = "test3"
-        let todo3 = ToDo(message: string3)!
-        todos += [todo1, todo2, todo3]
+    
+    override func viewDidAppear(animated: Bool) {
+        print(ref)
         
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            // Create and populate new array with database entries
+            var newItems = [ToDo]()
+            var deletedItems = [ToDo]()
+            for item in snapshot.children {
+                let todoItem = ToDo(snapshot: item as! FDataSnapshot)
+                if (todoItem.timeChecked != 100) {
+                    newItems.append(todoItem)
+                }
+                else {
+                    print("deleting")
+                    print(todoItem.message)
+                    deletedItems.append(todoItem)
+                    //todoItem.ref?.removeValue()
+                }
+            }
+            
+            // Set new array equal to old and reload data
+            self.todos = newItems
+            self.todosArchive = deletedItems
+            print(self.todosArchive.count)
+            self.tableView.reloadData()
+        })
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    
+    
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -61,8 +84,31 @@ class ToDoTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "ToDoTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ToDoTableViewCell
+        
         let todo = todos[indexPath.row]
-        cell.testLabel.text = todo.message
+        
+        cell.testLabel.text = todo.task
+        cell.messageLabel.text = todo.message
+        cell.userLabel.text = todo.user
+        
+        if (cell.cBox.isChecked == true && todos[indexPath.row].timeChecked != 50) {
+            todos[indexPath.row].checkedUser = "checkedUser"
+            cell.userLabel.text = "checkedUser"
+            todos[indexPath.row].timeChecked = 100
+            todos[indexPath.row].ref!.updateChildValues(todo.toAnyObject() as! [NSObject : AnyObject])
+            todos[indexPath.row] = todo
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+        }
+        else if (cell.cBox.isChecked == true && todos[indexPath.row].timeChecked == 50) {
+            cell.cBox.isChecked = false
+            todos[indexPath.row].timeChecked = 0
+            todos[indexPath.row].checkedUser = ""
+            cell.userLabel.text = todos[indexPath.row].user
+            todos[indexPath.row].ref!.updateChildValues(todo.toAnyObject() as! [NSObject : AnyObject])
+            todos[indexPath.row] = todo
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+        }
+        
         
         // Configure the cell...
 
@@ -71,9 +117,23 @@ class ToDoTableViewController: UITableViewController {
     
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? AddToDo, todo = sourceViewController.todo {
-            let newIndexPath = NSIndexPath(forRow: todos.count, inSection: 0)
-            todos.append(todo)
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            //let rootRef = Firebase(url: "https://homekeeper.firebaseio.com/")
+            //let itemsRef = rootRef.childByAppendingPath("todo-items/testHome")
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                todos[selectedIndexPath.row].ref!.updateChildValues(todo.toAnyObject() as! [NSObject : AnyObject])
+                todos[selectedIndexPath.row] = todo
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            }else{
+                let newIndexPath = NSIndexPath(forRow: todos.count, inSection: 0)
+                
+                todos.append(todo)
+                
+                let todoItemRef = ref.childByAutoId()
+                todoItemRef.setValue(todo.toAnyObject())
+                
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
         }
     }
     
@@ -81,23 +141,25 @@ class ToDoTableViewController: UITableViewController {
     
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
     
-
+    
+    
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            todos.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            let todoItem = todos[indexPath.row]
+            todoItem.ref?.removeValue()
+            print(todoItem.ref)
+            //todos.removeAtIndex(indexPath.row)
+            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-
 
     /*
     // Override to support rearranging the table view.
@@ -114,24 +176,16 @@ class ToDoTableViewController: UITableViewController {
     }
     */
 
+    func loadToDos() {
+        
+    }
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "editDetails" {
-            /*if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                todos[selectedIndexPath.row] = todo!
-                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
-            }
-            else {
-                let newIndexPath = NSIndexPath(forRow: todos.count, inSection: 0)
-                todos.append(todo!)
-                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
-            }*/
-            print("editing details")
+       
+        if segue.identifier == "editItem" {
             let todoDetailViewController = segue.destinationViewController as! AddToDo
             if let selectedToDoCell = sender as? ToDoTableViewCell {
                 let indexPath = tableView.indexPathForCell(selectedToDoCell)!
@@ -140,8 +194,31 @@ class ToDoTableViewController: UITableViewController {
             }
         }
         else if segue.identifier == "addItem" {
-            print("Adding new item.")
+            print("Adding new meal.")
         }
+        else if segue.identifier == "showCompleted" {
+            print("show completed")
+            print(todosArchive.count)
+            for var i = 0; i < todosArchive.count; i++ {
+                todosArchive[i].timeChecked = 50
+                
+                let tref = todosArchive[i].ref!
+                let newTime = ["timeChecked": 50]
+                tref.updateChildValues(newTime)
+                
+                todos.append(todosArchive[i])
+
+                
+                //let newIndexPath = NSIndexPath(forRow: todos.count, inSection: 0)
+                //let cellIdentifier = "ToDoTableViewCell"
+                //let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: newIndexPath) as! ToDoTableViewCell
+                
+                //cell.cBox.isChecked = true
+                
+                self.tableView.reloadData()
+            }
+        }
+        
     }
 
 

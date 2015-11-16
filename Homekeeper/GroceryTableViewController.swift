@@ -113,8 +113,8 @@ class GroceryTableViewController: UITableViewController {
         if editingStyle == .Delete {
             // Delete the row from the data source
             let groceryItem = items[indexPath.row]
-            
             groceryItem.ref!.removeValue()
+            items.removeAtIndex(indexPath.row)
         }
     }
     

@@ -22,6 +22,7 @@
 		26D80DA11BA3AE930012ECBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA01BA3AE930012ECBC /* Images.xcassets */; };
 		26D80DA41BA3AE930012ECBC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D80DA21BA3AE930012ECBC /* LaunchScreen.xib */; };
 		26D80DB01BA3AE930012ECBC /* HomekeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D80DAF1BA3AE930012ECBC /* HomekeeperTests.swift */; };
+		2F028D9A1BF9586600CE11CA /* checkBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F028D991BF9586600CE11CA /* checkBox.swift */; };
 		2F60C8B01BF3D43C00CE58DE /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60C8AF1BF3D43C00CE58DE /* Message.swift */; };
 		2F73D8291BF58985000484B6 /* DebtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F73D8281BF58985000484B6 /* DebtTableViewController.swift */; };
 		2F73D82B1BF5898A000484B6 /* DebtTracker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F73D82A1BF5898A000484B6 /* DebtTracker.storyboard */; };
@@ -77,6 +78,7 @@
 		26D80DA91BA3AE930012ECBC /* HomekeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomekeeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D80DAE1BA3AE930012ECBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26D80DAF1BA3AE930012ECBC /* HomekeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomekeeperTests.swift; sourceTree = "<group>"; };
+		2F028D991BF9586600CE11CA /* checkBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkBox.swift; sourceTree = "<group>"; };
 		2F60C8AF1BF3D43C00CE58DE /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2F73D8281BF58985000484B6 /* DebtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtTableViewController.swift; sourceTree = "<group>"; };
 		2F73D82A1BF5898A000484B6 /* DebtTracker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DebtTracker.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		239CAD271BD032EE0090FDE8 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				2F028D991BF9586600CE11CA /* checkBox.swift */,
 				2641CDCE1BD0DAAE000ED84A /* ToDo.storyboard */,
 				239CAD481BD03C520090FDE8 /* ToDo.swift */,
 				239CAD451BD03C300090FDE8 /* ToDoTableViewController.swift */,
@@ -449,6 +452,7 @@
 				2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */,
 				2F73D82F1BF58994000484B6 /* DebtItemTableViewCell.swift in Sources */,
 				2F60C8B01BF3D43C00CE58DE /* Message.swift in Sources */,
+				2F028D9A1BF9586600CE11CA /* checkBox.swift in Sources */,
 				3F6F8F191BD0491400359A64 /* UITableViewExtension.swift in Sources */,
 				2F73D8331BF5899F000484B6 /* DebtItemViewController.swift in Sources */,
 				2F9B38E81BCAC5E600D3D090 /* GroceryTableViewController.swift in Sources */,
