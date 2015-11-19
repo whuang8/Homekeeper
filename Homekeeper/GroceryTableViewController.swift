@@ -25,6 +25,7 @@ class GroceryTableViewController: UITableViewController {
         self.setNavigationBarItem()
         self.navigationController?.toolbarHidden = false
         setupFirebase()
+        self.title = "Groceries";
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -64,8 +65,8 @@ class GroceryTableViewController: UITableViewController {
             let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: row, inSection: 0)) as! GroceryItemTableViewCell
             
             if cell.checkoutSwitch.on {
-                items.removeAtIndex(row)
                 items[row].ref!.removeValue()
+                items.removeAtIndex(row)
             }
         }
         

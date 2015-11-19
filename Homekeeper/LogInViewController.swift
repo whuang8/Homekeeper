@@ -286,7 +286,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         cancelButton.alpha = 0.0;
         cancelButton.enabled = false;
         
-        self.view.addSubview(cancelButton);
+        //self.view.addSubview(cancelButton);
         
         UIView.animateWithDuration(0.5,
             delay: 0,

@@ -16,6 +16,7 @@ class DebtTableViewController: UITableViewController {
         super.viewDidLoad()
         loadSampleItems()
         self.setNavigationBarItem()
+        self.title = "Debt Tracker";
     }
     
     override func viewDidAppear(animated: Bool) {

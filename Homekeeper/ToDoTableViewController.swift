@@ -19,9 +19,9 @@ class ToDoTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Use the edit button item provided by the table view controller.
-        navigationItem.leftBarButtonItem = editButtonItem()
+        //navigationItem.leftBarButtonItem = editButtonItem()
         
-        //self.setNavigationBarItem()
+        self.setNavigationBarItem()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

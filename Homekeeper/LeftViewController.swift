@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 enum LeftMenu: Int {
-    case Chat = 0
+    case Pic = 0
+    case Chat
     case Debt
     case Groc
     case Todo
@@ -23,7 +24,10 @@ protocol LeftMenuProtocol : class {
 class LeftViewController: UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["Chat", "Debt", "Groceries", "Todo"]
+    
+    var menus = ["", "Chat", "Debt", "Groceries", "Todo"]
+    //var navController = UINavigationController()
+    //var optiViewController = UIViewController()
     var chatViewController = UIViewController()
     var debtViewController = UIViewController()
     var grocViewController = UIViewController()
@@ -38,7 +42,7 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         super.viewDidLoad()
         //self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "Wood.jpg")!);
         self.tableView.backgroundColor = UIColor.blackColor();
-        self.tableView.separatorColor = UIColor(white: 0.0, alpha: 0.0)
+        self.tableView.separatorColor = UIColor.clearColor();
         self.tableView.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
         self.view.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
         
@@ -46,6 +50,9 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         let storyboard2 = UIStoryboard(name: "GroceryList", bundle: nil);
         let storyboard3 = UIStoryboard(name: "ToDo", bundle: nil);
         let storyboard4 = UIStoryboard(name: "DebtTracker", bundle: nil);
+        
+        //let optiViewController:OptionsViewController = OptionsViewController();
+        //self.navController = UINavigationController(rootViewController: optiViewController);
         
         let chatViewController = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController;
         self.chatViewController = UINavigationController(rootViewController: chatViewController);
@@ -65,9 +72,17 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         makeToolbar();
     }
     
+    //Overrides start here
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    //tableView "overrides" start here
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menus.count;
@@ -88,9 +103,7 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    //All the fun stuff starts here
     
     func toOptions(sender: AnyObject) {
         let optionsViewController:OptionsViewController = OptionsViewController();
@@ -108,7 +121,7 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         items.append(loginButton);
         
         let toolbar = UIToolbar(frame: CGRectMake(0, view.frame.height - 44, 270, 44));
-        toolbar.backgroundColor = UIColor.redColor();
+        toolbar.backgroundColor = UIColor(white: 0.25, alpha: 1.0)
         
         let options:UIBarButtonItem = UIBarButtonItem(title: "Options",
             style: UIBarButtonItemStyle.Plain,
@@ -129,6 +142,8 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
     
     func changeViewController(menu: LeftMenu) {
         switch menu {
+        case .Pic:
+            return;
         case .Chat:
             self.slideMenuController()?.changeMainViewController(self.chatViewController, close: true);
         case .Debt:
@@ -142,4 +157,9 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
             break;
         }
     }
+    
+    //Functions to make it look pretty
+    
+    
+    
 }

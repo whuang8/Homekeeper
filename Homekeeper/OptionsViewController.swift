@@ -32,7 +32,7 @@ class OptionsViewController: UITableViewController {
         super.loadView()
 
         
-        addCancelButton();
+        //addCancelButton();
         addSaveButton();
         self.title = "User Options"
         
@@ -143,6 +143,10 @@ class OptionsViewController: UITableViewController {
             }
         default: fatalError("Unknown section")
         }
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        self.setNavigationBarItem();
     }
     
     // Customize the section headings for each section

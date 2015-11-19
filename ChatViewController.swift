@@ -45,6 +45,7 @@ class ChatViewController: JSQMessagesViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
+        self.title = "Household Chat";
         collectionView!.collectionViewLayout.springinessEnabled = true
         
         if messages.isEmpty {
