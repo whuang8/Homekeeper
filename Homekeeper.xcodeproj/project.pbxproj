@@ -51,6 +51,8 @@
 		3F6F8F1A1BD0491400359A64 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F8F111BD0491400359A64 /* UIViewControllerExtension.swift */; };
 		3F6F8F1E1BD04A2F00359A64 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */; };
 		3F6F8F201BD04A6300359A64 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3F6F8F1F1BD04A6300359A64 /* Base.lproj */; };
+		3FBE24C31BFE95680060DB85 /* UserOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE24C21BFE95680060DB85 /* UserOptionsViewController.swift */; };
+		3FBE24C51BFEA0FE0060DB85 /* HomeOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE24C41BFEA0FE0060DB85 /* HomeOptionsViewController.swift */; };
 		3FE6A0981BD0310B00C312EA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6A0971BD0310B00C312EA /* ChatViewController.swift */; };
 		C7238548133FC4CF609D6303 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC0D5C18339632B07140312 /* libPods.a */; };
 		C81AAFC61FF7171A071E68FA /* Pods_Homekeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A030608C5F94020C3E734C9 /* Pods_Homekeeper.framework */; };
@@ -111,6 +113,8 @@
 		3F6F8F111BD0491400359A64 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		3F6F8F1D1BD04A2F00359A64 /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Popover.storyboard; path = Homekeeper/Popover.storyboard; sourceTree = "<group>"; };
 		3F6F8F1F1BD04A6300359A64 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		3FBE24C21BFE95680060DB85 /* UserOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOptionsViewController.swift; sourceTree = "<group>"; };
+		3FBE24C41BFEA0FE0060DB85 /* HomeOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeOptionsViewController.swift; sourceTree = "<group>"; };
 		3FE6A0971BD0310B00C312EA /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		420F39C2BD024566E35CB9C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5A030608C5F94020C3E734C9 /* Pods_Homekeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homekeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +249,8 @@
 				3F6F8F0A1BD0491400359A64 /* ContainerViewController.swift */,
 				26F7F6E91BF97A850009F884 /* LeftViewController.swift */,
 				3F21A7251BF30152009F6BB9 /* OptionsViewController.swift */,
+				3FBE24C41BFEA0FE0060DB85 /* HomeOptionsViewController.swift */,
+				3FBE24C21BFE95680060DB85 /* UserOptionsViewController.swift */,
 				3F6F8F0E1BD0491400359A64 /* SlideMenuController.swift */,
 				3F6F8F0F1BD0491400359A64 /* StringExtension.swift */,
 				3F6F8F101BD0491400359A64 /* UITableViewExtension.swift */,
@@ -484,10 +490,12 @@
 				3F6F8F1A1BD0491400359A64 /* UIViewControllerExtension.swift in Sources */,
 				265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */,
 				2F73D8291BF58985000484B6 /* DebtTableViewController.swift in Sources */,
+				3FBE24C51BFEA0FE0060DB85 /* HomeOptionsViewController.swift in Sources */,
 				239CAD491BD03C520090FDE8 /* ToDo.swift in Sources */,
 				26F7F6E71BF97A610009F884 /* HouseholdsTableViewController.swift in Sources */,
 				26D80D9C1BA3AE930012ECBC /* GroceryItemViewController.swift in Sources */,
 				239CAD4C1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */,
+				3FBE24C31BFE95680060DB85 /* UserOptionsViewController.swift in Sources */,
 				2F9B38E21BC9EF3000D3D090 /* GroceryItem.swift in Sources */,
 				26F7F6EA1BF97A850009F884 /* LeftViewController.swift in Sources */,
 				2F73D82F1BF58994000484B6 /* DebtItemTableViewCell.swift in Sources */,

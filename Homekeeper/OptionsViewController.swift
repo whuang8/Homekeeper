@@ -15,48 +15,35 @@ class OptionsViewController: UITableViewController {
     let ref = Firebase(url: "https://homekeeper.firebaseio.com/");
     
     let defaults = NSUserDefaults.standardUserDefaults();
+    let options = ["User Options", "Home Options"];
     
-    var firstNameCell: UITableViewCell = UITableViewCell();
-    var lastNameCell: UITableViewCell = UITableViewCell();
-    var passwordCell: UITableViewCell = UITableViewCell();
+    var userOptionsCell: UITableViewCell = UITableViewCell();
+    var homeOptionsCell: UITableViewCell = UITableViewCell();
     
-    var firstNameText: UITextField = UITextField();
-    var lastNameText: UITextField = UITextField();
-    var passwordText: UITextField = UITextField();
-    
-    var newPasswordText: String = String();
+    var userOptionsButton: UIButton = UIButton();
+    var homeOptionsButton: UIButton = UIButton();
     
     var window: UIWindow?
     
     override func loadView() {
         super.loadView()
-
         
         addCancelButton();
-        addSaveButton();
-        self.title = "User Options"
+
+        self.title = "Options"
         
-        self.firstNameCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
-        self.firstNameText = UITextField(frame: CGRectInset(self.firstNameCell.contentView.bounds, 15, 0))
-        self.firstNameText.placeholder = "First Name"
-        self.firstNameText.text = defaults.stringForKey(AppDelegate.constants.firstNameKeyConstant);
+        //I don't know why I didn't make functions for these but whatever. You'll live.
+
+        self.userOptionsCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5);
+        self.userOptionsCell.textLabel?.text = "User Options";
+        //self.userOptionsCell.targetForAction("toUserOptions:", withSender: self);
         
-        self.firstNameCell.addSubview(self.firstNameText);
-        
-        
-        self.lastNameCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
-        self.lastNameText = UITextField(frame: CGRectInset(self.lastNameCell.contentView.bounds, 15, 0))
-        self.lastNameText.placeholder = "Last Name"
-        self.lastNameText.text = defaults.stringForKey(AppDelegate.constants.lastNameKeyConstant);
-        
-        self.lastNameCell.addSubview(self.lastNameText)
-        
-        self.passwordCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5);
-        self.passwordText = UITextField(frame: CGRectInset(self.passwordCell.contentView.bounds, 15, 0));
-        self.passwordText.placeholder = "New Password";
-        self.passwordText.secureTextEntry = true;
-        self.passwordCell.addSubview(self.passwordText);
-    }
+        self.homeOptionsCell.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5);
+        self.homeOptionsCell.textLabel?.text = "Home Options";
+        //self.homeOptionsCell.targetForAction("toHomeOptions:", withSender: self);
+        }
+    
+    //Buttons and their functions
     
     func addCancelButton() {
         let cancel: UIBarButtonItem = UIBarButtonItem(title: "Cancel",
@@ -67,53 +54,23 @@ class OptionsViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = cancel;
     }
     
-    func addSaveButton() {
-        let save: UIBarButtonItem = UIBarButtonItem(title: "Save",
-            style: UIBarButtonItemStyle.Plain,
-            target: self,
-            action: "saveButton:");
-        
-        self.navigationItem.rightBarButtonItem = save;
-    }
-    
     func cancelButton(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: {});
     }
     
-    func saveButton(sender: UIButton) {
-        //Update info in database
-        let passAlert:UIAlertController = UIAlertController(title: "Password Check",
-            message: "Please input your Homekeeper password.",
-            preferredStyle: UIAlertControllerStyle.Alert);
-        
-        passAlert.addAction(UIAlertAction(title: "Cancel",
-            style: UIAlertActionStyle.Cancel,
-            handler: nil));
-        
-        passAlert.addTextFieldWithConfigurationHandler({ (textField) in
-            textField.secureTextEntry = true;
-            textField.placeholder = "Password";
-        })
-        
-        let field = passAlert.textFields![0] as UITextField;
-        newPasswordText = field.text!;
-        
-        passAlert.addAction(UIAlertAction(title: "Submit",
-            style: UIAlertActionStyle.Default,
-            handler: {(action) -> Void in
-                
-                self.defaults.setObject(self.firstNameText.text, forKey: AppDelegate.constants.firstNameKeyConstant);
-                self.defaults.setObject(self.lastNameText.text, forKey: AppDelegate.constants.lastNameKeyConstant);
-                self.ref.changePasswordForUser(AppDelegate.constants.userNameKeyConstant,
-                    fromOld: self.newPasswordText,
-                    toNew: self.passwordText.text,
-                    withCompletionBlock: nil);
-        }))
+    //View changes
     
-        self.presentViewController(passAlert,
-            animated: true,
-            completion: nil);
+    func toUserOptions() {
+        let userOptionsView: UserOptionsViewController = UserOptionsViewController();
+        self.navigationController?.pushViewController(userOptionsView, animated: true);
     }
+    
+    func toHomeOptions() {
+        let homeOptionsView: HomeOptionsViewController = HomeOptionsViewController();
+        self.navigationController?.pushViewController(homeOptionsView, animated: true);
+    }
+    
+    //Overrides
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -121,27 +78,34 @@ class OptionsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch(section) {
-        case 0: return 3;    // section 0 has 2 rows
-        case 1: return 2;    // section 1 has 1 row
-        case 2: return 1;
+        case 0: return 2;
+        case 1: return 1;
         default: fatalError("Unknown number of sections");
         }
     }
-    
-    
-    
     
     // Return the row for the corresponding section and row
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch(indexPath.section) {
         case 0:
             switch(indexPath.row) {
-            case 0: return self.firstNameCell;   // section 0, row 0 is the first name
-            case 1: return self.lastNameCell;    // section 0, row 1 is the last name
-            case 2: return self.passwordCell;
+            case 0: return self.userOptionsCell;   // section 0, row 0 is the first name
+            case 1: return self.homeOptionsCell;    // section 0, row 1 is the last name
             default: fatalError("Unknown row in section 0")
             }
         default: fatalError("Unknown section")
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch(indexPath.section) {
+        case 0:
+            switch(indexPath.row) {
+            case 0: toUserOptions();
+            case 1: toHomeOptions();
+            default: fatalError("Unknown function");
+            }
+        default: fatalError("Unknown section");
         }
     }
     
