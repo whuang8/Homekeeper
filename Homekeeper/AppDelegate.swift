@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     struct constants {
         static let userNameKeyConstant = "userNameKey"
+        static let userIdConstant = "userIdKey"
         static let homeNameKeyConstant = "homeNameKey"
         static let firstNameKeyConstant = "firstNameKey"
         static let lastNameKeyConstant = "lastNameKey"
