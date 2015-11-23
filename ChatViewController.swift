@@ -21,9 +21,8 @@ class ChatViewController: JSQMessagesViewController {
         
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        // Set id and name using NSUser information
-        senderId = "0"
-        senderDisplayName = "Temp"
+        senderDisplayName = "-1"
+        senderId = "-1"
         
         // Move landing to login if some var is nil
         if (defaults.stringForKey(AppDelegate.constants.userNameKeyConstant) == nil) {
@@ -36,7 +35,21 @@ class ChatViewController: JSQMessagesViewController {
             self.presentViewController(navController, animated: false, completion: nil)
         }
         else {
-            // reset sender id and name
+            // Set id and name using NSUser information
+            senderId = defaults.stringForKey(AppDelegate.constants.userIdConstant)
+            senderDisplayName = defaults.stringForKey(AppDelegate.constants.userNameKeyConstant)
+            
+            setupFirebase(defaults.stringForKey(AppDelegate.constants.homeNameKeyConstant)!)
+            
+            ref.queryLimitedToFirst(50).observeEventType(FEventType.ChildAdded, withBlock: { (snapshot) in
+                let text = snapshot.value["text"] as? String
+                let senderName = snapshot.value["senderName"] as? String
+                let senderId = snapshot.value["senderId"] as? String
+                
+                let message = Message(text: text, senderName: senderName, senderID: senderId)
+                self.messages.append(message)
+                self.finishReceivingMessage()
+            })
         }
         
         automaticallyScrollsToMostRecentMessage = true
@@ -47,24 +60,26 @@ class ChatViewController: JSQMessagesViewController {
         self.setNavigationBarItem()
         collectionView!.collectionViewLayout.springinessEnabled = true
         
-        if messages.isEmpty {
-            // set temp data here
-            let msg1 = Message(text: "CS 307", senderName: "Thing 1", senderID: "1")
-            let msg2 = Message(text: "E = mc^2", senderName: "Thing 2", senderID: "2")
-            messages.append(msg1)
-            messages.append(msg2)
-        }
-        
         self.collectionView?.reloadData()
     }
+    
+    override func viewDidAppear(animated: Bool) { }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func setupFirebase(homeName: String) {
+        ref = Firebase(url: "https://homekeeper.firebaseio.com/messages/" + homeName)
+    }
+    
     func sendMessage(text: String!, sender: String!, senderName: String!) {
-        // Add to FIREBASE
-        tempSendMessage(text, senderID: sender, senderName: senderName)
+        print(NSUserDefaults.standardUserDefaults().stringForKey(AppDelegate.constants.homeNameKeyConstant))
+        ref.childByAutoId().setValue([
+            "text":text,
+            "senderId":sender,
+            "senderName":senderName
+        ])
     }
     
     func tempSendMessage(text: String!, senderID: String!, senderName: String!) {
