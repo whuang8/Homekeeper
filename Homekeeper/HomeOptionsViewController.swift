@@ -11,6 +11,8 @@ import UIKit
 import Firebase
 
 class HomeOptionsViewController: UITableViewController {
+    //Do your thing, Will
+    
     let ref = Firebase(url: "https://homekeeper.firebaseio.com/");
     let defaults = NSUserDefaults.standardUserDefaults();
     
