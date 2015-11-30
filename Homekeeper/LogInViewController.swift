@@ -69,7 +69,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     let defaults = NSUserDefaults.standardUserDefaults()
                     
                     defaults.setObject(self.emailText.text, forKey: AppDelegate.constants.userNameKeyConstant)
-                    defaults.setObject("testHome", forKey: AppDelegate.constants.homeNameKeyConstant)
+                    defaults.setObject(ref.authData.uid, forKey: AppDelegate.constants.userIdConstant)
+            
+                    let userRef = Firebase(url: ("https://homekeeper.firebaseio.com/users/" + ref.authData.uid))
+                    userRef.observeEventType(.Value, withBlock: { snapshot in
+                        defaults.setObject(snapshot.value["households"] as! String, forKey: AppDelegate.constants.homeNameKeyConstant)
+                    })
+                    
+                    print(defaults.valueForKey(AppDelegate.constants.homeNameKeyConstant))
                         
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
