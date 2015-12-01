@@ -16,7 +16,7 @@ class ChatViewController: JSQMessagesViewController {
     var ref = Firebase()
     var senderImageUrl: String!
     
-    let incoming = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor.whiteColor());
+    let incoming = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor.blueColor());
     let outgoing = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.whiteColor());
     
     override func viewDidLoad() {
@@ -111,28 +111,31 @@ class ChatViewController: JSQMessagesViewController {
         return messages.count
     }
     
-    /*override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        //let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
 
         
         let message = messages[indexPath.item]
         if message.senderId() == senderId {
-            //cell.textView!.textColor = UIColor.blackColor()
+            cell.textView!.textColor = UIColor.blackColor()
+            cell.textView!.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [0.0, 122.0/255.0, 1.0, 1.0]);
             //cell.backgroundColor = UIColor.jsq_messageBubbleLightGrayColor()
         } else {
-            //incoming.textView!.textColor = UIColor.whiteColor()
-            //incoming.backgroundColor = UIColor.jsq_messageBubbleBlueColor()
+            cell.textView!.textColor = UIColor.blackColor()
+            cell.textView!.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [91.0/255.0, 194.0/255.0, 54.0/255.0, 1.0]);
+            //cell.backgroundColor = UIColor.jsq_messageBubbleBlueColor()
         }
         
         //let attributes : [NSObject:AnyObject] = [NSForegroundColorAttributeName:cell.textView!.textColor!, NSUnderlineStyleAttributeName: 1]
         //cell.textView!.linkTextAttributes = attributes.description
-        //cell.textView!.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 1.0, 1.0, 1.0]);
-        //cell.textView!.layer.borderWidth = 0.6;
-        //cell.textView!.layer.cornerRadius = 10;
-        //cell.textView!.layer.masksToBounds = true;
+        //cell.textView!.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [0.0, 0.0, 0.0, 1.0]);
+        cell.textView!.layer.borderWidth = 1.5;
+        cell.textView!.layer.cornerRadius = 15;
+        cell.textView!.layer.masksToBounds = true;
+        //cell.textView!.layer.backgroundColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 1.0, 1.0, 1.0]);
         
         return cell
-    }*/
+    }
     
     // View  usernames above bubbles
     override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
