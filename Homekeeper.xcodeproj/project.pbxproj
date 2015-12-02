@@ -262,12 +262,12 @@
 		2F73D8271BF588AD000484B6 /* Debt */ = {
 			isa = PBXGroup;
 			children = (
+				2F73D82A1BF5898A000484B6 /* DebtTracker.storyboard */,
+				2F73D8281BF58985000484B6 /* DebtTableViewController.swift */,
 				2F73D8341BF589FF000484B6 /* DebtViewController.swift */,
 				2F73D8321BF5899F000484B6 /* DebtItemViewController.swift */,
 				2F73D8301BF58998000484B6 /* DebtItem.swift */,
 				2F73D82E1BF58994000484B6 /* DebtItemTableViewCell.swift */,
-				2F73D82A1BF5898A000484B6 /* DebtTracker.storyboard */,
-				2F73D8281BF58985000484B6 /* DebtTableViewController.swift */,
 			);
 			name = Debt;
 			sourceTree = "<group>";

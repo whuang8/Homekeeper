@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class DebtItem {
     var amount: String;
@@ -15,6 +16,7 @@ class DebtItem {
     var personInDebt: String;
     //var debtor: String;
     var paid: Bool;
+    var ref = Firebase()
     
     init? (amount: String, message: String, personInDebt: String) {
         self.amount = amount;
@@ -26,5 +28,22 @@ class DebtItem {
         if amount.isEmpty {
             return nil;
         }
+    }
+    
+    init (snapshot: FDataSnapshot) {
+        amount = snapshot.value["amount"] as! String
+        message = snapshot.value["message"] as! String
+        personInDebt = snapshot.value["personInDebt"] as! String
+        paid = false
+        ref = snapshot.ref
+    }
+    
+    func toAnyObject() -> AnyObject {
+        return [
+            "amount": amount,
+            "message": message,
+            "personInDebt": personInDebt,
+            "paid": paid
+        ]
     }
 }
