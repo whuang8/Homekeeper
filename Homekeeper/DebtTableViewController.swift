@@ -8,26 +8,37 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class DebtTableViewController: UITableViewController {
-    var debts = [DebtItem]();
+    var debts = [DebtItem]()
+    var ref = Firebase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleItems()
         self.setNavigationBarItem()
+        self.setupFirebase()
+    }
+    
+    func setupFirebase() {
+        ref = Firebase(url: "https://homekeeper.firebaseio.com/debts/" + NSUserDefaults.standardUserDefaults().stringForKey(AppDelegate.constants.homeNameKeyConstant)!)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-    }
-    
-    func loadSampleItems() {
-        let item1 = DebtItem(amount: "69.00", message: "idk man", personInDebt: "Lee Anne")!;
-        let item2 = DebtItem(amount: "420.00", message: "That good kush", personInDebt: "Lance")!;
-        let item3 = DebtItem(amount: "42.00", message: "Nerds are cool", personInDebt: "Tanner")!;
         
-        debts += [item1, item2, item3];
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            // Create and populate new array with database entries
+            var newDebts = [DebtItem]()
+            for item in snapshot.children {
+                let debtItem = DebtItem(snapshot: item as! FDataSnapshot)
+                newDebts.append(debtItem)
+            }
+            
+            // Set new array equal to old and reload data
+            self.debts = newDebts
+            self.tableView.reloadData()
+        })
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -40,7 +51,9 @@ class DebtTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cellID", forIndexPath: indexPath) as! DebtItemTableViewCell
+        
         let debt = debts[indexPath.row];
+        
         cell.debtLabel.text = debt.amount;
         cell.messageLabel.text = debt.message;
         cell.debtorLabel.text = debt.personInDebt;
@@ -54,12 +67,13 @@ class DebtTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            debts.removeAtIndex(indexPath.row);
+            // Delete the row from the data source
+            let debtItem = debts[indexPath.row]
+            debtItem.ref.removeValue()
+            debts.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic);
         }
     }
-    
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowDetail" {
@@ -68,12 +82,9 @@ class DebtTableViewController: UITableViewController {
 
             if let selectedDebtCell = sender as? DebtItemTableViewCell {
                 let indexPath = tableView.indexPathForCell(selectedDebtCell)!
-                let selectedMeal = debts[indexPath.row]
-                debtDetailViewController.debtitem = selectedMeal
+                let selectedDebt = debts[indexPath.row]
+                debtDetailViewController.debtitem = selectedDebt
             }
-        }
-        else if segue.identifier == "AddItem" {
-            print("Adding new cell");
         }
     }
     
@@ -83,12 +94,18 @@ class DebtTableViewController: UITableViewController {
         
         if (sourceViewController != nil), let debt = sourceViewController?.debtitem {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                debts[selectedIndexPath.row].ref.updateChildValues(debt.toAnyObject() as! [NSObject : AnyObject])
+                
                 debts[selectedIndexPath.row] = debt
                 tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
             }
             else {
                 let newIndexPath = NSIndexPath(forRow: debts.count, inSection: 0)
                 debts.append(debt)
+                
+                let debtItemRef = ref.childByAutoId()
+                
+                debtItemRef.setValue(debt.toAnyObject())
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
         }
