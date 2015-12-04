@@ -21,7 +21,7 @@ class ChatViewController: JSQMessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let defaults = NSUserDefaults.standardUserDefaults()
         
         senderDisplayName = "-1"
@@ -146,7 +146,7 @@ class ChatViewController: JSQMessagesViewController {
         cell.textView!.layer.borderWidth = 1.5;
         cell.textView!.layer.cornerRadius = 15;
         cell.textView!.layer.masksToBounds = true;
-        //cell.textView!.layer.backgroundColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 1.0, 1.0, 1.0]);
+        cell.textView!.layer.backgroundColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 1.0, 1.0, 1.0]);
         
         return cell
     }

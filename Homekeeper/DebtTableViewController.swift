@@ -18,6 +18,8 @@ class DebtTableViewController: UITableViewController {
         super.viewDidLoad()
         self.setNavigationBarItem()
         self.setupFirebase()
+        
+        
     }
     
     func setupFirebase() {
