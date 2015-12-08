@@ -110,15 +110,15 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
     
     
     func makeToolbar() {
-        let loginButton = UIBarButtonItem(title: "Login", style: UIBarButtonItemStyle.Plain, target: self, action: "toLogin");
+        let loginButton = UIBarButtonItem(title: "       Logout          ", style: UIBarButtonItemStyle.Plain, target: self, action: "toLogin");
         
         var items = [UIBarButtonItem]();
         items.append(loginButton);
         
         let toolbar = UIToolbar(frame: CGRectMake(0, view.frame.height - 44, 270, 44));
-        toolbar.backgroundColor = UIColor.redColor();
+        toolbar.backgroundColor = UIColor(white: 0.25, alpha: 1.0);
         
-        let options:UIBarButtonItem = UIBarButtonItem(title: "Options",
+        let options:UIBarButtonItem = UIBarButtonItem(title: "      Options",
             style: UIBarButtonItemStyle.Plain,
             target: self,
             action: "toOptions:");

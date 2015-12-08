@@ -22,12 +22,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor.blueColor();
+        
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.jpg")!);
         //setVideoLayer();
         //Looks for single or multiple taps.
+        
+        
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
         
+        backgroundImage()
         drawLoginMenu()
         drawLoginCancelButtons()
         drawSignUpButton()
@@ -162,6 +167,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     func presentSignup(sender: UIButton) {
         let storyboard = UIStoryboard(name: "LogInMain", bundle: nil);
         let controller = storyboard.instantiateViewControllerWithIdentifier("SignUpViewController");
+        let style: UIModalTransitionStyle = UIModalTransitionStyle.CrossDissolve;
+        controller.modalTransitionStyle = style;
         self.presentViewController(controller, animated: true, completion: nil);
     }
     
@@ -177,7 +184,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         base.alpha = 0;
         base.clipsToBounds = true;
         
-        self.view.addSubview(base);
+        //self.view.addSubview(base);
         
         //Make the text field
         let inpWid:CGFloat = 200.0;
@@ -328,7 +335,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             supHei));
         
         signUpButton.backgroundColor = UIColor.grayColor();
-        signUpButton.setTitle("Sign Up", forState: UIControlState.Normal);
+        signUpButton.setTitle("Sign up with email!", forState: UIControlState.Normal);
         signUpButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
         signUpButton.titleLabel?.font = UIFont(name: "System", size: 20);
         signUpButton.addTarget(self, action: "presentSignup:", forControlEvents: UIControlEvents.TouchUpInside);
@@ -361,15 +368,28 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 signUpButton.enabled = true;
         })
     }
-    /*
+    
     func setVideoLayer() {
         let myPlayerView = UIView(frame: self.view.frame);
-        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("ChampsElysees_150610_03_Videvo", withExtension: "mov")!;
+        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("HD045-086.vga", withExtension: "mov")!;
         let player = AVPlayer(URL: videoURL);
         
-        player.play();
         player.muted = true;
         player.actionAtItemEnd = AVPlayerActionAtItemEnd.None;
+        player.appliesMediaSelectionCriteriaAutomatically = false;
+        player.allowsExternalPlayback = false;
+        var error:NSError?;
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+        } catch let error1 as NSError {
+            error = error1
+        } catch {
+            fatalError()
+        }
+        if error != nil {
+            print(error)
+        }
         
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "playerItemDidReachEnd:",
@@ -377,8 +397,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             object: player.currentItem)
         
         let avLayer = AVPlayerLayer(player: player);
-        avLayer.frame = myPlayerView.bounds;
-        avLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        avLayer.frame = self.view.frame;
+        avLayer.backgroundColor = UIColor.blackColor().CGColor;
+        avLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+        
+        player.play();
         
         myPlayerView.layer.addSublayer(avLayer);
         
@@ -387,7 +410,21 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         blurView.alpha = 0.75;
         blurView.frame = self.view.bounds;
         self.view.addSubview(blurView);
-    }*/
+    }
+    
+    func backgroundImage() {
+        let width = UIScreen.mainScreen().bounds.size.width
+        let height = UIScreen.mainScreen().bounds.size.height
+        
+        let imageViewBackground = UIImageView(frame: CGRectMake(0, 0, width, height))
+        imageViewBackground.image = UIImage(named: "background.jpg")
+        
+        // you can change the content mode:
+        imageViewBackground.contentMode = UIViewContentMode.ScaleAspectFill
+        
+        self.view.addSubview(imageViewBackground);
+        self.view.sendSubviewToBack(imageViewBackground);
+    }
     
 
     /*

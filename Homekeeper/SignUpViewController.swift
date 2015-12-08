@@ -25,7 +25,9 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
-
+        
+        self.view.backgroundColor = UIColor.clearColor();
+        backgroundImage()
     }
     
     @IBAction func createUser(sender: AnyObject) {
@@ -146,6 +148,20 @@ class SignUpViewController: UIViewController {
         
         cancel.setTitle("Cancel", forState: .Normal);
         
+    }
+    
+    func backgroundImage() {
+        let width = UIScreen.mainScreen().bounds.size.width
+        let height = UIScreen.mainScreen().bounds.size.height
+        
+        let imageViewBackground = UIImageView(frame: CGRectMake(0, 0, width, height))
+        imageViewBackground.image = UIImage(named: "background.jpg")
+        
+        // you can change the content mode:
+        imageViewBackground.contentMode = UIViewContentMode.ScaleAspectFill
+        
+        self.view.addSubview(imageViewBackground);
+        self.view.sendSubviewToBack(imageViewBackground);
     }
     
 

@@ -26,16 +26,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Create an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5h-OL-NdI">
-                                <rect key="frame" x="177" y="89" width="247" height="21"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="247" id="MgC-pK-VE1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZL0-qH-3KO">
                                 <rect key="frame" x="58" y="210" width="165" height="30"/>
                                 <animations/>
@@ -109,7 +99,6 @@
                             <constraint firstItem="Gxk-Rg-RgG" firstAttribute="leading" secondItem="Mec-EO-Qdj" secondAttribute="leadingMargin" constant="38" id="Ric-HZ-uaN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qTw-Cw-7QO" secondAttribute="trailing" constant="10" id="Tds-fh-G5m"/>
                             <constraint firstItem="ZL0-qH-3KO" firstAttribute="leading" secondItem="Mec-EO-Qdj" secondAttribute="leadingMargin" constant="38" id="Ua0-ob-bSY"/>
-                            <constraint firstItem="ZL0-qH-3KO" firstAttribute="top" secondItem="o5h-OL-NdI" secondAttribute="bottom" constant="100" id="Uqn-9L-x7H"/>
                             <constraint firstItem="gF3-Is-EUm" firstAttribute="leading" secondItem="Mec-EO-Qdj" secondAttribute="leadingMargin" constant="38" id="fCR-4s-FpS"/>
                             <constraint firstItem="UNj-AJ-5z5" firstAttribute="leading" secondItem="Mec-EO-Qdj" secondAttribute="leadingMargin" constant="91" id="yLm-xx-cZ6"/>
                         </constraints>
