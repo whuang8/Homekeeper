@@ -28,6 +28,7 @@ class GroceryTableViewController: UITableViewController {
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+        
     }
     
     func setupFirebase() {
@@ -47,6 +48,7 @@ class GroceryTableViewController: UITableViewController {
             self.items = newItems
             self.tableView.reloadData()
         })
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,7 +95,7 @@ class GroceryTableViewController: UITableViewController {
         cell.groceryItemLabel.text = item.groceryItem
         cell.additionalInfoLabel.text = item.additionalInfo
         cell.countLabel.text = String(format: "%d", item.count)
-        cell.checkoutSwitch.setOn(item.checkout, animated: false)
+        //cell.checkoutSwitch.setOn(item.checkout, animated: false)
 
         return cell
     }

@@ -24,7 +24,7 @@ class GroceryItemTableViewCell: UITableViewCell {
         
         
         // Initialization code
-        checkoutSwitch.on = false
+        //checkoutSwitch.on = false
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

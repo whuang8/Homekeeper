@@ -64,6 +64,7 @@ class ChatViewController: JSQMessagesViewController {
         collectionView!.collectionViewLayout.springinessEnabled = true
         
         self.collectionView?.reloadData()
+        self.inputToolbar?.contentView?.leftBarButtonItem = nil;
     }
     
     override func viewDidAppear(animated: Bool) { }
