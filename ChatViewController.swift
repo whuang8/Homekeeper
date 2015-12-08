@@ -66,7 +66,9 @@ class ChatViewController: JSQMessagesViewController {
         self.collectionView?.reloadData()
     }
     
-    override func viewDidAppear(animated: Bool) { }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true);
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
