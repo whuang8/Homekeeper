@@ -14,17 +14,17 @@ class ToDoTableViewCell: UITableViewCell {
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
-
-    @IBOutlet weak var cBox: checkBox!
-
     
-
+    @IBOutlet weak var cBox: checkBox!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class AddToDo: UIViewController, UITextFieldDelegate {
-
+    
     //Properties
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var justALabel: UILabel!
@@ -18,16 +18,16 @@ class AddToDo: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //inputTextField.delegate = self
+        
+        inputTextField.delegate = self
         
         if let todo = todo {
-           inputTextField.text = todo.task
+            inputTextField.text = todo.task
             messageInput.text = todo.message
         }
         
         //if let todo = todo {
-            //navigationItem.title = todo.message
+        //navigationItem.title = todo.message
         //}
         
         //checkValidMessage()
@@ -40,26 +40,37 @@ class AddToDo: UIViewController, UITextFieldDelegate {
     }
     
     /*func textFieldDidBeginEditing(textField: UITextField) {
-        //Disable the Save button while editing.
-        saveNewItem.enabled = false
+    //Disable the Save button while editing.
+    saveNewItem.enabled = false
     }*/
     
     /*func checkValidMessage() {
-        // Disable the Save button if the text field is empty.
-        let text = inputTextField.text ?? ""
-        saveNewItem.enabled = !text.isEmpty
+    // Disable the Save button if the text field is empty.
+    let text = inputTextField.text ?? ""
+    saveNewItem.enabled = !text.isEmpty
     }*/
     
     /*func textFieldDidEndEditing(textField: UITextField) {
-        checkValidMessage()
-        navigationItem.title = textField.text
+    checkValidMessage()
+    navigationItem.title = textField.text
     }*/
     
     //Actions
     
     //Navigation
+    //@IBAction func cancel(sender: UIBarButtonItem) {
+    //    dismissViewControllerAnimated(true, completion: nil)
+    //}
+    
     @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        // Determine presentation style (modal or push)
+        if presentingViewController != nil {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+            
+        else {
+            navigationController!.popViewControllerAnimated(true)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -68,8 +79,8 @@ class AddToDo: UIViewController, UITextFieldDelegate {
             let message = messageInput.text
             
             //let username = NSUserName()
-            let username = "createUser"
-        
+            let username = NSUserName()
+            
             
             todo = ToDo(message: message!, user: username, task: task!, timeChecked: 0, checkedUser: "none")
         }

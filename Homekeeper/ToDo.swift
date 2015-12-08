@@ -28,10 +28,10 @@ class ToDo {
         self.timeChecked = timeChecked
         self.checkedUser = checkedUser
         if (task.isEmpty) {
-                return nil
+            return nil
         }
     }
-
+    
     init (snapshot: FDataSnapshot) {
         message = snapshot.value["message"] as! String
         user = snapshot.value["user"] as! String
@@ -50,5 +50,5 @@ class ToDo {
             "checkedUser": checkedUser
         ]
     }
-
+    
 }

@@ -15,6 +15,8 @@
 		239CAD4A1BD03C520090FDE8 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD481BD03C520090FDE8 /* ToDo.swift */; };
 		239CAD4C1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */; };
 		239CAD4D1BD03CC30090FDE8 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */; };
+		263FCD581C168E1000605F8D /* CompletedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263FCD571C168E1000605F8D /* CompletedTableViewController.swift */; };
+		263FCD5A1C168E1F00605F8D /* CompletedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263FCD591C168E1F00605F8D /* CompletedTableViewCell.swift */; };
 		2641CDCF1BD0DAAE000ED84A /* ToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2641CDCE1BD0DAAE000ED84A /* ToDo.storyboard */; };
 		265719681BBA2D1D00D29495 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265719671BBA2D1D00D29495 /* LogInViewController.swift */; };
 		26CBE1331BCC6EDD00EE78C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */; };
@@ -73,6 +75,8 @@
 		239CAD451BD03C300090FDE8 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		239CAD481BD03C520090FDE8 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		239CAD4B1BD03CC30090FDE8 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		263FCD571C168E1000605F8D /* CompletedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedTableViewController.swift; sourceTree = "<group>"; };
+		263FCD591C168E1F00605F8D /* CompletedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedTableViewCell.swift; sourceTree = "<group>"; };
 		2641CDCE1BD0DAAE000ED84A /* ToDo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ToDo.storyboard; sourceTree = "<group>"; };
 		265719671BBA2D1D00D29495 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		26CBE1321BCC6EDD00EE78C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 		239CAD271BD032EE0090FDE8 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				263FCD591C168E1F00605F8D /* CompletedTableViewCell.swift */,
+				263FCD571C168E1000605F8D /* CompletedTableViewController.swift */,
 				2641CDCE1BD0DAAE000ED84A /* ToDo.storyboard */,
 				2F028D991BF9586600CE11CA /* checkBox.swift */,
 				239CAD481BD03C520090FDE8 /* ToDo.swift */,
@@ -369,7 +375,7 @@
 				TargetAttributes = {
 					26D80D931BA3AE930012ECBC = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 44L47DE54H;
+						DevelopmentTeam = 2S3D8J8M3T;
 					};
 					26D80DA81BA3AE930012ECBC = {
 						CreatedOnToolsVersion = 6.4;
@@ -476,8 +482,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				263FCD581C168E1000605F8D /* CompletedTableViewController.swift in Sources */,
 				239CAD461BD03C300090FDE8 /* ToDoTableViewController.swift in Sources */,
 				3F6F8F081BD048A200359A64 /* AppDelegate.swift in Sources */,
+				263FCD5A1C168E1F00605F8D /* CompletedTableViewCell.swift in Sources */,
 				3F6F8F131BD0491400359A64 /* ContainerViewController.swift in Sources */,
 				3F6F8F121BD0491400359A64 /* BaseTableViewCell.swift in Sources */,
 				26F7F6E61BF97A610009F884 /* HouseholdsTableViewCell.swift in Sources */,

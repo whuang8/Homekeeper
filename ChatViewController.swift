@@ -21,6 +21,9 @@ class ChatViewController: JSQMessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
 
         let defaults = NSUserDefaults.standardUserDefaults()
         
@@ -63,6 +66,7 @@ class ChatViewController: JSQMessagesViewController {
         self.setNavigationBarItem()
         collectionView!.collectionViewLayout.springinessEnabled = true
         
+        
         self.collectionView?.reloadData()
     }
     
@@ -72,6 +76,11 @@ class ChatViewController: JSQMessagesViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     func setupFirebase(homeName: String) {
