@@ -9,35 +9,25 @@
         <!--Grocery List-->
         <scene sceneID="Ame-jz-VbK">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8oi-lX-Psl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="GroceryTableViewController" id="q59-D0-XxO" customClass="GroceryTableViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" id="dsM-bK-bq2">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" id="dsM-bK-bq2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroceryItemTableViewCell" rowHeight="96" id="hQe-AJ-0CZ" customClass="GroceryItemTableViewCell" customModule="Homekeeper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="96"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroceryItemTableViewCell" rowHeight="76" id="hQe-AJ-0CZ" customClass="GroceryItemTableViewCell" customModule="Homekeeper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="59" tableViewCell="hQe-AJ-0CZ" id="U0p-qb-3pA">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUO-Ij-EP8" userLabel="Grocery Item Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUO-Ij-EP8" userLabel="Grocery Item Label">
                                             <rect key="frame" x="8" y="9" width="52" height="26"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="play.png" offImage="typing.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hj9-Nq-Nb0" userLabel="Item Switcher">
-                                            <rect key="frame" x="533" y="8" width="51" height="31"/>
-                                            <animations/>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krb-39-w1u" userLabel="Count Label">
-                                            <rect key="frame" x="466" y="13" width="42" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -48,24 +38,28 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krb-39-w1u" userLabel="Count Label">
+                                            <rect key="frame" x="550" y="28" width="42" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="4DM-aw-y8s" secondAttribute="trailing" constant="100" id="58Y-n2-eVj"/>
-                                        <constraint firstItem="Hj9-Nq-Nb0" firstAttribute="top" secondItem="U0p-qb-3pA" secondAttribute="topMargin" id="P2h-Ac-iRo"/>
-                                        <constraint firstItem="Hj9-Nq-Nb0" firstAttribute="leading" secondItem="krb-39-w1u" secondAttribute="trailing" constant="25" id="VOL-Dq-gcB"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="krb-39-w1u" secondAttribute="trailing" id="5eZ-XZ-YdC"/>
+                                        <constraint firstItem="krb-39-w1u" firstAttribute="top" secondItem="U0p-qb-3pA" secondAttribute="topMargin" constant="20" id="Lyo-dt-iln"/>
                                         <constraint firstItem="YUO-Ij-EP8" firstAttribute="leading" secondItem="U0p-qb-3pA" secondAttribute="leadingMargin" id="XnZ-W9-fHL"/>
                                         <constraint firstItem="YUO-Ij-EP8" firstAttribute="top" secondItem="U0p-qb-3pA" secondAttribute="topMargin" constant="1" id="ZNA-5O-3Ge"/>
-                                        <constraint firstItem="krb-39-w1u" firstAttribute="top" secondItem="U0p-qb-3pA" secondAttribute="topMargin" constant="5" id="h4v-g1-uPk"/>
                                         <constraint firstItem="4DM-aw-y8s" firstAttribute="top" secondItem="U0p-qb-3pA" secondAttribute="topMargin" constant="35" id="hJU-ux-6Nw"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Hj9-Nq-Nb0" secondAttribute="trailing" constant="10" id="lrE-Rb-l71"/>
                                         <constraint firstItem="4DM-aw-y8s" firstAttribute="leading" secondItem="U0p-qb-3pA" secondAttribute="leadingMargin" id="w95-Jx-wFX"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
                                     <outlet property="additionalInfoLabel" destination="4DM-aw-y8s" id="FeM-eJ-Gn7"/>
-                                    <outlet property="checkoutSwitch" destination="Hj9-Nq-Nb0" id="uGf-Ib-YCy"/>
                                     <outlet property="countLabel" destination="krb-39-w1u" id="3Nk-nl-dEz"/>
                                     <outlet property="groceryItemLabel" destination="YUO-Ij-EP8" id="YOh-7c-uvu"/>
                                     <segue destination="BYX-38-t0r" kind="show" identifier="ShowDetail" id="XwV-uc-90n"/>
@@ -78,15 +72,7 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ISO-De-lKz"/>
-                        <barButtonItem title="Checkout" id="ZVr-BU-GDI">
-                            <connections>
-                                <action selector="checkoutPressed:" destination="q59-D0-XxO" id="Fdi-pz-yRL"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Klb-7E-lsh"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Grocery List" id="jZ9-1s-kyp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Emh-Tk-RMK" userLabel="AddItem">
                             <connections>
@@ -96,7 +82,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8oi-lX-Psl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="924" y="576"/>
         </scene>
@@ -253,10 +238,6 @@
             <point key="canvasLocation" x="1812" y="1040"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="play.png" width="28" height="28"/>
-        <image name="typing.png" width="34" height="8"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XwV-uc-90n"/>
     </inferredMetricsTieBreakers>
