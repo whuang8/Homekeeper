@@ -14,7 +14,7 @@ enum LeftMenu: Int {
     case Debt
     case Groc
     case Todo
-    case House
+//    case House
 }
 
 protocol LeftMenuProtocol : class {
@@ -24,12 +24,12 @@ protocol LeftMenuProtocol : class {
 class LeftViewController: UIViewController, LeftMenuProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["Chat", "Debt", "Groceries", "Todo", "Households"]
+    var menus = ["Chat", "Debt", "Groceries", "Todo"]
     var chatViewController = UIViewController()
     var debtViewController = UIViewController()
     var grocViewController = UIViewController()
     var todoViewController = UIViewController()
-    var householdsViewController = UIViewController()
+//    var householdsViewController = UIViewController()
     //var optionsTableViewController = UIViewController()
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,7 +48,7 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         let storyboard2 = UIStoryboard(name: "GroceryList", bundle: nil);
         let storyboard3 = UIStoryboard(name: "ToDo", bundle: nil);
         let storyboard4 = UIStoryboard(name: "DebtTracker", bundle: nil);
-        let storyboard5 = UIStoryboard(name: "Households", bundle: nil);
+//        let storyboard5 = UIStoryboard(name: "Households", bundle: nil);
         
         
         let chatViewController = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as! ChatViewController;
@@ -63,8 +63,8 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         let debtViewController = storyboard4.instantiateViewControllerWithIdentifier("DebtTableViewController") as! DebtTableViewController;
         self.debtViewController = UINavigationController(rootViewController: debtViewController);
         
-        let householdsViewController = storyboard5.instantiateViewControllerWithIdentifier("HouseholdsTableViewController") as! HouseholdsTableViewController;
-        self.householdsViewController = UINavigationController(rootViewController: householdsViewController);
+//        let householdsViewController = storyboard5.instantiateViewControllerWithIdentifier("HouseholdsTableViewController") as! HouseholdsTableViewController;
+//        self.householdsViewController = UINavigationController(rootViewController: householdsViewController);
 
         
         //self.presentViewController(navController, animated: true, completion: nil);
@@ -148,9 +148,9 @@ class LeftViewController: UIViewController, LeftMenuProtocol {
         case .Todo:
             self.slideMenuController()?.changeMainViewController(self.todoViewController, close: true);
             break;
-        case .House:
-            self.slideMenuController()?.changeMainViewController(self.householdsViewController, close: true);
-            break;
+//        case .House:
+//            self.slideMenuController()?.changeMainViewController(self.householdsViewController, close: true);
+//            break;
         }
     }
 }

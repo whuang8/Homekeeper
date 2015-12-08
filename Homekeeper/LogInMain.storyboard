@@ -61,6 +61,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createUser:" destination="dDu-ON-EQZ" eventType="touchUpInside" id="DVy-Eo-CqM"/>
+                                    <segue destination="dEh-1s-yvU" kind="unwind" unwindAction="unwindForSegue:" id="gN6-Vb-mtZ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gxk-Rg-RgG">
@@ -73,7 +74,7 @@
                                 <rect key="frame" x="111" y="160" width="61" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpO-XA-CJH">
@@ -113,6 +114,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hk-8d-aUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dEh-1s-yvU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="245" y="1236"/>
         </scene>

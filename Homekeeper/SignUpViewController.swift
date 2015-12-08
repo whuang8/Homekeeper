@@ -49,13 +49,13 @@ class SignUpViewController: UIViewController {
                     
                     let ref = Firebase(url: "https://homekeeper.firebaseio.com")
                     
-                    let userInfo = ["first_name": self.firstName.text!, "last_name": self.lastName.text!, "email": self.email.text!]
+                    let userInfo = ["first_name": self.firstName.text!, "last_name": self.lastName.text!, "email": self.email.text!, "households":"testHome"]
                     let usersRef = ref.childByAppendingPath("users")
                     let user = [uid as String!: userInfo]
                 
                     usersRef.updateChildValues(user)
                     
-                    self.performSegueWithIdentifier("HomeSegue", sender: self)
+                    self.dismissViewControllerAnimated(true, completion: nil);
                     
                 }
         })
