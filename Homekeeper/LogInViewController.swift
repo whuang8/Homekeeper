@@ -166,16 +166,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     
     func drawLoginMenu() {
-        let wid:CGFloat = 250.0;
         let hei:CGFloat = 300.0;
         
-        let base = UIImageView(frame:CGRectMake(self.view.bounds.width / 2 - (wid / 2),
+        let base = UIImageView(frame:CGRectMake(self.view.bounds.width / 2 - (self.view.bounds.width / 2),
             self.view.bounds.height / 2 - (hei / 2),
-            wid,
+            self.view.bounds.width,
             hei));
         
         base.backgroundColor = UIColor.grayColor();
-        base.layer.cornerRadius = 8.0;
         base.alpha = 0;
         base.clipsToBounds = true;
         
@@ -244,6 +242,18 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         self.view.addSubview(passwordText);
         
+        let titleWid:CGFloat = 300.0;
+        
+        let title: UILabel = UILabel(frame: CGRectMake(self.view.bounds.width / 2 - (titleWid / 2.52),
+            self.view.bounds.height / 3.25,
+            titleWid,
+            100));
+        
+        title.text = "Homekeeper";
+        title.font = UIFont(name: "Thonburi-Bold", size: 40);
+        
+        self.view.addSubview(title);
+        
         UIView.animateWithDuration(0.5,
             delay: 2,
             options: UIViewAnimationOptions.CurveEaseIn,
@@ -270,7 +280,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         loginButton.layer.cornerRadius = 8.0;
         loginButton.setTitle("Login", forState: UIControlState.Normal);
         loginButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
-        loginButton.titleLabel?.font = UIFont(name: "GillSans", size: 20);
+        loginButton.titleLabel?.font = UIFont(name: "System", size: 20);
         loginButton.addTarget(self, action: "logIn:", forControlEvents: UIControlEvents.TouchUpInside);
         loginButton.alpha = 0.0;
         loginButton.enabled = false;
@@ -288,7 +298,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         cancelButton.layer.cornerRadius = 8.0;
         cancelButton.setTitle("Cancel", forState: UIControlState.Normal);
         cancelButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
-        cancelButton.titleLabel?.font = UIFont(name: "GillSans", size: 20);
+        cancelButton.titleLabel?.font = UIFont(name: "System", size: 20);
         cancelButton.addTarget(self, action: "cancel:", forControlEvents: UIControlEvents.TouchUpInside);
         cancelButton.alpha = 0.0;
         cancelButton.enabled = false;
@@ -309,30 +319,43 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     
     func drawSignUpButton() {
-        let supWid: CGFloat = 200.0;
+        //let supWid: CGFloat = 300.0;
         let supHei: CGFloat = 40.0;
         
-        let signUpButton: UIButton = UIButton(frame: CGRectMake(self.view.bounds.width / 2 - (supWid / 2),
+        let signUpButton: UIButton = UIButton(frame: CGRectMake(self.view.bounds.width / 2 - (self.view.bounds.width / 2),
             self.view.bounds.height - supHei,
-            supWid,
+            self.view.bounds.width,
             supHei));
         
-        signUpButton.backgroundColor = UIColor.clearColor();
-        signUpButton.layer.cornerRadius = 8.0;
+        signUpButton.backgroundColor = UIColor.grayColor();
         signUpButton.setTitle("Sign Up", forState: UIControlState.Normal);
         signUpButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
-        signUpButton.titleLabel?.font = UIFont(name: "GillSans", size: 20);
+        signUpButton.titleLabel?.font = UIFont(name: "System", size: 20);
         signUpButton.addTarget(self, action: "presentSignup:", forControlEvents: UIControlEvents.TouchUpInside);
         signUpButton.alpha = 0.0;
         signUpButton.enabled = false;
         
         self.view.addSubview(signUpButton);
         
+        let facebook: UIButton = UIButton(frame: CGRectMake(self.view.bounds.width / 2 - (self.view.bounds.width / 2),
+            self.view.bounds.height - (supHei * 2),
+            self.view.bounds.width,
+            supHei));
+        
+        facebook.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue:1.0, alpha: 1.0);
+        facebook.setTitle("Sign in with Facebook!", forState: .Normal);
+        facebook.setTitleColor(UIColor.whiteColor(), forState: .Normal);
+        facebook.addTarget(self, action: nil, forControlEvents: .TouchUpInside);
+        facebook.alpha = 0.0;
+        
+        self.view.addSubview(facebook);
+        
         UIView.animateWithDuration(0.5,
             delay: 0,
             options: UIViewAnimationOptions.CurveEaseIn,
             animations: {
                 signUpButton.alpha = 0.5;
+                facebook.alpha = 0.5;
             },
             completion: { finished in
                 signUpButton.enabled = true;
