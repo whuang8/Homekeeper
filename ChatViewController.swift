@@ -67,7 +67,9 @@ class ChatViewController: JSQMessagesViewController {
         self.inputToolbar?.contentView?.leftBarButtonItem = nil;
     }
     
-    override func viewDidAppear(animated: Bool) { }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true);
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
