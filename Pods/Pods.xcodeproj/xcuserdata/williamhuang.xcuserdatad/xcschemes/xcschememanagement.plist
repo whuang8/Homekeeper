@@ -4,17 +4,37 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSQMessagesViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Homekeeper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-HomekeeperTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,12 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0D8DB962530D042FF600934B10ACD9A2</key>
+		<key>14B4F491623F994FD2511BF6B2696917</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1469924FC52F60B0068FA24EEFCB3EFC</key>
+		<key>57ADC05E440A960212657DE6DA1FEDD5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D69761C2CD2A1E5C013537B29CAB4CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,17 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9DE8C0991A36EBF362AAD73B08AE9636</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C1C850D3163D9E2308F7FDBC5208A838</key>
+		<key>D8470470292BC39EE263E6103508E41A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>EDA125ADA52355B7CA6DF7BA96918357</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5ACF367AE3BD7A7F2AF2D430901DF7B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

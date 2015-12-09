@@ -84,10 +84,18 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Homekeeper/Bolts.framework"
+  install_framework "Pods-Homekeeper/FBSDKCoreKit.framework"
+  install_framework "Pods-Homekeeper/FBSDKLoginKit.framework"
+  install_framework "Pods-Homekeeper/FBSDKShareKit.framework"
   install_framework "Pods-Homekeeper/JSQMessagesViewController.framework"
   install_framework "Pods-Homekeeper/JSQSystemSoundPlayer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Homekeeper/Bolts.framework"
+  install_framework "Pods-Homekeeper/FBSDKCoreKit.framework"
+  install_framework "Pods-Homekeeper/FBSDKLoginKit.framework"
+  install_framework "Pods-Homekeeper/FBSDKShareKit.framework"
   install_framework "Pods-Homekeeper/JSQMessagesViewController.framework"
   install_framework "Pods-Homekeeper/JSQSystemSoundPlayer.framework"
 fi
