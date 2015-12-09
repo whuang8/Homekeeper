@@ -107,6 +107,22 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                             print("Login failed. \(error)")
                         } else {
                             print("Logged in! \(authData)")
+                            //Needs to add user to database if logging in for the first time.
+                            /*self.loggedIn = true
+                            //self.performSegueWithIdentifier("SignInSegue", sender: self)
+                            
+                            let defaults = NSUserDefaults.standardUserDefaults()
+                            
+                            defaults.setObject(self.emailText.text, forKey: authData.providerData["email"] as! String)
+                            defaults.setObject(ref.authData.uid, forKey: authData.providerData["uid"] as! String)
+                            
+                            let userRef = Firebase(url: ("https://homekeeper.firebaseio.com/users/" + ref.authData.uid))
+                            userRef.observeEventType(.Value, withBlock: { snapshot in
+                                defaults.setObject(snapshot.value["households"] as! String, forKey: AppDelegate.constants.homeNameKeyConstant)
+                            })
+                            
+                            print(defaults.valueForKey(AppDelegate.constants.homeNameKeyConstant))*/
+                            self.dismissViewControllerAnimated(true, completion: nil)
                         }
                 })
             }
