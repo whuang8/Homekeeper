@@ -7,17 +7,17 @@
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Completed Table View Controller-->
         <scene sceneID="s14-2O-GCU">
             <objects>
-                <tableViewController id="hhf-wx-lTC" sceneMemberID="viewController">
+                <tableViewController id="hhf-wx-lTC" customClass="CompletedTableViewController" customModule="Homekeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="gkt-gt-k1g">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SUM-GI-kzW" customClass="CompletedTableViewCell" customModule="Homekeeper" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompletedTableViewCell" id="SUM-GI-kzW" customClass="CompletedTableViewCell" customModule="Homekeeper" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SUM-GI-kzW" id="YVB-b9-U93">
@@ -31,13 +31,6 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Beo-8G-qrs">
-                                            <rect key="frame" x="8" y="50" width="584" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-hT-AIo">
                                             <rect key="frame" x="8" y="8" width="584" height="21"/>
                                             <animations/>
@@ -46,7 +39,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRq-9G-bx4">
-                                            <rect key="frame" x="8" y="50" width="584" height="21"/>
+                                            <rect key="frame" x="8" y="50" width="584" height="22"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -167,13 +160,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter description of task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tEO-mz-dL9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter description of task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tEO-mz-dL9">
                                 <rect key="frame" x="20" y="110" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxf-bO-piJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxf-bO-piJ">
                                 <rect key="frame" x="20" y="72" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -183,13 +176,9 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tEO-mz-dL9" firstAttribute="leading" secondItem="bxf-bO-piJ" secondAttribute="leading" id="SGd-Sj-hNe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bxf-bO-piJ" secondAttribute="trailing" id="T48-Fo-TNz"/>
-                            <constraint firstItem="tEO-mz-dL9" firstAttribute="leading" secondItem="5cI-RK-poG" secondAttribute="leadingMargin" id="ho3-2i-K0Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bxf-bO-piJ" secondAttribute="trailing" id="i3n-3X-bJm"/>
-                            <constraint firstItem="tEO-mz-dL9" firstAttribute="top" secondItem="bxf-bO-piJ" secondAttribute="bottom" constant="8" symbolic="YES" id="qYU-Zt-vab"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tEO-mz-dL9" secondAttribute="trailing" id="sVa-CD-xwA"/>
-                            <constraint firstItem="uKt-Zt-erH" firstAttribute="top" secondItem="tEO-mz-dL9" secondAttribute="bottom" constant="460" id="ybP-iG-mcl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Task" id="QLe-zw-EuZ">

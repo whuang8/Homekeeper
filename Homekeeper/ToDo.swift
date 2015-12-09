@@ -50,5 +50,4 @@ class ToDo {
             "checkedUser": checkedUser
         ]
     }
-    
 }
