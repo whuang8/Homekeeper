@@ -7,7 +7,8 @@
 
 
 import UIKit
-
+import Foundation
+import Firebase
 
 class GroceryItemViewController: UIViewController, UITextFieldDelegate {
     // Mark: Properties
@@ -90,10 +91,8 @@ class GroceryItemViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancel(sender: UIBarButtonItem) {
         // Determine presentation style (modal or push)
-        let isPresentingInAddItemMode = presentingViewController is UINavigationController
-        
-        if isPresentingInAddItemMode {
-            navigationController!.popViewControllerAnimated(true)
+        if presentingViewController != nil {
+            dismissViewControllerAnimated(true, completion: nil)
         }
         
         else {
@@ -110,6 +109,42 @@ class GroceryItemViewController: UIViewController, UITextFieldDelegate {
             // Set the item that needs to be added
             item = GroceryItem(groceryItem: name, additionalInfo: additionalInfo!, count: Int(count!)!)
         }
+    }
+    
+    // Mark: Customization
+    
+    override func viewDidLayoutSubviews() {
+        
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.darkGrayColor().CGColor
+        border.frame = CGRect(x: 0,
+            y: groceryItemTextField.frame.size.height - width,
+            width:  groceryItemTextField.frame.size.width,
+            height: groceryItemTextField.frame.size.height)
+        
+        border.borderWidth = width
+        groceryItemTextField.layer.addSublayer(border)
+        groceryItemTextField.layer.masksToBounds = true
+        groceryItemTextField.clipsToBounds = true;
+        
+        let border1 = CALayer()
+        //let width = CGFloat(2.0)
+        border1.borderColor = UIColor.darkGrayColor().CGColor
+        border1.frame = CGRect(x: 0,
+            y: additionalInfoTextField.frame.size.height - width,
+            width:  additionalInfoTextField.frame.size.width,
+            height: additionalInfoTextField.frame.size.height)
+        
+        border1.borderWidth = width
+        additionalInfoTextField.layer.addSublayer(border1)
+        additionalInfoTextField.layer.masksToBounds = true;
+        additionalInfoTextField.clipsToBounds = true;
+        //additionalInfoTextField.frame.size.height = 30;
+        
+        countStepper.layer.cornerRadius = 10;
+        countStepper.layer.borderWidth = 1.0;
+        countStepper.alpha = 0.5;
     }
 }
 
