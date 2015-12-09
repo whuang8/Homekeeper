@@ -98,11 +98,6 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2d-w7-qBP" customClass="checkBox" customModule="Homekeeper" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="22" width="40" height="40"/>
-                                            <animations/>
-                                            <state key="normal" title="Button"/>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NK9-Ik-XUs">
                                             <rect key="frame" x="56" y="55" width="530" height="20"/>
                                             <animations/>
@@ -110,6 +105,11 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2d-w7-qBP" customClass="checkBox" customModule="Homekeeper" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="30" width="23" height="22"/>
+                                            <animations/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
                                     </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -128,21 +128,24 @@
                             <outlet property="delegate" destination="ZyM-qA-GLu" id="3te-Zu-epb"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="juW-Mc-Wuz"/>
+                        <barButtonItem title="Show Completed" id="UMO-H9-cVZ">
+                            <connections>
+                                <action selector="shoeCompleted:" destination="ZyM-qA-GLu" id="Eto-uQ-msa"/>
+                                <segue destination="hhf-wx-lTC" kind="push" identifier="showCompleted" id="AkN-7a-pfV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="5Y2-jj-fYL"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="To Do" id="CkP-F1-Iwq">
-                        <rightBarButtonItems>
-                            <barButtonItem style="done" systemItem="add" id="Uva-bj-Xgf">
-                                <connections>
-                                    <segue destination="Kdf-AB-t75" kind="presentation" identifier="addItem" id="nA1-tQ-gfW"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Show Completed" id="UMO-H9-cVZ">
-                                <connections>
-                                    <action selector="shoeCompleted:" destination="ZyM-qA-GLu" id="Eto-uQ-msa"/>
-                                    <segue destination="hhf-wx-lTC" kind="push" identifier="showCompleted" id="AkN-7a-pfV"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="Uva-bj-Xgf">
+                            <connections>
+                                <segue destination="Kdf-AB-t75" kind="presentation" identifier="addItem" id="nA1-tQ-gfW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBW-lF-rEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,13 +163,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter description of task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tEO-mz-dL9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter description of task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tEO-mz-dL9">
                                 <rect key="frame" x="20" y="110" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxf-bO-piJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxf-bO-piJ">
                                 <rect key="frame" x="20" y="72" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -211,7 +214,8 @@
         <!--Navigation Controller-->
         <scene sceneID="cOR-Qe-1U8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uaK-Bj-LG5" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="uaK-Bj-LG5" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G8X-Vr-8do">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

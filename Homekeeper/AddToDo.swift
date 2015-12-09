@@ -86,4 +86,36 @@ class AddToDo: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //Tanner's stuff
+    
+    override func viewDidLayoutSubviews() {
+        
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.darkGrayColor().CGColor
+        border.frame = CGRect(x: 0,
+            y: inputTextField.frame.size.height - width,
+            width:  inputTextField.frame.size.width,
+            height: inputTextField.frame.size.height)
+        
+        border.borderWidth = width
+        inputTextField.layer.addSublayer(border)
+        inputTextField.layer.masksToBounds = true
+        inputTextField.clipsToBounds = true;
+        
+        let border1 = CALayer()
+        //let width = CGFloat(2.0)
+        border1.borderColor = UIColor.darkGrayColor().CGColor
+        border1.frame = CGRect(x: 0,
+            y: messageInput.frame.size.height - width,
+            width:  messageInput.frame.size.width,
+            height: messageInput.frame.size.height)
+        
+        border1.borderWidth = width
+        messageInput.layer.addSublayer(border1)
+        messageInput.layer.masksToBounds = true;
+        messageInput.clipsToBounds = true;
+
+    }
+    
 }

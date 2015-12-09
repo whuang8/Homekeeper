@@ -22,7 +22,7 @@ class ToDoTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.setNavigationBarItem()
-        
+        self.navigationController?.toolbarHidden = false;
         //loadToDos()
     }
     
